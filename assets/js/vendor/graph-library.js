@@ -53,7 +53,7 @@ function horizontalChart( _id, _values, format){
 	        type: 'bar'
 	    },
 	    size:{
-	    	height: 450
+	    	height: 300
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290']
