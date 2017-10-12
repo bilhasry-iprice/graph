@@ -12,7 +12,7 @@
 		"labels" : ["Average Order Value"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Conversion Rate", 36.28, 41.99, 90.64, 53.73, 22.85, 56.38]
+			[ "Average Order Value", 36.28, 41.99, 90.64, 53.73, 22.85, 56.38]
         ],
         "type" : "horizontal-bar",
         "format" : "$"
@@ -21,7 +21,7 @@
 		"labels" : ["GDP Per Capita"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Conversion Rate", 12432, 17749, 90724, 28636, 6925, 8270]
+			[ "GDP Per Capita", 12432, 17749, 90724, 28636, 6925, 8270]
         ],
         "type" : "horizontal-bar",
         "format" : "$"
