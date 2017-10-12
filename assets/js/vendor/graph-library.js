@@ -11,6 +11,9 @@ function barChart( _id, _values, format){
 	        columns : _values,
 	        type: 'bar'
 	    },
+	    size:{
+	    	height: 500
+	    },
 	    axis : {
 	    	x : {
             tick: {
@@ -48,6 +51,12 @@ function horizontalChart( _id, _values, format){
 	    	x : 'x',
 	        columns : _values,
 	        type: 'bar'
+	    },
+	    size:{
+	    	height: 450
+	    },
+	    color: {
+	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290']
 	    },
 	    axis : {
 	    	rotated: true,
