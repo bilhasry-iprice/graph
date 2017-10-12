@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="myApp" ng-controller="mainController">
+	<head >
+		<meta charset="utf-8">
+		<title ng-bind="title"></title>
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/js/vendor/c3/c3.css">
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+		
+		<script src="assets/js/angular.js"></script>
+		<script src="assets/js/sanitize.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular-route.js"></script>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="assets/js/vendor/c3/c3.js"></script>
+		<script src="assets/js/vendor/graph-library.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body >
+		<div id="main-container">
+			<div id='canvas'></div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+        	$(document).ready(function(){
+        		$(window).scroll(function (event) {
+                    var scroll = $(window).scrollTop();
+                    if( scroll != 0){
+                      $('.navbar-default').addClass('sticky');
+                    }else{
+                      $('.navbar-default').removeClass('sticky');
+                    }
+                });
+                
+        	});
+        </script>
+	</body>
+</html>
