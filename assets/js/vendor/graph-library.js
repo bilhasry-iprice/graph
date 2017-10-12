@@ -118,6 +118,9 @@ function splineChart( _id, data){
 	            type: 'category' // this needed to load string x value
 	        }
 	    },
+	    color: {
+	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
+	    },
 	    grid: {
 	        x: {
 	            show: true
