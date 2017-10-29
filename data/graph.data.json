@@ -193,18 +193,94 @@
 		"format" : "%"
 	},
 	{
-		"labels" : ["Return Policy # Of Days"],
-		"data"	 : {
-			"overall" : [
-				["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-				["data 1", 52, 20, 18, 28, 22, 26]
-				
+		"labels" : ["Unwanted Item Not Allowed"],
+		"data" 	 : [
+			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
+			[ "Local", 53, 21, 27, 43, 22, 55]
+        ],
+        "type" : "horizontal-bar",
+        "format" : "%"
+	},
+	{
+		"labels" : ["Average Return Period for Unwanted Item​"],
+		"data" 	 : [
+			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
+			[ "Average Days", 13.67, 14.89, 43.73, 17.69, 22.23, 10.67]
+        ],
+        "type" : "horizontal-bar",
+        "format" : ""
+	},
+	{
+		"labels" : ["Return Period for Unwanted Item"],
+		"data"	 : [
+				["> 15", 22, 11, 27, 24, 55, 11],
+				["7-14", 9, 34, 47, 50, 24, 34],
+				["< 6", 22, 3, 5, 2, 13, 22],
+				["Unspecified", 47, 52, 21, 24, 8, 33]
 			],
-			"local" : [
-				["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-				["data 1", 53, 21, 27, 43, 22, 55]
-			]
-		},
+		"type": "stacked",
+		"categories" : ["ID", "TH", "SG", "MY", "VN", "PH"],
+		"format" : "%",
+		"groups" : [
+			["> 15", "7-14", "< 6", "Unspecified"]
+		]
+	},
+	{
+		"labels" : ["Return Cost for Unwanted Item"],
+		"data"	 : [
+				["Free", 30, 13, 52, 18, 24, 22],
+				["Paid", 22, 16, 32, 58, 71, 34],
+				["Unspecified", 48, 71, 16, 24, 5, 44]
+			],
+		"type": "stacked",
+		"categories" : ["ID", "TH", "SG", "MY", "VN", "PH"],
+		"format" : "%",
+		"groups" : [
+			["Free", "Paid", "Unspecified"]
+		]
+	},
+	{
+		"labels" : ["On-site Offerings"],
+		"data"	 : [
+			["ID", 41, 76, 59, 47, 63],
+			["TH", 67, 75, 54, 48, 54],
+			["SG", 65, 54, 50, 62, 58],
+			["MY", 57, 63, 50, 37, 73],
+			["VN", 51, 80, 82, 76, 84],
+			["PH", 25, 70, 85, 70, 90]
+		],
+		"categories" : ["Loyalty Program", "Product Recommendation Engine", "User Review", "Guest Checkout", "Wishlist"],
+		"type" : "bar",
 		"format" : "%"
+	},
+	{
+		"labels" : ["Type of Customer Service Channels"],
+		"data"	 : [
+			["ID", 66, 82],
+			["TH", 23, 100],
+			["SG", 39, 75],
+			["MY", 27, 83],
+			["VN", 45, 100],
+			["PH", 45, 85]
+		],
+		"categories" : ["Livechat", "Hotline"],
+		"type" : "bar",
+		"format" : "%"
+	},
+	{
+		"labels" : ["eCommerce Player Distribution"],
+		"data"	 : [
+				["Fashion", 27, 4, 27, 20, 16, 15],
+				["Electronics", 14, 35, 14, 7, 61, 20],
+				["General", 30, 29, 38, 42, 10, 54],
+				["Other", 16, 23, 12, 10, 12, 0],
+				["Cosmetic", 12, 8, 8, 20, 0, 10]
+			],
+		"type": "stacked",
+		"categories" : ["ID", "TH", "SG", "MY", "VN", "PH"],
+		"format" : "%",
+		"groups" : [
+			["Fashion", "Electronics", "General", "Other", "Cosmetic"]
+		]
 	}
 ]

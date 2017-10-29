@@ -56,7 +56,7 @@ function donutChart( _id, _values, format, cat){
 	        type: 'donut'
 	    },
 	    size:{
-	    	height: 600
+	    	height: 450
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#91B496', '#86E2D5', '#EC644B', '#FABE58', ]
@@ -197,7 +197,7 @@ function comboChart( _id, chart1, chart2, data){
 
 }
 
-function stackedChart(_id, _values, _groups, cat){
+function stackedChart(_id, _values, _groups, cat, format){
 	var chart = c3.generate({
 	bindto: '#'+_id,
     data: {
@@ -215,8 +215,23 @@ function stackedChart(_id, _values, _groups, cat){
 	    rotated: true,
 	    x: {
             type: 'category',
-            categories: cat
+            categories: cat,
+
+        },
+        y : {
+        tick: {
+                
+				format: function (d) { 
+					if( format == '%'){
+						return d + " "+format; 	
+					}else{
+						return format + " " + d;
+					}
+					
+				}
+            }
         }
+
 	},
     grid: {
     	x: {
