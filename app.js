@@ -49,7 +49,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                         case 'stacked' : 
                               var _groups = data[pos].groups;
                               var _cat = data[pos].categories;
-                              stackedChart( _id, _values, _groups, _cat);
+                              stackedChart( _id, _values, _groups, _cat, _format);
                         break;
 
             	}
