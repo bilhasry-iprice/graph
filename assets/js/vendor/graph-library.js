@@ -3,7 +3,7 @@
  * bar chart function
  */
 
-function barChart( _id, _values, format){
+function barChart( _id, _values, format, cat){
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
@@ -12,21 +12,15 @@ function barChart( _id, _values, format){
 	        type: 'bar'
 	    },
 	    size:{
-	    	height: 500
+	    	height: 600
 	    },
-	    axis : {
-	    	x : {
-            tick: {
-	                
-					format: function (d) { 
-						if( format == '%'){
-							return d + " "+format; 	
-						}else{
-							return format + " " + d;
-						}
-						
-					}
-	            }
+	    color: {
+	        pattern: ['#33CCCC', '#FF6633', '#91B496', '#86E2D5', '#EC644B', '#FABE58', ]
+	    },
+	    axis: {
+        	x: {
+	            type: 'category',
+	            categories: cat
 	        }
 	    },
 	    grid: {
@@ -146,7 +140,7 @@ function comboChart( _id, chart1, chart2, data){
 
 }
 
-function stackedChart(_id, _values, _groups){
+function stackedChart(_id, _values, _groups, cat){
 	var chart = c3.generate({
 	bindto: '#'+_id,
     data: {
@@ -154,8 +148,18 @@ function stackedChart(_id, _values, _groups){
         type: 'bar',
         groups: _groups
     },
+    color: {
+        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
+    },
+    size:{
+    	height: 450
+    },
     axis : {
-	    	rotated: true
+	    rotated: true,
+	    x: {
+            type: 'category',
+            categories: cat
+        }
 	},
     grid: {
     	x: {
