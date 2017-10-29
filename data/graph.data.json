@@ -180,17 +180,11 @@
 	},
 	{
 		"labels" : ["Express Delivery"],
-		"data"	 : {
-			"overall" : [
+		"data"	 : [
 				["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-				["data 1", 26.00, 52.00, 78.00, 56.00, 46.00, 66.00]
-				
+				["Express Delivery", 24, 50, 73, 30, 45, 40]
 			],
-			"local" : [
-				["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-				["data 1", 24, 50, 73, 30, 45, 40]
-			]
-		},
+		"type" : "bar",
 		"format" : "%"
 	},
 	{
