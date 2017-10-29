@@ -29,41 +29,24 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
             	var _type = data[pos].type;
             	var _values = data[pos].data;
             	var _format = data[pos].format;
+                  
 
             	switch( _type ){
             		case 'horizontal-bar' : 
-						horizontalChart( _id, _values, _format);
+					horizontalChart( _id, _values, _format);
             		break;
             		case 'spline'         : 
-						splineChart( _id, _values);
-
+					splineChart( _id, _values);
             		break;
-            		case 'doughnut' :
+            		case 'bar' : 
+                              var _cat = data[pos].categories;
+                              barChart( _id, _values, _format, _cat);
             		break;
-            		case 'toggle-bar' :
-            		var format = data[pos].format;
-            		pos = parseInt(pos);
-            		_values = data[pos].data.overall;
-            		barChart( _id, _values, format)
-
-            		break;
-            		case 'toggle-stack':
-
-            		pos = parseInt(pos);
-            		_values = data[pos].data.overall;
-
-            		var groups = data[pos].groups;
-            		console.log(groups);
-            		stackedChart( _id, _values, groups);
-            		break;
-
-            		case 'toggle-horizontal' :
-            		var format = data[pos].format;
-            		pos = parseInt(pos);
-            		_values = data[pos].data.overall;
-            		horizontalChart( _id, _values, format);
-
-            		break;
+                        case 'stacked' : 
+                              var _groups = data[pos].groups;
+                              var _cat = data[pos].categories;
+                              stackedChart( _id, _values, _groups, _cat);
+                        break;
 
             	}
             }

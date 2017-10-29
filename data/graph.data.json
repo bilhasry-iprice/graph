@@ -152,43 +152,27 @@
 	},
 	{
 		"labels" : ["Payment Options"],
-		"data"	 : {
-			"overall" : [
-				["Credit Card", 84, 72, 92, 80, 49, 66],
-				["E-Payment", 58, 60, 72, 92, 60, 86],
-				["Bank Transfer", 92, 80, 28, 34, 86, 42],
-				["Cash On Delivery", 42, 50, 10, 10, 80, 34],
-				["Virtual Wallet", 26, 30, 44, 42, 14, 32],
-				["Offline Point-of-Sale", 8, 46, 4, 10, 46, 16],
-				["Instalment", 42, 24, 8, 8, 48, 8]
-			],
-			"local" : [
-				["x", "Credit Card","E-Payment", "Bank Transfer", "Cash On Delivery", "Virtual Wallet", "Offline Point-of-Sale", "Instalment"],
-				["ID", 84, 57, 94, 43, 27, 8, 41],
-				["TH", 75, 60, 81, 52, 31, 46, 25],
-				["SG", 88, 69, 38, 19, 38, 4, 15],
-				["MY", 83, 97, 50, 17, 37, 10, 13],
-				["VN", 51, 59, 88, 82, 12, 47, 49],
-				["PH", 50, 95, 65, 80, 35, 20, 15]
-			]
-		},
+		"data"	 : [
+			["ID", 84, 58, 92, 42, 26, 8, 42],
+			["TH", 72, 60, 80, 50, 30, 46, 24],
+			["SG", 92, 72, 28, 10, 44, 4, 8],
+			["MY", 80, 92, 34, 10, 42, 10, 8],
+			["VN", 49, 60, 86, 80, 14, 46, 48],
+			["PH", 66, 86, 42, 34, 32, 16, 8]
+		],
+		"categories" : ["Credit Card","E-Payment", "Bank Transfer", "Cash On Delivery", "Virtual Wallet", "Offline Point-of-Sale", "Instalment"],
+		"type" : "bar",
 		"format" : "%"
 	},
 	{
 		"labels" : ["Delivery Policy"],
-		"data"	 : {
-			"overall" : [
+		"data"	 : [
 				["Free delivery", 14, 10, 18, 26, 20, 18],
 				["Free Above Certain $",14, 58, 50, 34, 54, 32],
 				["Paid", 72, 32, 32, 40, 26, 50]
 			],
-			"local" : [
-				["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-				["Free delivery", 14, 10, 18, 26, 20, 18],
-				["Free Above Certain $", 14, 58, 50, 34, 54, 32],
-				["Paid", 72, 32, 32, 40, 26, 50]
-			]
-		},
+		"type": "stacked",
+		"categories" : ["ID", "TH", "SG", "MY", "VN", "PH"],
 		"format" : "%",
 		"groups" : [
 			["Free delivery", "Free Above Certain $", "Paid"]
