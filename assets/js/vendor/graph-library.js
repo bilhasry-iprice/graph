@@ -21,6 +21,63 @@ function barChart( _id, _values, format, cat){
         	x: {
 	            type: 'category',
 	            categories: cat
+	        },
+	        y : {
+	        	tick: {
+	                
+					format: function (d) { 
+						if( format == '%'){
+							return d + " "+format; 	
+						}else{
+							return format + " " + d;
+						}
+						
+					}
+	            }
+	        }
+	    },
+	    grid: {
+	        x: {
+	            show: true
+	        },
+	        y: {
+	            show: true
+	        }
+	    }
+	});
+}
+
+function donutChart( _id, _values, format, cat){
+
+	var chart = c3.generate({
+		bindto: '#'+_id,
+	    data: {
+	        columns : _values,
+	        type: 'donut'
+	    },
+	    size:{
+	    	height: 600
+	    },
+	    color: {
+	        pattern: ['#33CCCC', '#FF6633', '#91B496', '#86E2D5', '#EC644B', '#FABE58', ]
+	    },
+	    axis: {
+        	x: {
+	            type: 'category',
+	            categories: cat
+	        },
+	        y : {
+	        	tick: {
+	                
+					format: function (d) { 
+						if( format == '%'){
+							return d + " "+format; 	
+						}else{
+							return format + " " + d;
+						}
+						
+					}
+	            }
 	        }
 	    },
 	    grid: {

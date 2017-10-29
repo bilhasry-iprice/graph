@@ -181,10 +181,15 @@
 	{
 		"labels" : ["Express Delivery"],
 		"data"	 : [
-				["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-				["Express Delivery", 24, 50, 73, 30, 45, 40]
+				["ID", 24],
+				["TH", 50],
+				["SG", 73],
+				["MY", 30],
+				["VN", 45],
+				["PH", 40]
 			],
-		"type" : "bar",
+		"categories" : [ "Merchants"],
+		"type" : "donut",
 		"format" : "%"
 	},
 	{
