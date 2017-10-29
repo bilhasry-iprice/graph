@@ -42,6 +42,10 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                               var _cat = data[pos].categories;
                               barChart( _id, _values, _format, _cat);
             		break;
+                        case 'donut' : 
+                              var _cat = data[pos].categories;
+                              donutChart( _id, _values, _format, _cat);
+                        break;
                         case 'stacked' : 
                               var _groups = data[pos].groups;
                               var _cat = data[pos].categories;
