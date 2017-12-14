@@ -1,0 +1,162 @@
+body{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+div{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+p{
+	padding: 0px;
+	margin: 0px;
+}
+
+.block{
+	width: 1120px;
+	margin: 0px auto;
+	display: block;
+	clear: both;
+}
+
+.flex{
+	display: flex;
+}
+
+.half{
+	width: calc(50% - 10px);
+	float: left;
+}
+
+.col{
+	width: calc(12.5% - 5px);
+	float:left;
+	margin-right: 5px;
+}
+
+.bg__grey{
+	background: #f0f0f0;
+}
+
+.col:first-child{
+	width: calc(25% - 5px);
+}
+
+.col:last-child{
+	margin-right: 0px;
+}
+.col a{
+	line-height: 48px;
+	text-decoration: none;
+}
+.col a img{
+	width: 48px;
+	float:left;
+	margin-right: 5px;
+}
+
+.block::after{
+	content: ' ';
+	width: 100%;
+	display: table;
+	clear: both;
+}
+
+.p__10{ padding: 10px; }
+.pt__10{ padding-top: 10px; }
+.pb__10{ padding-bottom: 10px; }
+.pr__10{ padding-right: 10px; }
+.pl__10{ padding-left: 10px; }
+
+.mt__10{ margin-top: 10px; }
+.mb__10{ margin-bottom: 5px; }
+.mr__10{ margin-right: 10px; }
+.ml__10{ margin-left: 10px; }
+
+
+.color__white{
+	color: #fff;
+}
+.inline{
+	list-style: none;
+	display: inline-block;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+ul li{
+	padding:0px 5px;
+}
+
+ul li a{
+	color: #cdcdcd;
+	font-weight: bold;
+}
+
+.ta__right{  text-align: right; }
+.ta__left{  text-align: left; }
+.ta__center{  text-align: center; }
+
+.filter-header label{
+	font-weight: bold;
+	font-size: 14px;
+}
+.year{
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px solid #343434;
+}
+
+.header .col{
+	vertical-align: middle;
+	position: relative;
+	font-size: 13px;
+	line-height: 48px;
+	font-weight: bold;
+}
+
+.header .col:last-child{
+	line-height: 24px;
+}
+
+.row .col span p{
+	line-height: 48px;
+}
+
+.row .category-item:first-child{
+	background: #f63;
+}
+
+.row .category-item:first-child img{
+	background: #fff;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.animate-width{
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 500ms; /* Safari */
+    -webkit-transition-delay: 500ms; /* Safari */
+    transition-property: width;
+    transition-duration: 500ms;
+    transition-delay: 500ms;
+}
+
+.infographic-data-wrapper .col span p{
+	text-indent:15px;
+	width:0%;
+	background: #33cccc;
+	color:#222;
+}
