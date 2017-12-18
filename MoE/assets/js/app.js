@@ -173,12 +173,12 @@ $(document).ready(function(){
 		var _wEmployees = field.employees / config.max_employees * 100; 
 
 		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__white"><img src="assets/img/'+ field.logodesktop + '"/>'+field.name+'</a></span>';
-		_elTraffic.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTraffics+'">'+field.traffics+'</p></span>';
-		_elApps.innerHTML 		= '<span><p class="animate-width" data-width="'+_wApp+'">'+field.app+'</p></span>';
-		_elTwitter.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTwitter+'">'+field.twitter+'</p></span>';
-		_elInstagram.innerHTML 		= '<span><p class="animate-width" data-width="'+_wInstagram+'">'+field.instagram+'</p></span>';
-		_elFacebook.innerHTML 		= '<span><p class="animate-width" data-width="'+_wFacebook+'">'+field.facebook+'</p></span>';
-		_elEmployee.innerHTML 		= '<span><p class="animate-width" data-width="'+_wEmployees+'">'+field.employees+'</p></span>';
+		_elTraffic.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTraffics+'">'+field.traffics.toLocaleString()+'</p></span>';
+		_elApps.innerHTML 		= '<span><p class="animate-width" data-width="'+_wApp+'">'+field.app.toLocaleString()+'</p></span>';
+		_elTwitter.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTwitter+'">'+field.twitter.toLocaleString()+'</p></span>';
+		_elInstagram.innerHTML 		= '<span><p class="animate-width" data-width="'+_wInstagram+'">'+field.instagram.toLocaleString()+'</p></span>';
+		_elFacebook.innerHTML 		= '<span><p class="animate-width" data-width="'+_wFacebook+'">'+parseInt(field.facebook).toLocaleString()+'</p></span>';
+		_elEmployee.innerHTML 		= '<span><p class="animate-width" data-width="'+_wEmployees+'">'+field.employees.toLocaleString()+'</p></span>';
 
 		_elwrapper.appendChild(_elStore);
 		_elwrapper.appendChild(_elTraffic);
