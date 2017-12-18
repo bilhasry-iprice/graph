@@ -172,7 +172,7 @@ $(document).ready(function(){
 		var _wFacebook = field.facebook / config.max_facebook * 100; 
 		var _wEmployees = field.employees / config.max_employees * 100; 
 
-		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__white"><img src="assets/img/'+ field.logodesktop + '"/>'+field.name+'</a></span>';
+		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__white" target="_blank" rel="noopener"><img src="assets/img/'+ field.logodesktop + '"/>'+field.name+'</a></span>';
 		_elTraffic.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTraffics+'">'+field.traffics.toLocaleString()+'</p></span>';
 		_elApps.innerHTML 		= '<span><p class="animate-width" data-width="'+_wApp+'">'+field.app.toLocaleString()+'</p></span>';
 		_elTwitter.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTwitter+'">'+field.twitter.toLocaleString()+'</p></span>';
