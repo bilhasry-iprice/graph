@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-	setTimeout(function(){
-		$('.loader-overlay').hide();
-	}, 2000);
-
 	var data_list 	= new Array();
 	var data 		= document.getElementById('data');
 	var up 			= true;
