@@ -160,3 +160,9 @@ ul li a{
 	background: #33cccc;
 	color:#222;
 }
+@media screen and (max-width:768px){
+	.half{
+		width: 100%;
+		margin-right: 0px;
+	}
+}
