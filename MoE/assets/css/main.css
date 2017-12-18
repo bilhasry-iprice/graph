@@ -247,4 +247,31 @@ div#data {
 		margin-right: 0px;
 		text-align: left;
 	}
+
+	.infographic-header.fixed {
+	    position: relative;
+	}
+
+	.filter-header.flex {
+	    position: fixed;
+	    top: 0px;
+	    height: 90px;
+	}
+
+	.header.block.mb__10 {
+	    padding-top: 90px;
+	}
+
+	div#data {
+	    padding-top: 0px;
+	}
+
+	.category-item:first-child, .col:first-child{
+	    position: fixed;
+	    left: 0px;
+	}
+
+	.category-item:nth-child(2), .col:nth-child(2){
+	    margin-left:25%;
+	}
 }
