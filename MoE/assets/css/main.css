@@ -258,6 +258,7 @@ div#data {
 	    left:0px;
 	    height: 110px;
 	    z-index:2;
+	    background: #fff;
 	}
 
 	.header.block.mb__10 {
