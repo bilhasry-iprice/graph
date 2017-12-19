@@ -6,6 +6,53 @@ $(document).ready(function(){
 	var config 		= '';
 	var filter 		= new Array();
 	var filterList	= new Array();
+	var dx			= 0;
+	var dy			= 0;
+	var curX		= 0;
+	var curY		= 0;
+	var pos 		= 0;
+
+	var container = document.getElementById('infographic-content');
+	if( $(window).width() < 768){
+		container.style.width = $(window).width() + 'px';	
+	}
+	
+
+	$(container).scroll(function(){
+
+		
+		var x = container.scrollLeft;
+		var y = container.scrollTop;
+
+		$('.sort-by').each(function(i){
+			if (i === 0) {
+				this.style.transform = translate(x, y);
+			}
+			else{
+				this.style.transform = translate(0, y);	
+			}
+		});
+
+		$('.category-item:first-child').each(function(){
+			this.style.transform = translate(x, 0);
+		});
+		// leftHeaders.forEach(function (leftHeader) {
+		// 	leftHeader.style.transform = translate(x, 0);
+		// });
+		// topHeaders.forEach(function (topHeader, i) {
+		// 	if (i === 0) {
+		// 		topHeader.style.transform = translate(x, y);
+		// 	} else {
+		// 		topHeader.style.transform = translate(0, y);
+		// 	}
+		// });
+		// topLeft.style.transform = translate(x, y);
+
+	});
+
+	function translate(x, y) {
+		return 'translate(' + x + 'px, ' + y + 'px)';
+	}
 
 	$.getJSON('data.json', function(result){
 		config = result.config;
@@ -172,13 +219,13 @@ $(document).ready(function(){
 		var _wFacebook = field.facebook / config.max_facebook * 100; 
 		var _wEmployees = field.employees / config.max_employees * 100; 
 
-		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__white" target="_blank" rel="noopener"><img src="assets/img/'+ field.logodesktop + '"/>'+field.name+'</a></span>';
+		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__black" target="_blank" rel="noopener"><img src="assets/img/'+ field.logodesktop + '"/>'+field.name+'</a></span>';
 		_elTraffic.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTraffics+'">'+field.traffics.toLocaleString()+'</p></span>';
-		_elApps.innerHTML 		= '<span><p class="animate-width" data-width="'+_wApp+'">'+field.app.toLocaleString()+'</p></span>';
-		_elTwitter.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTwitter+'">'+field.twitter.toLocaleString()+'</p></span>';
-		_elInstagram.innerHTML 		= '<span><p class="animate-width" data-width="'+_wInstagram+'">'+field.instagram.toLocaleString()+'</p></span>';
-		_elFacebook.innerHTML 		= '<span><p class="animate-width" data-width="'+_wFacebook+'">'+parseInt(field.facebook).toLocaleString()+'</p></span>';
-		_elEmployee.innerHTML 		= '<span><p class="animate-width" data-width="'+_wEmployees+'">'+field.employees.toLocaleString()+'</p></span>';
+		_elApps.innerHTML 		= '<span><p class="animate-width" data-width="'+_wApp+'">'+  (field.app == 0 ? 'n/a' : field.app.toLocaleString()) +'</p></span>';
+		_elTwitter.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTwitter+'">'+ (field.twitter == 0 ? 'n/a' : field.twitter.toLocaleString()) +'</p></span>';
+		_elInstagram.innerHTML 		= '<span><p class="animate-width" data-width="'+_wInstagram+'">'+ (field.instagram == 0 ? 'n/a' : field.instagram.toLocaleString()) +'</p></span>';
+		_elFacebook.innerHTML 		= '<span><p class="animate-width" data-width="'+_wFacebook+'">'+ (field.facebook == 0 ? 'n/a' : field.facebook.toLocaleString()) +'</p></span>';
+		_elEmployee.innerHTML 		= '<span><p class="animate-width" data-width="'+_wEmployees+'">'+ (field.employees == 0 ? 'n/a' : field.employees.toLocaleString()) +'</p></span>';
 
 		_elwrapper.appendChild(_elStore);
 		_elwrapper.appendChild(_elTraffic);
