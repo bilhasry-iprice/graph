@@ -244,6 +244,20 @@ div#data {
 	counter-reset: my-badass-counter;
 }
 @media screen and (max-width:768px){
+	span.col.ta__center.sort-by.active {
+		padding: 6px 21px 6px 6px;
+		min-height: 48px;
+	}
+	span.col.ta__center.sort-by.active:before{
+	    width: 18px;
+	    height: 18px;
+	    background-size: 100%;
+	}
+
+	.col.active{
+		line-height: 21px;
+		text-decoration: none;
+	}
 	.m__hide{
 		display:none;
 	}
@@ -255,7 +269,7 @@ div#data {
 	}
 
 	.category-item{
-		font-size: 12px;
+		font-size: 10px;
 	}
 	#infographic-content{
 		width: 100%;

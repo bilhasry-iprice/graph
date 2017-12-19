@@ -20,7 +20,6 @@ $(document).ready(function(){
 
 	$(container).scroll(function(){
 
-		
 		var x = container.scrollLeft;
 		var y = container.scrollTop;
 
@@ -36,18 +35,6 @@ $(document).ready(function(){
 		$('.category-item:first-child').each(function(){
 			this.style.transform = translate(x, 0);
 		});
-		// leftHeaders.forEach(function (leftHeader) {
-		// 	leftHeader.style.transform = translate(x, 0);
-		// });
-		// topHeaders.forEach(function (topHeader, i) {
-		// 	if (i === 0) {
-		// 		topHeader.style.transform = translate(x, y);
-		// 	} else {
-		// 		topHeader.style.transform = translate(0, y);
-		// 	}
-		// });
-		// topLeft.style.transform = translate(x, y);
-
 	});
 
 	function translate(x, y) {
@@ -160,6 +147,7 @@ $(document).ready(function(){
 		
 		if( _el !== undefined){
 			
+
 			data_list = bubbleSort( data_list, _el, up);
 
 			data.innerHTML = '';
@@ -219,7 +207,7 @@ $(document).ready(function(){
 		var _wFacebook = field.facebook / config.max_facebook * 100; 
 		var _wEmployees = field.employees / config.max_employees * 100; 
 
-		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__black" target="_blank" rel="noopener"><img src="assets/img/'+ field.logodesktop + '"/>'+field.name+'</a></span>';
+		_elStore.innerHTML 	= '<span><a href="' + field.url + '" class="color__black" target="_blank" rel="noopener"><img src="assets/img/'+ field.logodesktop + '"/><label>'+field.name+'</label></a></span>';
 		_elTraffic.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTraffics+'">'+field.traffics.toLocaleString()+'</p></span>';
 		_elApps.innerHTML 		= '<span><p class="animate-width" data-width="'+_wApp+'">'+  (field.app == 0 ? 'n/a' : field.app.toLocaleString()) +'</p></span>';
 		_elTwitter.innerHTML 		= '<span><p class="animate-width" data-width="'+_wTwitter+'">'+ (field.twitter == 0 ? 'n/a' : field.twitter.toLocaleString()) +'</p></span>';
