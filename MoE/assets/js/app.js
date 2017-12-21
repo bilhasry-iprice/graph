@@ -6,15 +6,17 @@ $(document).ready(function(){
 	var config 		= '';
 	var filter 		= new Array();
 	var filterList	= new Array();
-	var dx			= 0;
-	var dy			= 0;
-	var curX		= 0;
-	var curY		= 0;
-	var pos 		= 0;
+	
 
-	var container = document.getElementById('infographic-content');
+	var container = document.getElementById('container');
 	if( $(window).width() < 768){
 		container.style.width = $(window).width() + 'px';	
+		var topLeft = document.createElement('div');
+		console.log($('.sort-by:first-child').width());
+		container.appendChild(topLeft);
+		topLeft.classList.add('top-left');
+		topLeft.style.width = $('.sort-by:first-child').width() +'px';
+		topLeft.style.height = $('.sort-by:first-child').height() +'px';
 	}
 	
 
@@ -22,6 +24,8 @@ $(document).ready(function(){
 
 		var x = container.scrollLeft;
 		var y = container.scrollTop;
+
+		;
 
 		$('.sort-by').each(function(i){
 			if (i === 0) {
@@ -46,8 +50,14 @@ $(document).ready(function(){
         $.each(result.data, function(i, field){
         	
         	data_list.push(field);
-    		processData(i, field, config);
+    		
         });
+
+        data_list = bubbleSort( data_list, 'traffics', true);
+
+		for(i=0; i<data_list.length; ++i){
+			processData(i, data_list[i], config);
+		}
 
         animate();
     });
@@ -138,12 +148,6 @@ $(document).ready(function(){
 		$('.active').removeClass('down');
 		
 		$(this).addClass(sort);
-
-		$('.loader-overlay').show();
-
-		setTimeout(function(){
-			$('.loader-overlay').hide();
-		}, 1000);
 		
 		if( _el !== undefined){
 			
@@ -196,7 +200,7 @@ $(document).ready(function(){
 			_elEmployee.setAttribute('class', 'category-item col bg__grey');
 
 		var _elwrapper = document.createElement('div');
-			_elwrapper.setAttribute('class', 'row block mb__10 '+ field.category + ' ' + field.location + ' ' + field.type);
+			_elwrapper.setAttribute('class', 'row mb__10 '+ field.category + ' ' + field.location + ' ' + field.type);
 			_elwrapper.setAttribute('data-order', i+1);
 			_elwrapper.setAttribute('data-key', field.key);
 
