@@ -376,7 +376,10 @@ div#data {
 	    height: 18px;
 	    background-size: 100%;
 	}
-
+	.category-item:first-child{
+	    min-width: 210px;
+	}
+		
 	.category-item span{
 		overflow:hidden;
 	}
