@@ -54,12 +54,62 @@ $(document).ready(function(){
     		
         });
 
-        var data = bubbleSort( data_list, 'traffics', true);
+        data_list = bubbleSort( data_list, 'traffics', true);
 
-        generateVList(data);
+        generateVList(data_list);
         animate();
         
     });
+
+	function Filter( filter ){
+
+		generateVList(data_list);
+		$('.row').css('display', 'none');	
+			
+				
+		filterList = [];
+		$('.row').each(function(){
+			
+			switch( filter.length ){
+				case 1 : if( $(this).hasClass(filter[0])){
+							$(this).css('display', 'block');
+						}
+					break;
+				case 2 : if( $(this).hasClass(filter[0]) && 
+							 $(this).hasClass(filter[1]) 
+							){
+						
+							$(this).css('display', 'block');
+						}
+					break;
+				case 3 : if( $(this).hasClass(filter[0]) && 
+							 $(this).hasClass(filter[1]) && 
+							 $(this).hasClass(filter[2])
+						   ){
+							$(this).css('display', 'block');
+						}
+					break;
+				default : $(this).css('display', 'block');
+					break;
+			}
+		});
+
+		animate();
+
+
+	}
+
+	$('.sort_by').on('change', function(){
+
+		filter 		= new Array();
+		$('.sort_by').each(function(){
+			if( $(this).val() != ''){
+				filter.push($(this).val());	
+			}
+		});
+
+		Filter(filter);
+	});
 
     $('.sort-by').on('click', function(e){
 		
@@ -133,7 +183,7 @@ $(document).ready(function(){
 		var obj = $('[class*="category-item"]');
 	    obj.each(function () {
 	      var w = $(this).find('p').attr('data-width');
-	      TweenMax.to($(this).find('p'), 1, { width: w+'%' }, 1);
+	      TweenMax.to($(this).find('p'), 0.5, { width: w+'%' }, 1);
 	    });
 		
 	}
@@ -210,7 +260,7 @@ $(document).ready(function(){
 	    }
 
 	    var _width = $(window).width();
-	    var itemH = 35, _h = 48; 
+	    var itemH = 35, _h = 52; 
 
 	    var list = new VirtualList({
 	      w: $('#data').width(),
