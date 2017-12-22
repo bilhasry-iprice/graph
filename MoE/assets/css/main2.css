@@ -269,7 +269,7 @@ div#data {
 
 .information label:last-child:before{
 	background: url('../img/iema.png') no-repeat center center;
-	background-size: 11px 17px;
+	background-size: 13px 16px;
 }
 .category-item.iema,
 .category-item.verified {
@@ -286,7 +286,7 @@ div#data {
     right: 4px;
     top: 16px;
     background: url(../img/iema.png) no-repeat center center;
-    background-size: 11px 16px;
+    background-size: 13px 16px;
 }
 .category-item.verified:after{
 	background: url(../img/verified.png) no-repeat center center;
