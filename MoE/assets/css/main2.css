@@ -332,6 +332,7 @@ div#data {
 		display: block;
 		float:left;
 		margin-right: 5px;
+		margin-bottom: 5px;		
 	}
 	.infographic-data-wrapper .header .col:first-child, #data .col:first-child{
 		width: calc(25% - 5px);
