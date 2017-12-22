@@ -59,7 +59,7 @@ $(document).ready(function(){
 		for(i=0; i<data_list.length; ++i){
 			processData(i, data_list[i], config);
 		}
-
+		
         animate();
     });
 
@@ -151,12 +151,11 @@ $(document).ready(function(){
 		$('.active').removeClass('down');
 		
 		$(this).addClass(sort);
-		
+		data.innerHTML = '';
 		if( _el !== undefined){
 			
 			data_list = bubbleSort( data_list, _el, up);
 
-			data.innerHTML = '';
 			for(i=0; i<data_list.length; ++i){
 				processData(i, data_list[i], config);
 			}
@@ -168,7 +167,6 @@ $(document).ready(function(){
 			this.style.transform = translate(x, 0);
 		});
 	});
-
 
 	function animate(){
 
@@ -238,6 +236,7 @@ $(document).ready(function(){
 		$(data).append(_elwrapper);
     }
 
+    
 
     function bubbleSort(arr, _el, up){
     	var len = arr.length;
