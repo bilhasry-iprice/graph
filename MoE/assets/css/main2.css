@@ -363,6 +363,11 @@ div#data {
 	}
 	.col {
 		border:3px solid #fff;
+		width:12.5%;
+	}
+
+	.col:first-child{
+		width: 25%;
 	}
 	.header .col:first-child{
 		z-index: 4;
@@ -379,7 +384,7 @@ div#data {
 	.category-item:first-child{
 	    min-width: 210px;
 	}
-		
+
 	.category-item span{
 		overflow:hidden;
 	}
