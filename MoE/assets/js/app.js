@@ -6,7 +6,8 @@ $(document).ready(function(){
 	var config 		= '';
 	var filter 		= new Array();
 	var filterList	= new Array();
-	
+	var x	= 0;
+	var y	= 0;	
 
 	var container = document.getElementById('container');
 	if( $(window).width() < 768){
@@ -22,8 +23,8 @@ $(document).ready(function(){
 
 	$(container).scroll(function(){
 
-		var x = container.scrollLeft;
-		var y = container.scrollTop;
+		x = container.scrollLeft;
+		y = container.scrollTop;
 
 		;
 
@@ -111,6 +112,9 @@ $(document).ready(function(){
 	}
 
 	$('.sort_by').on('change', function(){
+
+		
+
 		$('.animate-width').css('width', '0');
 		filter 		= new Array();
 		$('.sort_by').each(function(){
@@ -125,6 +129,7 @@ $(document).ready(function(){
 	});
 
 	$('.sort-by').on('click', function(e){
+		
 		var sort = 'up';
 		var _el = $(e.target).attr('data-attr');
 
@@ -158,6 +163,10 @@ $(document).ready(function(){
 
 			animate();
 		}
+
+		$('.category-item:first-child').each(function(){
+			this.style.transform = translate(x, 0);
+		});
 	});
 
 
