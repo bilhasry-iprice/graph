@@ -23,7 +23,7 @@
    "type": "b2c",
    "category": "general",
    "location": "international",
-   "verified": "",
+   "verified": true,
    "iema_winner": null
  },
  {

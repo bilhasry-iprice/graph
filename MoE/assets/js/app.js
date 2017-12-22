@@ -119,7 +119,6 @@ $(document).ready(function(){
 			}
 		});
 
-		console.log(filter);
 		$('.row').css('display', 'none');
 
 		Filter(filter);
@@ -127,6 +126,8 @@ $(document).ready(function(){
 
 	$('.sort-by').on('click', function(e){
 		var sort = 'up';
+		var _el = $(e.target).attr('data-attr');
+
 		if( $(e.target).hasClass('active')){
 			if( up ){
 				up = false;
@@ -136,12 +137,9 @@ $(document).ready(function(){
 				sort = 'up';
 			}
 		}
-		
-		var _el = $(e.target).attr('data-attr');
 
 		$('.active').removeClass('active');
 		
-
 		$(this).addClass('active');
 
 		$('.active').removeClass('up');
@@ -151,7 +149,6 @@ $(document).ready(function(){
 		
 		if( _el !== undefined){
 			
-
 			data_list = bubbleSort( data_list, _el, up);
 
 			data.innerHTML = '';
@@ -178,8 +175,11 @@ $(document).ready(function(){
 	}
 
     function processData(i, field, config){
+    	var iema = field.iema_winner ? 'iema' : '';
+    	var verified = field.verified ? 'verified' : '';
+
     	var _elStore = document.createElement('div');
-			_elStore.setAttribute('class', 'category-item col bg__grey');
+			_elStore.setAttribute('class', 'category-item col bg__grey ' + iema +' ' + verified);
 
 		var _elTraffic = document.createElement('div');
 			_elTraffic.setAttribute('class', 'category-item col bg__grey');
@@ -205,7 +205,7 @@ $(document).ready(function(){
 			_elwrapper.setAttribute('data-key', field.key);
 
 		var _wTraffics = field.traffics / parseInt(config.max_traffics) * 100; 
-		var _wApp = field.app / parseInt(config.max_app) * 100; 
+		var _wApp = 1 / field.app * 100 ; 
 		var _wTwitter = field.twitter / config.max_twitter * 100; 
 		var _wInstagram = field.instagram / config.max_instagram * 100; 
 		var _wFacebook = field.facebook / config.max_facebook * 100; 
@@ -230,31 +230,58 @@ $(document).ready(function(){
     }
 
 
-    function bubbleSort(arr, _el){
+    function bubbleSort(arr, _el, up){
     	var len = arr.length;
-    	if( up ){
-    		for (var i = len-1; i>=0; i--){
-	    		for(var j = 1; j<=i; j++){
+    	if( _el == 'app'){
+    		if( !up ){
+	    		for (var i = len-1; i>=0; i--){
+		    		for(var j = 1; j<=i; j++){
 
-	    			if(arr[j-1][_el]<arr[j][_el]){
-	    				var temp = arr[j-1];
-	    				arr[j-1] = arr[j];
-	    				arr[j] = temp;
-	    			}
-	    		}
+		    			if(arr[j-1][_el]<arr[j][_el]){
+		    				var temp = arr[j-1];
+		    				arr[j-1] = arr[j];
+		    				arr[j] = temp;
+		    			}
+		    		}
+		    	}
+	    	}else{
+	    		for (var i = len-1; i>=0; i--){
+		    		for(var j = 1; j<=i; j++){
+
+		    			if(arr[j-1][_el]>arr[j][_el]){
+		    				var temp = arr[j-1];
+		    				arr[j-1] = arr[j];
+		    				arr[j] = temp;
+		    			}
+		    		}
+		    	}
 	    	}
     	}else{
-    		for (var i = len-1; i>=0; i--){
-	    		for(var j = 1; j<=i; j++){
+    		if( up ){
+	    		for (var i = len-1; i>=0; i--){
+		    		for(var j = 1; j<=i; j++){
 
-	    			if(arr[j-1][_el]>arr[j][_el]){
-	    				var temp = arr[j-1];
-	    				arr[j-1] = arr[j];
-	    				arr[j] = temp;
-	    			}
-	    		}
+		    			if(arr[j-1][_el]<arr[j][_el]){
+		    				var temp = arr[j-1];
+		    				arr[j-1] = arr[j];
+		    				arr[j] = temp;
+		    			}
+		    		}
+		    	}
+	    	}else{
+	    		for (var i = len-1; i>=0; i--){
+		    		for(var j = 1; j<=i; j++){
+
+		    			if(arr[j-1][_el]>arr[j][_el]){
+		    				var temp = arr[j-1];
+		    				arr[j-1] = arr[j];
+		    				arr[j] = temp;
+		    			}
+		    		}
+		    	}
 	    	}
     	}
+    	
     	
     	return arr;
 }

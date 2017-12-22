@@ -246,14 +246,64 @@ div#data {
 	counter-reset: my-badass-counter;
 }
 
+.information label{
+	font-size: 11px;
+	padding: 0px 15px 0px 30px;
+	position: relative;
+	display:inline-block;
+}
+.information label:first-child{
+	border-right: 1px solid #343434;
+}
+.information label:before{
+	content:'';
+	width: 17px;
+	height:17px;
+	display: block;
+	position: absolute;
+	left:8px;
+	top: 0px;
+	background: url('../img/verified.png') no-repeat center center;
+	background-size: 16px 16px;
+}
+
+.information label:last-child:before{
+	background: url('../img/iema.png') no-repeat center center;
+	background-size: 11px 17px;
+}
+.category-item.iema,
+.category-item.verified {
+    position: relative;
+}
+
+.category-item.iema:after,
+.category-item.verified:after{
+    content: '';
+    position: absolute;
+    width:16px;
+    height:16px;
+    display: block;
+    right: 4px;
+    top: 16px;
+    background: url(../img/iema.png) no-repeat center center;
+    background-size: 11px 16px;
+}
+.category-item.verified:after{
+	background: url(../img/verified.png) no-repeat center center;
+    background-size: 16px 16px;
+}
 @media screen and (min-width:768px){
+	
+	.infographic-header{
+		height:70px;
+	}
 	#infographic-content{
 		max-width:1120px;
 		width: 100%;
 		display: block;
 	}
 	.infographic-data-wrapper{
-		padding-top: 40px;
+		padding-top: 70px;
 	}
 
 	.infographic-data-wrapper .header{
@@ -293,6 +343,20 @@ div#data {
 
 }
 @media screen and (max-width:768px){
+	.filter{
+		order:1;
+		border-bottom: 1px solid #efefef;
+		margin-bottom: 0px;
+	}
+	.information{
+		order:3;
+		padding: 5px;
+	}
+	.quartal.half{
+		order: 2;
+		border-bottom: 1px solid #efefef;
+		margin-bottom: 8px;
+	}
 	.header .col{
 		z-index: 3;
 
@@ -384,7 +448,5 @@ div#data {
 	.header.block.mb__10 {
 	    background: #fff;
 	}
-
-	
 
 }
