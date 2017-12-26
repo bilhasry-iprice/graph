@@ -288,6 +288,7 @@ div#data {
     background-size: 16px 16px;
 }
 @media screen and (min-width:768px){
+	.swipe-left{ display: none; }
 	
 	.infographic-header{
 		height:70px;
@@ -339,6 +340,32 @@ div#data {
 
 }
 @media screen and (max-width:768px){
+
+	.swipe-left{
+	    position: absolute;
+	    top: 25%;
+	    left: 0%;
+	    z-index: 99;
+	    width: 100%;
+	}
+
+	.swipe-wrapper{
+		background: rgba(0,0,0,0.7);
+	    padding: 20px;
+	    text-align: center;
+	    color: #fff;
+	    border-radius: 16px;
+	    font-size: 18px;
+	    line-height: 24px;
+	    width: 75%;
+	    display: block;
+	    margin: 0px auto;
+	}
+
+	.swipe-wrapper p{
+	    margin-top: 16px;
+	}
+
 	.filter{
 		order:1;
 		border-bottom: 1px solid #efefef;
