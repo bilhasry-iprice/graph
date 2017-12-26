@@ -11,6 +11,16 @@ $(document).ready(function(){
 
 	var container = document.getElementById('container');
 	if( $(window).width() < 768){
+		setTimeout(
+				function(){ 
+					$('.swipe-left').animate({
+						opacity : 0
+					}, 1000, function(){
+						$('.swipe-left').remove(); 	
+					}); 
+			}, 
+			2000
+		);
 		container.style.width = $(window).width() + 'px';	
 		var topLeft = document.createElement('div');
 		console.log($('.sort-by:first-child').width());
@@ -60,6 +70,7 @@ $(document).ready(function(){
         animate();
         
     });
+
 
 	function Filter( filter ){
 
@@ -115,27 +126,28 @@ $(document).ready(function(){
 		
 		var sort = 'up';
 		var _el = $(e.target).attr('data-attr');
-
-		if( $(e.target).hasClass('active')){
-			if( up ){
-				up = false;
-				sort = 'down';
-			}else{
-				up = true;
-				sort = 'up';
-			}
-		}
-
-		$('.active').removeClass('active');
-		
-		$(this).addClass('active');
-
-		$('.active').removeClass('up');
-		$('.active').removeClass('down');
-		
-		$(this).addClass(sort);
 		
 		if( _el !== undefined){
+			if( $(e.target).hasClass('active')){
+				if( up ){
+					up = false;
+					sort = 'down';
+				}else{
+					up = true;
+					sort = 'up';
+				}
+			}else{
+
+			}
+
+			$('.active').removeClass('active');
+			
+			$(this).addClass('active');
+
+			$('.active').removeClass('up');
+			$('.active').removeClass('down');
+			
+			$(this).addClass(sort);
 			
 			var arrSort = sortBy(data_list, up, _el);
 
