@@ -11,23 +11,23 @@ $(document).ready(function(){
 
 	var container = document.getElementById('container');
 	if( $(window).width() < 768){
-		setTimeout(
-				function(){ 
-					$('.swipe-left').animate({
-						opacity : 0
-					}, 1000, function(){
-						$('.swipe-left').remove(); 	
-					}); 
-			}, 
-			2000
-		);
 		container.style.width = $(window).width() + 'px';	
 		var topLeft = document.createElement('div');
-		console.log($('.sort-by:first-child').width());
+		
 		container.appendChild(topLeft);
 		topLeft.classList.add('top-left');
 		topLeft.style.width = $('.sort-by:first-child').width() +'px';
 		topLeft.style.height = $('.sort-by:first-child').height() +'px';
+
+		$('.swipe-left').click(function(){
+
+			$('.swipe-left').animate({
+				opacity : 0
+			}, 1000, function(){
+				$('.swipe-left').remove(); 	
+			}); 
+			
+		})
 	}
 	
 
@@ -126,7 +126,7 @@ $(document).ready(function(){
 		
 		var sort = 'up';
 		var _el = $(e.target).attr('data-attr');
-		
+
 		if( _el !== undefined){
 			if( $(e.target).hasClass('active')){
 				if( up ){
