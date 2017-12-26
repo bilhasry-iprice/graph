@@ -186,12 +186,7 @@ ul li a{
 
 
 .animate-width{
-	-webkit-transition-property: width;
-	-webkit-transition-duration: 500ms; /* Safari */
-    -webkit-transition-delay: 500ms; /* Safari */
-    transition-property: width;
-    transition-duration: 500ms;
-    transition-delay: 500ms;
+	
 }
 
 .infographic-data-wrapper .header{

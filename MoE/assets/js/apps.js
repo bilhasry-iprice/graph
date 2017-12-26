@@ -54,7 +54,7 @@ $(document).ready(function(){
     		
         });
 
-        data_list = bubbleSort( data_list, 'traffics', true);
+        data_list = sortBy( data_list, true, 'traffics');
 
         generateVList(data_list);
         animate();
@@ -137,9 +137,9 @@ $(document).ready(function(){
 		
 		if( _el !== undefined){
 			
-			data_list = bubbleSort( data_list, _el, up);
+			var arrSort = sortBy(data_list, up, _el);
 
-			generateVList(data_list);
+			generateVList(arrSort);
 			animate();			
 		}
 
@@ -148,112 +148,90 @@ $(document).ready(function(){
 		});
 	});
 
-	function bubbleSort(arr, _el, up){
-    	var len = arr.length;
-    	
-		if( up ){
-    		for (var i = len-1; i>=0; i--){
-	    		for(var j = 1; j<=i; j++){
+    function sortBy( arr, order, property){
+    	var arrSort = arr.slice(0);
+    	arrSort.sort(function(a,b) {
+    		if( property != 'app'){
+				if( ! order) {//ascending
+					return a[property] - b[property];
+				} else { // descending
+					return b[property] - a[property];
+				}
+			}else{
+				if( ! order) {//ascending
+					return b[property] - a[property];
+				} else { // descending
+					return a[property] - b[property];
+				}
+			}
+		});
 
-	    			if(arr[j-1][_el]<arr[j][_el]){
-	    				var temp = arr[j-1];
-	    				arr[j-1] = arr[j];
-	    				arr[j] = temp;
-	    			}
-	    		}
-	    	}
-    	}else{
-    		for (var i = len-1; i>=0; i--){
-	    		for(var j = 1; j<=i; j++){
-
-	    			if(arr[j-1][_el]>arr[j][_el]){
-	    				var temp = arr[j-1];
-	    				arr[j-1] = arr[j];
-	    				arr[j] = temp;
-	    			}
-	    		}
-	    	}
-    	}
-    	
-    	return arr;
-	}
+    	return arrSort;
+    }
+    
 
 	function animate(){
 
-		var obj = $('[class*="category-item"]');
+		var obj = $('.percent');
 	    obj.each(function () {
-	      var w = $(this).find('p').attr('data-width');
-	      TweenMax.to($(this).find('p'), 0.5, { width: w+'%' }, 1);
+	      var w = $(this).attr('data-width');
+	      TweenMax.to($(this), 0.5, { width: w+'%' }, 1);
 	    });
 		
 	}
-
-    function processData(i, field, config){
-    	var html = '';
-
-    	var iema 		= field.iema_winner ? 'iema' : '';
-    	var verified 	= field.verified ? 'verified' : '';
-
-		var _wTraffics 	= field.traffics / parseInt(config.max_traffics) * 100; 
-		var _wApp 		= field.app / parseInt(config.max_app) * 100; 
-		var _wTwitter 	= field.twitter / config.max_twitter * 100; 
-		var _wInstagram = field.instagram / config.max_instagram * 100; 
-		var _wFacebook 	= field.facebook / config.max_facebook * 100; 
-		var _wEmployees = field.employees / config.max_employees * 100; 
-
-
-    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '">';
-    	html += '<span><a href="' + field.url + '" class="color__black" target="_blank" rel="noopener">';
-    	html += '<img src="assets/img/'+ field.logodesktop + '"/><label>'+field.name+'</label></a></span>';
-    	html += '</div>'
-
-    	html += '<div class="category-item col bg__grey ">';
-    	html += '<span><p class="animate-width" data-width="'+_wTraffics+'">'+field.traffics.toLocaleString()+'</p></span>';
-    	html += '</div>';
-
-    	html += '<div class="category-item col bg__grey ">';
-    	html += '<span><p class="animate-width" data-width="'+_wApp+'">'+  (field.app == 0 ? 'n/a' : field.app.toLocaleString()) +'</p></span>';
-    	html += '</div>';
-
-    	html += '<div class="category-item col bg__grey ">';
-    	html += '<span><p class="animate-width" data-width="'+_wTwitter+'">'+ (field.twitter == 0 ? 'n/a' : field.twitter.toLocaleString()) +'</p></span>';
-    	html += '</div>';
-
-    	html += '<div class="category-item col bg__grey ">';
-    	html += '<span><p class="animate-width" data-width="'+_wInstagram+'">'+ (field.instagram == 0 ? 'n/a' : field.instagram.toLocaleString()) +'</p></span>';
-    	html += '</div>';
-
-    	html += '<div class="category-item col bg__grey ">';
-    	html += '<span><p class="animate-width" data-width="'+_wFacebook+'">'+ (field.facebook == 0 ? 'n/a' : field.facebook.toLocaleString()) +'</p></span>';
-    	html += '</div>';
-
-    	html += '<div class="category-item col bg__grey ">';
-    	html += '<span><p class="animate-width" data-width="'+_wEmployees+'">'+ (field.employees == 0 ? 'n/a' : field.employees.toLocaleString()) +'</p></span>';
-    	html += '</div>';
-
-    	return html;
-		
-    }
 
     function generateVList(data) {
 
 	    var bigAssList = [];
 
-	    var link = window.location.href;
-	    var urlImgs = 'imgs/';
-
-	    if(link.indexOf('/en') > 0) {
-	      urlImgs = '../imgs/';
-	    }
-
 	    for (var i = 0; i < data.length; i++) {
+	    	var html = '';
+
+	    	var iema 		= data[i].iema_winner ? 'iema' : '';
+	    	var verified 	= data[i].verified ? 'verified' : '';
+
+			var _wTraffics 	= data[i].traffics / parseInt(config.max_traffics) * 100; 
+			var _wApp 		= data[i].app / parseInt(config.max_app) * 100; 
+			var _wTwitter 	= data[i].twitter / config.max_twitter * 100; 
+			var _wInstagram = data[i].instagram / config.max_instagram * 100; 
+			var _wFacebook 	= data[i].facebook / config.max_facebook * 100; 
+			var _wEmployees = data[i].employees / config.max_employees * 100; 
+
+
+	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '">';
+	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="noopener">';
+	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/><label>'+data[i].name+'</label></a></span>';
+	    	html += '</div>'
+
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wTraffics+'">'+data[i].traffics.toLocaleString()+'</p></span>';
+	    	html += '</div>';
+
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 0 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
+	    	html += '</div>';
+
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wTwitter+'">'+ (data[i].twitter == 0 ? 'n/a' : data[i].twitter.toLocaleString()) +'</p></span>';
+	    	html += '</div>';
+
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wInstagram+'">'+ (data[i].instagram == 0 ? 'n/a' : data[i].instagram.toLocaleString()) +'</p></span>';
+	    	html += '</div>';
+
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wFacebook+'">'+ (data[i].facebook == 0 ? 'n/a' : data[i].facebook.toLocaleString()) +'</p></span>';
+	    	html += '</div>';
+
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span><p class="animate-width" data-width="'+_wEmployees+'">'+ (data[i].employees == 0 ? 'n/a' : data[i].employees.toLocaleString()) +'</p></span>';
+	    	html += '</div>';
 
 	    	var _el = document.createElement('div');
 			_el.setAttribute('class', 'row mb__10 '+ data[i].category + ' ' + data[i].location + ' ' + data[i].type);
 			_el.setAttribute('data-order', i+1);
 			_el.setAttribute('data-key', data[i].key);
 
-	    	html = processData(i, data[i], config);
 
 	    	_el.innerHTML = html;
 			bigAssList.push(_el);
