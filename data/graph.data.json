@@ -3,7 +3,7 @@
 		"labels" : ["Conversion Rate"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Conversion Rate", 2.53, 1.78, 2.61, 2.06, 2.94, 1.73]
+			[ "Conversion Rate", 0.90, 0.68, 1.00, 0.79, 1.13, 0.66]
         ],
         "type" : "horizontal-bar",
         "format" : "%"
@@ -12,7 +12,7 @@
 		"labels" : ["Average Order Value"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Average Order Value", 36.28, 41.99, 90.64, 53.73, 22.85, 56.38]
+			[ "Average Order Value", 36, 42, 91, 54, 23, 56]
         ],
         "type" : "horizontal-bar",
         "format" : "$"
@@ -64,8 +64,8 @@
 		"labels" : ["Desktop vs Mobile Conversion Rate"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Mobile", 2.17, 1.23, 1.53, 1.32, 2.31, 1.19],
-			[ "Desktop", 5.42, 3.35, 4.82, 3.11, 5.91, 3.22]
+			[ "Mobile", 1.4, 0.8, 1.0, 0.9, 1.5, 0.8],
+			[ "Desktop", 3.5, 2.2, 3.2, 2.0, 3.9, 2.1]
         ],
         "type" : "horizontal-bar",
         "format" : "%"
@@ -74,8 +74,8 @@
 		"labels" : ["Desktop vs Mobile Average Order Value"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Mobile", 35.01, 39.04, 81.67, 51.77, 22.56, 55.03],
-			[ "Desktop", 41.72, 46.91, 95.81, 54.15, 25.61, 59.02]
+			[ "Mobile", 35, 39, 82, 52, 23, 55],
+			[ "Desktop", 42, 47, 96, 54, 26, 59]
         ],
         "type" : "horizontal-bar",
         "format" : "%"
@@ -153,14 +153,15 @@
 	{
 		"labels" : ["Payment Options"],
 		"data"	 : [
-			["ID", 84, 58, 92, 42, 26, 8, 42],
-			["TH", 72, 60, 80, 50, 30, 46, 24],
-			["SG", 92, 72, 28, 10, 44, 4, 8],
-			["MY", 80, 92, 34, 10, 42, 10, 8],
-			["VN", 49, 60, 86, 80, 14, 46, 48],
-			["PH", 66, 86, 42, 34, 32, 16, 8]
+
+			["ID", 84, 94, 43, 8, 41],
+			["TH", 90, 81, 52, 46, 25],
+			["SG", 100, 38, 19, 4, 15],
+			["MY", 100, 50, 17, 10, 13],
+			["VN", 60, 88, 82, 47, 49],
+			["PH", 95, 65, 80, 20, 15]
 		],
-		"categories" : ["Credit Card","E-Payment", "Bank Transfer", "Cash On Delivery", "Virtual Wallet", "Offline Point-of-Sale", "Instalment"],
+		"categories" : ["Credit Card", "Bank Transfer", "Cash On Delivery", "Offline Point-of-Sale", "Instalment"],
 		"type" : "bar",
 		"format" : "%"
 	},
