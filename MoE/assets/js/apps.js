@@ -54,11 +54,11 @@ $(document).ready(function(){
 			$('.category-item:first-child').each(function(){
 				TweenMax.to($(this), 0.5, { width: '100px' }, 1);
 			});
+
 		}else{
 			$('.category-item:first-child label').each(function(){
 				this.style.width = 'calc(100% - 60px)';
 			});
-
 			TweenMax.to($('.sort-by:first-child'), 0.5, { width: '210px' }, 1);
 
 			$('.category-item:first-child').each(function(){
@@ -156,8 +156,8 @@ $(document).ready(function(){
 					sort = 'up';
 				}
 			}else{
-				up = false;
-				sort = 'down';
+				up = true;
+				sort = 'up';
 			}
 
 			$('.active').removeClass('active');
@@ -270,7 +270,7 @@ $(document).ready(function(){
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span><p class="animate-width" data-width="'+_wEmployees+'">'+ (data[i].employees == 0 ? 'n/a' : data[i].employees.toLocaleString()) +'</p></span>';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wEmployees+'">'+ (data[i].employees == 0 ? 'n/a' : data[i].employees.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
 	    	var _el = document.createElement('div');
