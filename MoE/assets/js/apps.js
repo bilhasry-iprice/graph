@@ -8,6 +8,7 @@ $(document).ready(function(){
 	var filterList	= new Array();
 	var x	= 0;
 	var y	= 0;	
+	var curr = '';
 
 	var container = document.getElementById('container');
 	if( $(window).width() < 768){
@@ -36,8 +37,6 @@ $(document).ready(function(){
 		x = container.scrollLeft;
 		y = container.scrollTop;
 
-		;
-
 		$('.sort-by').each(function(i){
 			if (i === 0) {
 				this.style.transform = translate(x, y);
@@ -46,6 +45,26 @@ $(document).ready(function(){
 				this.style.transform = translate(0, y);	
 			}
 		});
+
+		if( x > 0 ){
+			$('.category-item:first-child label').each(function(){
+				this.style.width = '0px';
+			});
+			TweenMax.to($('.sort-by:first-child'), 0.5, { width: '100px' }, 1);
+			$('.category-item:first-child').each(function(){
+				TweenMax.to($(this), 0.5, { width: '100px' }, 1);
+			});
+		}else{
+			$('.category-item:first-child label').each(function(){
+				this.style.width = 'calc(100% - 60px)';
+			});
+
+			TweenMax.to($('.sort-by:first-child'), 0.5, { width: '210px' }, 1);
+
+			$('.category-item:first-child').each(function(){
+				TweenMax.to($(this), 0.5, { width: '210px' }, 1);
+			});
+		}
 
 		$('.category-item:first-child').each(function(){
 			this.style.transform = translate(x, 0);
@@ -137,7 +156,8 @@ $(document).ready(function(){
 					sort = 'up';
 				}
 			}else{
-
+				up = false;
+				sort = 'down';
 			}
 
 			$('.active').removeClass('active');
@@ -240,7 +260,7 @@ $(document).ready(function(){
 	    	html += '</div>';
 
 	    	var _el = document.createElement('div');
-			_el.setAttribute('class', 'row mb__10 '+ data[i].category + ' ' + data[i].location + ' ' + data[i].type);
+			_el.setAttribute('class', 'row  '+ data[i].category + ' ' + data[i].location + ' ' + data[i].type);
 			_el.setAttribute('data-order', i+1);
 			_el.setAttribute('data-key', data[i].key);
 
