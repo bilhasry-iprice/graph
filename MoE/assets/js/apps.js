@@ -178,6 +178,18 @@ $(document).ready(function(){
 		$('.category-item:first-child').each(function(){
 			this.style.transform = translate(x, 0);
 		});
+
+		if( x > 0){
+			$('.sort-by:first-child').css( 'width', '100px');
+			$('.category-item:first-child').each(function(){
+				this.style.width = '100px';
+			});
+		}else{
+			$('.sort-by:first-child').css( 'width', '210px');
+			$('.category-item:first-child').each(function(){
+				this.style.width = '210px';
+			});
+		}
 	});
 
     function sortBy( arr, order, property){

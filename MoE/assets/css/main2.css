@@ -445,7 +445,7 @@ div#data {
 	}
 	span.col.ta__center.sort-by.active {
 		padding: 6px 21px 6px 6px;
-		min-height: 48px;
+		min-height: 54px;
 	}
 	
 	.category-item:first-child{
@@ -472,7 +472,7 @@ div#data {
 	}
 
 	.col.active{
-		line-height: 21px;
+		line-height: 36px;
 		text-decoration: none;
 	}
 
