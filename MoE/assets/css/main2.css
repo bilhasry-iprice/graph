@@ -422,7 +422,15 @@ div#data {
 	}
 	.header .col{
 		z-index: 3;
+	}
+	.header .col{
+		min-height:54px;
+		padding: 0px 10px;
+	}
 
+	.header .col:nth-child(2){
+		line-height:18px;
+		padding-top:6px;
 	}
 	.col {
 		border:3px solid #fff;
