@@ -304,22 +304,23 @@ div#data {
 }
 .sort-by.col:nth-child(2),
 .sort-by.col:nth-child(3) {
-    background: rgba(255,102,51,0.3);
+    background: #f7af97;
 }
+
 .category-item.col:nth-child(2),
 .category-item.col:nth-child(3) {
-    background: rgba(255,102,51,0.1);
+    background: #eed9d2;
 }
 .sort-by.col:nth-child(4),
 .sort-by.col:nth-child(5),
 .sort-by.col.col:nth-child(6) {
-    background: rgba(51,204,204,0.3);
+    background: #9de5e5;
 }
 
 .category-item.col:nth-child(4),
 .category-item.col:nth-child(5),
 .category-item.col:nth-child(6) {
-    background: rgba(51,204,204,0.1)
+    background: #dae8e8;
 }
 
 .category-item.col:nth-child(7) {
