@@ -175,20 +175,22 @@ $(document).ready(function(){
 			animate();			
 		}
 
-		$('.category-item:first-child').each(function(){
-			this.style.transform = translate(x, 0);
-		});
-
-		if( x > 0){
-			$('.sort-by:first-child').css( 'width', '100px');
+		// execute only for mobile
+		if( $(window).width() < 768){
 			$('.category-item:first-child').each(function(){
-				this.style.width = '100px';
+				this.style.transform = translate(x, 0);
 			});
-		}else{
-			$('.sort-by:first-child').css( 'width', '210px');
-			$('.category-item:first-child').each(function(){
-				this.style.width = '210px';
-			});
+			if( x > 0){
+				$('.sort-by:first-child').css( 'width', '100px');
+				$('.category-item:first-child').each(function(){
+					this.style.width = '100px';
+				});
+			}else{
+				$('.sort-by:first-child').css( 'width', '210px');
+				$('.category-item:first-child').each(function(){
+					this.style.width = '210px';
+				});
+			}
 		}
 	});
 
