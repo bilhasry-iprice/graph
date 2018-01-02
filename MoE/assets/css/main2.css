@@ -242,7 +242,7 @@ ul li a{
     counter-increment: my-badass-counter;
     position: absolute;
     left:0px;
-    line-height: 48px;
+    line-height: 54px;
     width: 23px;
     text-align:right;
     color: #343434;
@@ -447,11 +447,7 @@ div#data {
 		padding: 6px 21px 6px 6px;
 		min-height: 48px;
 	}
-	span.col.ta__center.sort-by.active:before{
-	    width: 18px;
-	    height: 18px;
-	    background-size: 100%;
-	}
+	
 	.category-item:first-child{
 	    width: 210px;
 	}
