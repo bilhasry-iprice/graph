@@ -461,9 +461,6 @@ div#data {
 	    display:block;
 	    height:48px;
 	    overflow:hidden;
-	    -webkit-transition: all linear 250ms;
-	    -mox-transition: all linear 250ms;
-	    transition: all linear 250ms;
 	}
 
 	.category-item span{
