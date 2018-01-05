@@ -15,7 +15,7 @@ function barChart( _id, _values, format, cat){
 	    	height: 600
 	    },
 	    color: {
-	        pattern: ['#33CCCC', '#FF6633', '#91B496', '#86E2D5', '#EC644B', '#FABE58', ]
+	        pattern: ['#11C1EA', '#0FACD1', '#0D97B7', '#0B829E', '#086A87', '#08586B']
 	    },
 	    axis: {
         	x: {
@@ -106,7 +106,7 @@ function horizontalChart( _id, _values, format){
 	    	height: 450
 	    },
 	    color: {
-	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290']
+	        pattern: ['#11C1EA', '#0FACD1', '#0D97B7', '#0B829E', '#086A87', '#08586B']
 	    },
 	    axis : {
 	    	rotated: true,
