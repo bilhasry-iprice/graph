@@ -30,7 +30,7 @@ $(document).ready(function(){
 		if( y > 10 ){
 			$('.swipe-left').animate({
 				opacity : 0
-			}, 2000, function(){
+			}, 1000, function(){
 				$('.swipe-left').remove(); 	
 			}); 
 		}
