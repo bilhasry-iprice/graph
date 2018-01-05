@@ -24,7 +24,6 @@ function barChart( _id, _values, format, cat){
 	        },
 	        y : {
 	        	tick: {
-	                
 					format: function (d) { 
 						if( format == '%'){
 							return d + " "+format; 	
@@ -113,7 +112,7 @@ function horizontalChart( _id, _values, format){
 	    	rotated: true,
 	    	y : {
             tick: {
-	                
+	                count : 4,
 					format: function (d) { 
 						if( format == '%'){
 							return d + " "+format; 	
