@@ -112,7 +112,6 @@ function horizontalChart( _id, _values, format){
 	    	rotated: true,
 	    	y : {
             tick: {
-	                count : 4,
 					format: function (d) { 
 						if( format == '%'){
 							return d + " "+format; 	
