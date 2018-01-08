@@ -138,17 +138,17 @@ ul li a{
 	vertical-align: middle;
 	position: relative;
 	font-size: 12px;
-	line-height: 48px;
+	line-height: 42px;
 	font-weight: bold;
-	min-height:54px;
+	min-height:42px;
 }
 
-.header .col:first-child{
+.header .col{
 	background: #9a9a9a;
 }
 .header .col:last-child{
 	padding-top:6px;
-	line-height: 18px;
+	line-height: 16px;
 	
 }
 .header .col:nth-child(n+2):before,
@@ -158,7 +158,7 @@ ul li a{
 	height:8px;
 	-webkit-filter: brightness(100);
 	background:url('../img/up-down.png') no-repeat;
-	background-size:16px auto;
+	background-size:14px auto;
 	display:block;
 	overflow:hidden;
 	position:absolute;
@@ -166,12 +166,12 @@ ul li a{
 	
 }
 .header .col:before{
-	top:15px;
+	top: 10px;
 	right:5px;
-	background-position:-2px 0px !important;
+	background-position:-2px 2px !important;
 }
 .header .col:after{
-	bottom:15px;
+	bottom: 10px;
 	right:5px;
 	background-position:-2px -8px !important;
 }
@@ -301,10 +301,6 @@ div#data {
 }
 
 .header .col{ color: #fff; }
-.header .col:nth-child(2),
-.header .col:nth-child(3){
-	background: #086A87;
-}
 
 .category-item.col:nth-child(4) span p,
 .category-item.col:nth-child(5) span p,
@@ -312,19 +308,9 @@ div#data {
     background: #f63;
 }
 
-.header .col:nth-child(4),
-.header .col:nth-child(5),
-.header .col:nth-child(6){
-	background: #99381F;
-}
-
 
 .category-item.col:nth-child(7) span p{
     background: #33cccc;
-}
-
-.header .col:nth-child(7){
-	background: #1B6664;
 }
 
 .header > span.col.sort-by.active {
@@ -342,7 +328,7 @@ div#data {
 		height:70px;
 	}
 	#infographic-content{
-		max-width:1024px;
+		max-width:1120px;
 		width: 100%;
 		display: block;
 	}
@@ -361,7 +347,7 @@ div#data {
 		padding: 0px 10px;
 	}
 	#data{
-		margin-top:53px;
+		margin-top: 45px;
 		display: block;
 		width: 100%;
 		max-width: 1120px;
@@ -379,7 +365,7 @@ div#data {
 		display: block;
 		float:left;
 		margin-right: 5px;
-		margin-bottom: 5px;		
+		margin-bottom: 5px;
 	}
 	.infographic-data-wrapper .header .col:first-child, #data .col:first-child{
 		width: calc(25% - 5px);
@@ -436,7 +422,7 @@ div#data {
 		z-index: 3;
 	}
 	.header .col{
-		min-height:54px;
+		min-height:42px;
 		line-height:36px;
 	}
 
