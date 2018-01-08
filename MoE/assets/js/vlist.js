@@ -136,6 +136,7 @@ VirtualList.createContainer = function(w, h) {
   c.style.overflow = 'visible';
   c.style.position = 'relative';
   c.style.padding = 0;
+  c.setAttribute('class', 'row-wrapper');
   return c;
 };
 

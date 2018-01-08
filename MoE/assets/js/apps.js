@@ -1,15 +1,17 @@
 $(document).ready(function(){
 
 	var data_list 	= new Array();
+	var filename	= 'q1-2017.json';
 	var data 		= document.getElementById('data');
 	var up 			= true;
 	var config 		= '';
 	var filter 		= new Array();
 	var filterList	= new Array();
+	var year = 2017;
 	var x	= 0;
 	var y	= 0;	
 	var curr = '';
-
+	var list = '';
 	var container = document.getElementById('container');
 	if( $(window).width() < 768){
 		container.style.width = $(window).width() + 'px';	
@@ -34,6 +36,7 @@ $(document).ready(function(){
 				$('.swipe-left').remove(); 	
 			}); 
 		}
+
 		$('.sort-by').each(function(i){
 			if (i === 0) {
 				this.style.transform = translate(x, y);
@@ -72,7 +75,26 @@ $(document).ready(function(){
 		return 'translate(' + x + 'px, ' + y + 'px)';
 	}
 
-	$.getJSON('data.json', function(result){
+	$('.q-button').click(function(e){
+		var q = $(e.currentTarget).attr('data-attr');
+		var filename = q + '-' + year + '.json';
+		data_list = new Array();
+		$.getJSON('data/'+filename, function(result){
+			config = result.config;
+	        $.each(result.data, function(i, field){
+	        	
+	        	data_list.push(field);
+	    		
+	        });
+
+	        data_list = sortBy( data_list, true, 'traffics');
+
+	        generateVList(data_list);
+	        animate();
+	        
+	    });
+	});
+	$.getJSON('data/'+filename, function(result){
 		config = result.config;
         $.each(result.data, function(i, field){
         	
@@ -247,7 +269,7 @@ $(document).ready(function(){
 
 	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '">';
 	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="noopener">';
-	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/><label>'+data[i].name+'</label></a></span>';
+	    	html += '<label>'+data[i].name+'</label></a></span>';
 	    	html += '</div>'
 
 	    	html += '<div class="category-item col bg__grey ">';
@@ -287,7 +309,7 @@ $(document).ready(function(){
 	    var _width = $(window).width();
 	    var itemH = 35, _h = 52; 
 
-	    var list = new VirtualList({
+	    list = new VirtualList({
 	      w: $('#data').width(),
 	      h: _h * data.length,
 	      items: bigAssList,
