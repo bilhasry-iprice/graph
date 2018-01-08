@@ -12,10 +12,10 @@ function barChart( _id, _values, format, cat){
 	        type: 'bar'
 	    },
 	    size:{
-	    	height: 600
+	    	height: 550
 	    },
 	    color: {
-	        pattern: ['#11C1EA', '#0FACD1', '#0D97B7', '#0B829E', '#086A87', '#08586B']
+	        pattern: ['#11C1EA', '#FF6633', '#33CCCC', '#0D97B7', '#0D97B7', '#289996']
 	    },
 	    axis: {
         	x: {
