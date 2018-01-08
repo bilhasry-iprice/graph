@@ -143,16 +143,20 @@ ul li a{
 	min-height:54px;
 }
 
+.header .col:first-child{
+	background: #9a9a9a;
+}
 .header .col:last-child{
 	padding-top:6px;
 	line-height: 18px;
-	background: #cdcdcd;
+	
 }
 .header .col:nth-child(n+2):before,
 .header .col:nth-child(n+2):after{
 	content: ' ';
 	width:12px;
 	height:8px;
+	-webkit-filter: brightness(100);
 	background:url('../img/up-down.png') no-repeat;
 	background-size:16px auto;
 	display:block;
@@ -189,11 +193,6 @@ ul li a{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-
-.animate-width{
-	
 }
 
 .infographic-data-wrapper .header{
@@ -273,6 +272,8 @@ div#data {
 	background: url('../img/iema.png') no-repeat center center;
 	background-size: 13px 16px;
 }
+
+
 .category-item.iema,
 .category-item.verified {
     position: relative;
@@ -294,29 +295,36 @@ div#data {
 	background: url(../img/verified.png) no-repeat center center;
     background-size: 16px 16px;
 }
-.sort-by.col:nth-child(2),
-.sort-by.col:nth-child(3) {
-    background: #F5F1E3;
+.category-item.col:nth-child(2) span p,
+.category-item.col:nth-child(3) span p {
+    background: #11C1EA;
 }
 
-.category-item.col:nth-child(2),
-.category-item.col:nth-child(3) {
-    background: #F5F1E3;
-}
-.sort-by.col:nth-child(4),
-.sort-by.col:nth-child(5),
-.sort-by.col.col:nth-child(6) {
-    background: #E8E9EB;
+.header .col{ color: #fff; }
+.header .col:nth-child(2),
+.header .col:nth-child(3){
+	background: #086A87;
 }
 
-.category-item.col:nth-child(4),
-.category-item.col:nth-child(5),
-.category-item.col:nth-child(6) {
-    background: #E8E9EB;
+.category-item.col:nth-child(4) span p,
+.category-item.col:nth-child(5) span p,
+.category-item.col:nth-child(6) span p {
+    background: #f63;
 }
 
-.category-item.col:nth-child(7), .header .col:nth-child(7){
-    background: #f7f7f7;
+.header .col:nth-child(4),
+.header .col:nth-child(5),
+.header .col:nth-child(6){
+	background: #99381F;
+}
+
+
+.category-item.col:nth-child(7) span p{
+    background: #33cccc;
+}
+
+.header .col:nth-child(7){
+	background: #1B6664;
 }
 
 .header > span.col.sort-by.active {
@@ -334,7 +342,7 @@ div#data {
 		height:70px;
 	}
 	#infographic-content{
-		max-width:1120px;
+		max-width:1024px;
 		width: 100%;
 		display: block;
 	}
