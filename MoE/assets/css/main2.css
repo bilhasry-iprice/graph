@@ -351,8 +351,12 @@ div#data {
 		display: block;
 		width: 100%;
 		max-width: 1105px;
+		padding-right:20px;
 	}
 
+	#container{
+		overflow-x: hidden;
+	}
 	#data .row{
 		width: 100%;
 		display: table;
