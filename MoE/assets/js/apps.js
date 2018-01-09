@@ -22,7 +22,7 @@ $(document).ready(function(){
 		topLeft.style.width = $('.sort-by:first-child').width() +'px';
 		topLeft.style.height = $('.sort-by:first-child').height() +'px';
 
-
+		
 	}
 	
 	$('.iema-awards').click(function(e){
@@ -321,7 +321,7 @@ $(document).ready(function(){
 	    var itemH = 35, _h = 52; 
 
 	    list = new VirtualList({
-	      w: $('#data').width()+20,
+	      w: $('#data').width(),
 	      h: _h * data.length,
 	      items: bigAssList,
 	      itemHeight: itemH,
