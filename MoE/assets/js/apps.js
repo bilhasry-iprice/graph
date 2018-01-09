@@ -22,13 +22,14 @@ $(document).ready(function(){
 		topLeft.style.width = $('.sort-by:first-child').width() +'px';
 		topLeft.style.height = $('.sort-by:first-child').height() +'px';
 
-		$('.iema-awards').click(function(e){
-			e.preventDefault();
-
-			window.parent.scrollTo(0,900);
-		})
+		
 	}
 	
+	$('.iema-awards').click(function(e){
+		e.preventDefault();
+		console.log('0');
+		window.parent.scrollTo(0,900);
+	});
 	$(container).scroll(function(){
 
 		x = container.scrollLeft;
