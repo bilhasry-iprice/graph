@@ -106,7 +106,7 @@ function horizontalChart( _id, _values, format){
 	    	height: 450
 	    },
 	    color: {
-	        pattern: ['#11C1EA', '#0FACD1', '#0D97B7', '#0B829E', '#086A87', '#08586B']
+	        pattern: ['#11C1EA', '#FF6633', '#0D97B7', '#0B829E', '#086A87', '#08586B']
 	    },
 	    axis : {
 	    	rotated: true,

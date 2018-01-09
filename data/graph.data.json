@@ -18,10 +18,10 @@
         "format" : "$"
 	},
 	{
-		"labels" : ["GDP Per Capita (,000)"],
+		"labels" : ["GDP Per Capita"],
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "GDP Per Capita", 12, 17, 90, 28, 6, 8]
+			[ "GDP Per Capita (,000)", 12, 17, 90, 28, 6, 8]
         ],
         "type" : "horizontal-bar",
         "format" : "$"
