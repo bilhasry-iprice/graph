@@ -12,7 +12,7 @@ function barChart( _id, _values, format, cat){
 	        type: 'bar'
 	    },
 	    size:{
-	    	height: 550
+	    	height: 500
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
