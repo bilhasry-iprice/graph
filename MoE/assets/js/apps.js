@@ -22,65 +22,61 @@ $(document).ready(function(){
 		topLeft.style.width = $('.sort-by:first-child').width() +'px';
 		topLeft.style.height = $('.sort-by:first-child').height() +'px';
 
-		
+		$(container).scroll(function(){
+
+			x = container.scrollLeft;
+			y = container.scrollTop;
+
+			if( (y > 10 ) || (x > 10)){
+				$('.swipe-left').animate({
+					opacity : 0
+				}, 1000, function(){
+					$('.swipe-left').remove(); 	
+				}); 
+			}
+
+			$('.sort-by').each(function(i){
+				if (i === 0) {
+					this.style.transform = translate(x, y);
+				}
+				else{
+					this.style.transform = translate(0, y);	
+				}
+			});
+
+			if( x > 0 ){
+				$('.category-item:first-child label').each(function(){
+					this.style.width = '0px';
+				});
+				TweenMax.to($('.sort-by:first-child'), 0.5, { width: '100px' }, 1);
+				$('.category-item:first-child').each(function(){
+					TweenMax.to($(this), 0.5, { width: '100px' }, 1);
+				});
+
+				TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '720px' }, 1);
+				TweenMax.to($('.row-wrapper'), 0.5, { width: '720px' }, 1);
+
+			}else{
+				$('.category-item:first-child label').each(function(){
+					this.style.width = 'calc(100% - 60px)';
+				});
+				TweenMax.to($('.sort-by:first-child'), 0.5, { width: '210px' }, 1);
+
+				$('.category-item:first-child').each(function(){
+					TweenMax.to($(this), 0.5, { width: '210px' }, 1);
+				});
+				TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '840px' }, 1);
+				TweenMax.to($('.row-wrapper'), 0.5, { width: '840px' }, 1);
+			}
+
+			$('.category-item:first-child').each(function(){
+				this.style.transform = translate(x, 0);
+			});
+		});
+
 	}
 	
-	$('.iema-awards').click(function(e){
-		e.preventDefault();
-		console.log('0');
-		window.parent.scrollTo(0,900);
-	});
-	$(container).scroll(function(){
 
-		x = container.scrollLeft;
-		y = container.scrollTop;
-
-		if( (y > 10 ) || (x > 10)){
-			$('.swipe-left').animate({
-				opacity : 0
-			}, 1000, function(){
-				$('.swipe-left').remove(); 	
-			}); 
-		}
-
-		$('.sort-by').each(function(i){
-			if (i === 0) {
-				this.style.transform = translate(x, y);
-			}
-			else{
-				this.style.transform = translate(0, y);	
-			}
-		});
-
-		if( x > 0 ){
-			$('.category-item:first-child label').each(function(){
-				this.style.width = '0px';
-			});
-			TweenMax.to($('.sort-by:first-child'), 0.5, { width: '100px' }, 1);
-			$('.category-item:first-child').each(function(){
-				TweenMax.to($(this), 0.5, { width: '100px' }, 1);
-			});
-
-			TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '720px' }, 1);
-			TweenMax.to($('.row-wrapper'), 0.5, { width: '720px' }, 1);
-
-		}else{
-			$('.category-item:first-child label').each(function(){
-				this.style.width = 'calc(100% - 60px)';
-			});
-			TweenMax.to($('.sort-by:first-child'), 0.5, { width: '210px' }, 1);
-
-			$('.category-item:first-child').each(function(){
-				TweenMax.to($(this), 0.5, { width: '210px' }, 1);
-			});
-			TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '840px' }, 1);
-			TweenMax.to($('.row-wrapper'), 0.5, { width: '840px' }, 1);
-		}
-
-		$('.category-item:first-child').each(function(){
-			this.style.transform = translate(x, 0);
-		});
-	});
 
 	function translate( x, y) {
 		return 'translate(' + x + 'px, ' + y + 'px)';
