@@ -22,6 +22,11 @@ $(document).ready(function(){
 		topLeft.style.width = $('.sort-by:first-child').width() +'px';
 		topLeft.style.height = $('.sort-by:first-child').height() +'px';
 
+		$('.iema-awards').click(function(e){
+			e.preventDefault();
+
+			window.parent.scrollTo(0,900);
+		})
 	}
 	
 	$(container).scroll(function(){
@@ -29,7 +34,7 @@ $(document).ready(function(){
 		x = container.scrollLeft;
 		y = container.scrollTop;
 
-		if( y > 10 ){
+		if( (y > 10 ) || (x > 10)){
 			$('.swipe-left').animate({
 				opacity : 0
 			}, 1000, function(){
@@ -55,6 +60,9 @@ $(document).ready(function(){
 				TweenMax.to($(this), 0.5, { width: '100px' }, 1);
 			});
 
+			TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '720px' }, 1);
+			TweenMax.to($('.row-wrapper'), 0.5, { width: '720px' }, 1);
+
 		}else{
 			$('.category-item:first-child label').each(function(){
 				this.style.width = 'calc(100% - 60px)';
@@ -64,6 +72,8 @@ $(document).ready(function(){
 			$('.category-item:first-child').each(function(){
 				TweenMax.to($(this), 0.5, { width: '210px' }, 1);
 			});
+			TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '840px' }, 1);
+			TweenMax.to($('.row-wrapper'), 0.5, { width: '840px' }, 1);
 		}
 
 		$('.category-item:first-child').each(function(){
