@@ -25,7 +25,7 @@ p{
 }
 
 .block{
-	max-width: 1120px;
+	max-width: 1105px;
 	margin: 0px auto;
 	display: block;
 	clear: both;
@@ -122,7 +122,7 @@ ul li a{
 .ta__center{  text-align: center; }
 
 .infographic-header{
-	max-width: 1120px;
+	max-width: 1105px;
 }
 .filter-header label{
 	font-weight: bold;
@@ -328,7 +328,7 @@ div#data {
 		height:70px;
 	}
 	#infographic-content{
-		max-width:1120px;
+		max-width:1105px;
 		width: 100%;
 		display: block;
 	}
@@ -339,7 +339,7 @@ div#data {
 	.infographic-data-wrapper .header{
 		position: fixed;
 		width: 100%;
-		max-width: 1120px;
+		max-width: 1105px;
 		z-index: 3;
 	}
 
@@ -350,7 +350,7 @@ div#data {
 		margin-top: 45px;
 		display: block;
 		width: 100%;
-		max-width: 1120px;
+		max-width: 1105px;
 	}
 
 	#data .row{
@@ -463,7 +463,7 @@ div#data {
 	
 	.infographic-data-wrapper{
 		width: 100%;	
-		max-width:1120px;
+		max-width:1105px;
 	}
 
 	.col.active{
