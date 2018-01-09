@@ -15,7 +15,7 @@ function barChart( _id, _values, format, cat){
 	    	height: 550
 	    },
 	    color: {
-	        pattern: ['#11C1EA', '#FF6633', '#33CCCC', '#0D97B7', '#0D97B7', '#289996']
+	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
 	    },
 	    axis: {
         	x: {
