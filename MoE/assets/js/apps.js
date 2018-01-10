@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var data_list 	= new Array();
-	var filename	= 'q1-2017.json';
+	var filename	= 'q3-2017.json';
 	var data 		= document.getElementById('data');
 	var up 			= true;
 	var config 		= '';
@@ -12,7 +12,10 @@ $(document).ready(function(){
 	var y	= 0;	
 	var curr = '';
 	var list = '';
+	var lang = 'en';
 	var container = document.getElementById('container');
+
+
 	if( $(window).width() < 768){
 		container.style.width = $(window).width() + 'px';	
 		var topLeft = document.createElement('div');
@@ -267,7 +270,7 @@ $(document).ready(function(){
 	    	var verified 	= data[i].verified ? 'verified' : '';
 
 			var _wTraffics 	= data[i].traffics / parseInt(config.max_traffics) * 100; 
-			var _wApp 		= data[i].app / parseInt(config.max_app) * 100; 
+			var _wApp = 1 / data[i].app * 100 ; 
 			var _wTwitter 	= data[i].twitter / config.max_twitter * 100; 
 			var _wInstagram = data[i].instagram / config.max_instagram * 100; 
 			var _wFacebook 	= data[i].facebook / config.max_facebook * 100; 
@@ -276,6 +279,7 @@ $(document).ready(function(){
 
 	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '">';
 	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="noopener">';
+	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/>';
 	    	html += '<label>'+data[i].name+'</label></a></span>';
 	    	html += '</div>'
 
@@ -284,7 +288,7 @@ $(document).ready(function(){
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 0 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
@@ -327,5 +331,67 @@ $(document).ready(function(){
 	    $('#data').append(list.container);
 	    
 	}
+
+	function getLang(){
+
+		
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+
+		for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if(pair[0] == 'lang'){
+				lang = pair[1];
+			}
+		}
+		$.getJSON('data/translation.json', function(result){
+			
+			switch( lang ){
+				case 'id' : var trans = result.id;
+							$('.filterYear').html(trans.filterYear);
+							$('.filterQuartal').html(trans.filterQuartal);
+							$('.verifiedText').html(trans.verifiedText);
+							$('.awardText').html(trans.awardText);
+							$('.merchantTitle').html(trans.merchantTitle);
+							$('.monthlyTitle').html(trans.monthlyTitle);
+							$('.employeeTitle').html( trans.employeeTitle );
+							$('.filterResultsBy').html( trans.filterResultsBy );
+					break;
+				case 'th' : var trans = result.th;
+							$('.filterYear').html(trans.filterYear);
+							$('.filterQuartal').html(trans.filterQuartal);
+							$('.verifiedText').html(trans.verifiedText);
+							$('.awardText').html(trans.awardText);
+							$('.merchantTitle').html(trans.merchantTitle);
+							$('.monthlyTitle').html(trans.monthlyTitle);
+							$('.employeeTitle').html( trans.employeeTitle );
+							$('.filterResultsBy').html( trans.filterResultsBy );
+					break;
+				case 'vn' : var trans = result.vn;
+							$('.filterYear').html(trans.filterYear);
+							$('.filterQuartal').html(trans.filterQuartal);
+							$('.verifiedText').html(trans.verifiedText);
+							$('.awardText').html(trans.awardText);
+							$('.merchantTitle').html(trans.merchantTitle);
+							$('.monthlyTitle').html(trans.monthlyTitle);
+							$('.employeeTitle').html( trans.employeeTitle );
+							$('.filterResultsBy').html( trans.filterResultsBy );
+					break;
+				case 'my' : var trans = result.my;
+							$('.filterYear').html(trans.filterYear);
+							$('.filterQuartal').html(trans.filterQuartal);
+							$('.verifiedText').html(trans.verifiedText);
+							$('.awardText').html(trans.awardText);
+							$('.merchantTitle').html(trans.merchantTitle);
+							$('.monthlyTitle').html(trans.monthlyTitle);
+							$('.employeeTitle').html( trans.employeeTitle );
+							$('.filterResultsBy').html( trans.filterResultsBy );
+					break;
+			}  
+		});
+		
+	}
+
+	getLang();
     
 });
