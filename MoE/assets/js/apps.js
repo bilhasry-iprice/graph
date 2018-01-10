@@ -10,10 +10,11 @@ $(document).ready(function(){
 	var year = 2017;
 	var x	= 0;
 	var y	= 0;	
-	var curr = '';
+	var curr = new Array();
 	var list = '';
 	var lang = 'en';
 	var container = document.getElementById('container');
+	var trans = '';
 
 
 	if( $(window).width() < 768){
@@ -101,9 +102,9 @@ $(document).ready(function(){
 	    		
 	        });
 
-	        data_list = sortBy( data_list, true, 'traffics');
+	        curr = sortBy( data_list, true, 'traffics');
 
-	        generateVList(data_list);
+	        generateVList(curr);
 	        animate();
 	        
 	    });
@@ -116,47 +117,46 @@ $(document).ready(function(){
     		
         });
 
-        data_list = sortBy( data_list, true, 'traffics');
+        curr = sortBy( data_list, true, 'traffics');
 
-        generateVList(data_list);
+        generateVList(curr);
         animate();
         
     });
 
 
 	function Filter( filter ){
-
 		generateVList(data_list);
-		$('.row').css('display', 'none');	
-			
-				
+		$('.row').css('display', 'none');		
+
 		filterList = [];
 		$('.row').each(function(){
-			
+			var key = $(this).attr('data-key');
 			switch( filter.length ){
 				case 1 : if( $(this).hasClass(filter[0])){
-							$(this).css('display', 'block');
+							filterList.push(data_list[key]);
 						}
 					break;
 				case 2 : if( $(this).hasClass(filter[0]) && 
 							 $(this).hasClass(filter[1]) 
 							){
-						
-							$(this).css('display', 'block');
+							filterList.push(data_list[key]);
 						}
 					break;
 				case 3 : if( $(this).hasClass(filter[0]) && 
 							 $(this).hasClass(filter[1]) && 
 							 $(this).hasClass(filter[2])
 						   ){
-							$(this).css('display', 'block');
+							filterList.push(data_list[key]);
 						}
 					break;
-				default : $(this).css('display', 'block');
+				default : 	filterList.push(data_list[key]);
+							
 					break;
 			}
 		});
-
+		curr = filterList;
+		generateVList(filterList);
 		animate();
 
 
@@ -202,7 +202,7 @@ $(document).ready(function(){
 			
 			$(this).addClass(sort);
 			
-			var arrSort = sortBy(data_list, up, _el);
+			var arrSort = sortBy(curr, up, _el);
 
 			generateVList(arrSort);
 			animate();			
@@ -351,51 +351,57 @@ $(document).ready(function(){
 		$.getJSON('data/translation.json', function(result){
 			
 			switch( lang ){
-				case 'id' : var trans = result.id;
-							$('.filterYear').html(trans.filterYear);
-							$('.filterQuartal').html(trans.filterQuartal);
-							$('.verifiedText').html(trans.verifiedText);
-							$('.awardText').html(trans.awardText);
-							$('.merchantTitle').html(trans.merchantTitle);
-							$('.monthlyTitle').html(trans.monthlyTitle);
-							$('.employeeTitle').html( trans.employeeTitle );
-							$('.filterResultsBy').html( trans.filterResultsBy );
+				case 'id' :  trans = result.id;
+
 					break;
-				case 'th' : var trans = result.th;
-							$('.filterYear').html(trans.filterYear);
-							$('.filterQuartal').html(trans.filterQuartal);
-							$('.verifiedText').html(trans.verifiedText);
-							$('.awardText').html(trans.awardText);
-							$('.merchantTitle').html(trans.merchantTitle);
-							$('.monthlyTitle').html(trans.monthlyTitle);
-							$('.employeeTitle').html( trans.employeeTitle );
-							$('.filterResultsBy').html( trans.filterResultsBy );
+				case 'th' :  trans = result.th;
+							
 					break;
-				case 'vn' : var trans = result.vn;
-							$('.filterYear').html(trans.filterYear);
-							$('.filterQuartal').html(trans.filterQuartal);
-							$('.verifiedText').html(trans.verifiedText);
-							$('.awardText').html(trans.awardText);
-							$('.merchantTitle').html(trans.merchantTitle);
-							$('.monthlyTitle').html(trans.monthlyTitle);
-							$('.employeeTitle').html( trans.employeeTitle );
-							$('.filterResultsBy').html( trans.filterResultsBy );
+				case 'vn' :  trans = result.vn;
+							
 					break;
-				case 'my' : var trans = result.my;
-							$('.filterYear').html(trans.filterYear);
-							$('.filterQuartal').html(trans.filterQuartal);
-							$('.verifiedText').html(trans.verifiedText);
-							$('.awardText').html(trans.awardText);
-							$('.merchantTitle').html(trans.merchantTitle);
-							$('.monthlyTitle').html(trans.monthlyTitle);
-							$('.employeeTitle').html( trans.employeeTitle );
-							$('.filterResultsBy').html( trans.filterResultsBy );
+				case 'my' :  trans = result.my;
+					break;
+				default   :  trans = result.en;
 					break;
 			}  
+
+			translate(trans);
+
+
 		});
 		
 	}
 
+	function translate(trans){
+		$('.filterYear').html(trans.filterYear);
+		$('.filterQuartal').html(trans.filterQuartal);
+		$('.verifiedText').html(trans.verifiedText);
+		$('.awardText').html(trans.awardText);
+		$('.merchantTitle').html(trans.merchantTitle);
+		$('.monthlyTitle').html(trans.monthlyTitle);
+		$('.employeeTitle').html( trans.employeeTitle );
+		$('.filterResultsBy').html( trans.filterResultsBy );
+		$('.filter').find('select').each(function(){
+			$(this).empty();
+			if( $(this).hasClass('business_model')){
+				$(this).append('<option value="">'+trans.businessTitle+'</option>');
+				$.each(trans.options.business_model, function(key, value){
+					$('.business_model').append('<option value="'+key+'">'+value+'</option>')
+				});
+			}else if( $(this).hasClass('store_type')){
+				$(this).append('<option value="">'+trans.storeTitle+'</option>');
+				$.each(trans.options.store_type, function(key, value){
+					$('.store_type').append('<option value="'+key+'">'+value+'</option>')
+				});
+			}else if( $(this).hasClass('store_origin')){
+				$(this).append('<option value="">'+trans.originTitle+'</option>');
+				$.each(trans.options.store_origin, function(key, value){
+					$('.store_origin').append('<option value="'+key+'">'+value+'</option>')
+				});
+			}
+		});
+	}
 	getLang();
     
 });

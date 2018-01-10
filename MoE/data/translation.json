@@ -16,6 +16,9 @@
 		"monthlyTitle" : "Monthly Visits",
 		"appRank" : "Apps Rank",
 		"employeeTitle" : "Number of Employees",
+		"businessTitle" : "Business Model",
+		"storeTitle" : "Store Type",
+		"originTitle" : "Store Origin",
 		"options" : {
 			"business_model" : {
 				"b2c" : "Business to Consumer",
@@ -25,6 +28,10 @@
 				"fashion" : "Fashion",
 				"general" : "General",
 				"tech" : "Tech &amp; Gadget"
+			},
+			"store_origin" : {
+				"indonesia" : "Indonesia",
+				"international" : "International"
 			}
 		}
 	},
@@ -46,15 +53,22 @@
 		"monthlyTitle" : "Visitor Per Bulan",
 		"appRank" : "Ranking Aplikasi",
 		"employeeTitle" : "Jumlah karyawan",
+		"businessTitle" : "Bisnis Model",
+		"storeTitle" : "Tipe Toko",
+		"originTitle" : "Asal Toko",
 		"options" : {
 			"business_model" : {
-				"b2c" : "Business to Consumer",
+				"b2c" : "Business to Consumer ",
 				"c2c" : "Consumer to Consumer"
 			},
 			"store_type" : {
-				"fashion" : "Fashion",
-				"general" : "General",
-				"tech" : "Tech &amp; Gadget"
+				"fashion" : "Toko Fesyen",
+				"general" : "Toko Umum",
+				"tech" : "Toko Elektronik"
+			},
+			"store_origin" : {
+				"indonesia" : "Indonesia",
+				"international" : "Internasional"
 			}
 		}
 	},
