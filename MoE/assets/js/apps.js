@@ -366,14 +366,14 @@ $(document).ready(function(){
 					break;
 			}  
 
-			translate(trans);
+			translateLang(trans);
 
 
 		});
 		
 	}
 
-	function translate(trans){
+	function translateLang(trans){
 		$('.filterYear').html(trans.filterYear);
 		$('.filterQuartal').html(trans.filterQuartal);
 		$('.verifiedText').html(trans.verifiedText);
