@@ -124,6 +124,10 @@ ul li a{
 .infographic-header{
 	max-width: 1105px;
 }
+
+.infographic-header label{
+	font-weight: bold;
+}
 .filter-header label{
 	font-weight: bold;
 	font-size: 14px;
@@ -206,6 +210,10 @@ ul li a{
 	display: table-cell;
 }
 
+.quarter-label.y-active,
+.quarter-label.q-active{
+    color: #0b829e;
+}
 
 .col:first-child{
 	width: 25%;
@@ -214,8 +222,10 @@ ul li a{
 .infographic-data-wrapper .col span p{
 	text-indent:15px;
 	width:0%;
+	font-weight: bold;
 	background: #33cccc;
 	color:#222;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.9);
 }
 
 .filter-header{
@@ -233,8 +243,9 @@ ul li a{
     counter-increment: my-badass-counter;
     position: absolute;
     left:0px;
-    line-height: 54px;
+    line-height: 48px;
     width: 23px;
+    font-weight: bold;
     text-align:right;
     color: #343434;
 }

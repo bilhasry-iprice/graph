@@ -1,0 +1,87 @@
+{
+	"en" : {
+		"verifiedText": "Verified by Merchant",
+		"awardText": "Award Winners",
+		"filterResultsBy": "Filter results by",
+		"filterYear" : "Year",
+		"filterQuartal" : "Quarter",
+		"typeFilter": "Type",
+		"categoryFilter": "Category",
+		"originFilter": "Origin",
+		"fashionFilter": "Fashion",
+		"generalFilter": "General",
+		"techAndGadgetFilter": "Tech & Gadgets",
+		"internationalFilter": "International",
+		"merchantTitle" : "Merchant",
+		"monthlyTitle" : "Monthly Visits",
+		"appRank" : "Apps Rank",
+		"employeeTitle" : "Number of Employees",
+		"options" : {
+			"business_model" : {
+				"b2c" : "Business to Consumer",
+				"c2c" : "Consumer to Consumer"
+			},
+			"store_type" : {
+				"fashion" : "Fashion",
+				"general" : "General",
+				"tech" : "Tech &amp; Gadget"
+			}
+		}
+	},
+	"id" : {
+	    "verifiedText": "Diverifikasi oleh Toko Online",
+	    "awardText": "Pemenang Penghargaan",
+	    "numbersIn1000Text": "*Angka dalam 1000s",
+	    "filterYear" : "Tahun",
+		"filterQuartal" : "Kuartal",
+	    "filterResultsBy": "Filter berdasarkan",
+	    "typeFilter": "Tipe",
+	    "categoryFilter": "Kategori",
+	    "originFilter": "Asal",
+	    "fashionFilter": "Fashion",
+	    "generalFilter": "Umum",
+	    "techAndGadgetFilter": "Tech & Gadget",
+	    "internationalFilter": "Internasional",
+	    "merchantTitle" : "Toko Online",
+		"monthlyTitle" : "Visitor Per Bulan",
+		"appRank" : "Ranking Aplikasi",
+		"employeeTitle" : "Jumlah karyawan",
+		"options" : {
+			"business_model" : {
+				"b2c" : "Business to Consumer",
+				"c2c" : "Consumer to Consumer"
+			},
+			"store_type" : {
+				"fashion" : "Fashion",
+				"general" : "General",
+				"tech" : "Tech &amp; Gadget"
+			}
+		}
+	},
+	"th" : {
+		"verifiedText": "ตรวจสอบจากร้านค้า",
+	   "awardText": "ผู้ชนะการประกวด",
+	   "numbersIn1000Text": "*จำนวน(หลักพัน)",
+	   "filterResultsBy": "ฟิลเตอร์โดย",
+	   "typeFilter": "รูปแบบธุรกิจ",
+	   "categoryFilter": "ประเภทสินค้า",
+	   "originFilter": "ที่มา",
+	   "fashionFilter": "แฟชั่น",
+	   "generalFilter": "ทั่วไป",
+	   "techAndGadgetFilter": "เทคฯและแก็ดเจ็ต",
+	   "internationalFilter": "ต่างชาติ"
+	},
+	"vn" : {
+		"verifiedText": "Chứng thực bởi DN",
+		"awardText": "DN Thắng giải",
+		"numbersIn1000Text": "Số lượng (Ngàn)",
+		"filterResultsBy": "Lọc kết quả theo",
+		"typeFilter": "Loại hình",
+		"categoryFilter": "Ngành hàng",
+		"originFilter": "Xuất xứ",
+		"fashionFilter": "Thời trang",
+		"generalFilter": "Tổng hợp",
+		"techAndGadgetFilter": "Công nghệ",
+		"internationalFilter": "Quốc tế"
+	}
+}
