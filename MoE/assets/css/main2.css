@@ -222,10 +222,9 @@ ul li a{
 .infographic-data-wrapper .col span p{
 	text-indent:15px;
 	width:0%;
-	font-weight: bold;
 	background: #33cccc;
 	color:#222;
-	text-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+
 }
 
 .filter-header{
