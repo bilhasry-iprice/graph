@@ -86,8 +86,12 @@ $(document).ready(function(){
 	}
 
 	$('.q-button').click(function(e){
+		$('.q-button').removeClass('q-active');
+
 		var q = $(e.currentTarget).attr('data-attr');
 		var filename = q + '-' + year + '.json';
+
+		$(e.currentTarget).addClass('q-active');
 		data_list = new Array();
 		$.getJSON('data/'+filename, function(result){
 			config = result.config;
