@@ -204,6 +204,11 @@ ul li a{
 	box-sizing: border-box;
 }
 
+.row .category-item:first-child span,
+.row .category-item:first-child span label{
+	display: block;
+	cursor:pointer;
+}
 .infographic-data-wrapper .header{
 	display: table-header-group;
 }

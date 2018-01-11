@@ -3,7 +3,7 @@
  * bar chart function
  */
 
-function barChart( _id, _values, format, cat){
+function barChart( _id, _values, format, cat, x_label, y_label){
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
@@ -20,7 +20,11 @@ function barChart( _id, _values, format, cat){
 	    axis: {
         	x: {
 	            type: 'category',
-	            categories: cat
+	            categories: cat,
+	            label: {
+	                text: 'X Label',
+	                position: 'outer-center'
+	            }
 	        },
 	        y : {
 	        	tick: {
@@ -32,6 +36,10 @@ function barChart( _id, _values, format, cat){
 						}
 						
 					}
+	            },
+	            label: {
+	                text: ' Label',
+	                position: 'outer-middle'
 	            }
 	        }
 	    },
@@ -94,7 +102,7 @@ function donutChart( _id, _values, format, cat){
  * horizontal chart function
  */
 
-function horizontalChart( _id, _values, format){
+function horizontalChart( _id, _values, format, x_label, y_label){
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -111,7 +119,7 @@ function horizontalChart( _id, _values, format){
 	    axis : {
 	    	rotated: true,
 	    	y : {
-            tick: {
+            	tick: {
 					format: function (d) { 
 						if( format == '%'){
 							return d + " "+format; 	
@@ -120,10 +128,18 @@ function horizontalChart( _id, _values, format){
 						}
 						
 					}
+	            },
+	            label: {
+	                text: y_label,
+	                position: 'outer-middle'
 	            }
 	        },
 	    	x: {
-	            type: 'category' // this needed to load string x value
+	            type: 'category', // this needed to load string x value
+	        	label: {
+	                text: x_label,
+	                position: 'outer-center'
+	            }
 	        }
 	    },
 	    grid: {
@@ -154,7 +170,7 @@ function putImage( _el ){
  * pie chart function
  */
 
-function splineChart( _id, data){
+function splineChart( _id, data, x_label, y_label){
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -164,7 +180,17 @@ function splineChart( _id, data){
 	    },
 	    axis : {
 	    	x: {
-	            type: 'category' // this needed to load string x value
+	            type: 'category', // this needed to load string x value
+	        	label: {
+	                text: 'X Label',
+	                position: 'outer-center'
+	            }
+	        },
+	        y : {
+	        	label: {
+	                text: 'X Label',
+	                position: 'outer-middle'
+	            }
 	        }
 	    },
 	    size:{
