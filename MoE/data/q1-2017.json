@@ -1,4 +1,13 @@
-[
+{
+    "config" : {
+    "max_traffics" : "96342837",
+    "max_app" : "1",
+    "max_twitter" : "456000",
+    "max_instagram" : "623000",
+    "max_facebook" : "19202587",
+    "max_employees" : "2460"
+  },
+  "data" :[
   {
     "key": 0,
     "name": "bobobobo",
@@ -950,22 +959,6 @@
     "location": "indonesia",
     "verified": "",
     "iema_winner": ""
-  },
-  {
-    "key": "",
-    "name": "",
-    "url": "",
-    "logodesktop": "",
-    "traffics": "",
-    "app": "",
-    "twitter": "",
-    "instagram": "",
-    "facebook": "",
-    "employees": "",
-    "type": "",
-    "category": "",
-    "location": "",
-    "verified": "",
-    "iema_winner": ""
   }
 ]
+}
