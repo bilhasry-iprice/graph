@@ -31,18 +31,19 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
             	var _format = data[pos].format;
                   var _xlabel = data[pos].x_label;
                   var _ylabel = data[pos].y_label;
-                  
+                  var label = data[pos].label;
 
+                  console.log(label);
             	switch( _type ){
             		case 'horizontal-bar' : 
-					horizontalChart( _id, _values, _format, _xlabel, _ylabel);
+					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label);
             		break;
             		case 'spline'         : 
-					splineChart( _id, _values, _xlabel, _ylabel);
+					splineChart( _id, _values, _format, _xlabel, _ylabel);
             		break;
             		case 'bar' : 
                               var _cat = data[pos].categories;
-                              barChart( _id, _values, _format, _cat, _xlabel, _ylabel);
+                              barChart( _id, _values, _format, _cat, _xlabel, _ylabel, label);
             		break;
                         case 'donut' : 
                               var _cat = data[pos].categories;

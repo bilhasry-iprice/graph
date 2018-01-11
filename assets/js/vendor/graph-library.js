@@ -3,13 +3,18 @@
  * bar chart function
  */
 
-function barChart( _id, _values, format, cat, x_label, y_label){
+function barChart( _id, _values, format, cat, x_label, y_label, label){
+
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
 	        columns : _values,
-	        type: 'bar'
+	        type: 'bar',
+	        tick: {
+                // this also works for non timeseries data
+                values: ['06', '09', '12', '15', '18', '21', '00']
+            }
 	    },
 	    size:{
 	    	height: 500
@@ -75,7 +80,6 @@ function donutChart( _id, _values, format, cat){
 	        },
 	        y : {
 	        	tick: {
-	                
 					format: function (d) { 
 						if( format == '%'){
 							return d + " "+format; 	
@@ -102,7 +106,8 @@ function donutChart( _id, _values, format, cat){
  * horizontal chart function
  */
 
-function horizontalChart( _id, _values, format, x_label, y_label){
+function horizontalChart( _id, _values, format, x_label, y_label, label){
+	console.log(label);
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -114,7 +119,7 @@ function horizontalChart( _id, _values, format, x_label, y_label){
 	    	height: 450
 	    },
 	    color: {
-	        pattern: ['#11C1EA', '#FF6633', '#0D97B7', '#0B829E', '#086A87', '#08586B']
+	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
 	    },
 	    axis : {
 	    	rotated: true,
@@ -170,7 +175,7 @@ function putImage( _el ){
  * pie chart function
  */
 
-function splineChart( _id, data, x_label, y_label){
+function splineChart( _id, data, format, x_label, y_label){
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -190,6 +195,16 @@ function splineChart( _id, data, x_label, y_label){
 	        	label: {
 	                text: y_label,
 	                position: 'outer-middle'
+	            },
+	            tick : {
+	            	format: function (d) { 
+						if( format == '%'){
+							return d + " "+format; 	
+						}else{
+							return format + " " + d;
+						}
+						
+					}
 	            }
 	        }
 	    },
