@@ -38,7 +38,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
 					horizontalChart( _id, _values, _format, _xlabel, _ylabel);
             		break;
             		case 'spline'         : 
-					splineChart( _id, _value, _xlabel, _ylabel);
+					splineChart( _id, _values, _xlabel, _ylabel);
             		break;
             		case 'bar' : 
                               var _cat = data[pos].categories;

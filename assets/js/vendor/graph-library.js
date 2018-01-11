@@ -182,14 +182,14 @@ function splineChart( _id, data, x_label, y_label){
 	    	x: {
 	            type: 'category', // this needed to load string x value
 	        	label: {
-	                text: 'X Label',
+	                text: x_label,
 	                position: 'outer-center'
 	            }
 	        },
 	        y : {
 	        	label: {
-	                text: 'X Label',
-	                position: 'inner-middle'
+	                text: y_label,
+	                position: 'outer-middle'
 	            }
 	        }
 	    },
