@@ -22,7 +22,7 @@ function barChart( _id, _values, format, cat, x_label, y_label){
 	            type: 'category',
 	            categories: cat,
 	            label: {
-	                text: 'X Label',
+	                text: x_label,
 	                position: 'outer-center'
 	            }
 	        },
@@ -38,7 +38,7 @@ function barChart( _id, _values, format, cat, x_label, y_label){
 					}
 	            },
 	            label: {
-	                text: ' Label',
+	                text: y_label,
 	                position: 'outer-middle'
 	            }
 	        }
@@ -130,15 +130,15 @@ function horizontalChart( _id, _values, format, x_label, y_label){
 					}
 	            },
 	            label: {
-	                text: y_label,
-	                position: 'outer-middle'
+	                text: x_label,
+	                position: 'outer-center'
 	            }
 	        },
 	    	x: {
 	            type: 'category', // this needed to load string x value
 	        	label: {
-	                text: x_label,
-	                position: 'outer-center'
+	                text: y_label,
+	                position: 'outer-middle'
 	            }
 	        }
 	    },
@@ -189,7 +189,7 @@ function splineChart( _id, data, x_label, y_label){
 	        y : {
 	        	label: {
 	                text: 'X Label',
-	                position: 'outer-middle'
+	                position: 'inner-middle'
 	            }
 	        }
 	    },
@@ -200,7 +200,7 @@ function splineChart( _id, data, x_label, y_label){
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
 	    },
 	    point: {
-		  r: 5, 
+		  r: 3, 
 		},
 	    grid: {
 	        x: {
