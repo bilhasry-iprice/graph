@@ -118,6 +118,8 @@
 	},
 	{
 		"labels" : ["Day of Week Local Conversion Rate"],
+		"x_label" : "Days of The Week",
+		"y_label" : "Conversion Rate",
 		"data"	 : [
 			["x", "MON","TUE","WED","THU","FRI","SAT","SUN"],
 			["ID","100","107","112","110","99","77","70"],
@@ -132,6 +134,8 @@
 	},
 	{
 		"labels" : ["Day of Week Local Conversion Rate"],
+		"x_label" : "Days of The Week",
+		"y_label" : "Mobile Traffic Contribution (%)",
 		"data"	 : [
 			["x", "MON","TUE","WED","THU","FRI","SAT","SUN"],
 			["ID","81","80","80","81","82","88","90"],
@@ -162,6 +166,8 @@
 	},
 	{
 		"labels" : ["Payment Options"],
+		"x_label" : "Types of Payment Solution",
+		"y_label" : "Percentage of merchants offering such payment solutions ",
 		"data"	 : [
 
 			["ID", 84, 94, 43, 8, 41],
