@@ -1,6 +1,8 @@
 [
 	{
 		"labels" : ["Conversion Rate"],
+		"x_label" : "Conversion Rate (%)",
+		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
 			[ "Conversion Rate", 0.90, 0.68, 1.00, 0.79, 1.13, 0.66]
@@ -10,6 +12,8 @@
 	},
 	{
 		"labels" : ["Average Order Value"],
+		"x_label" : "Average Order Value (USD)",
+		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
 			[ "Average Order Value", 36, 42, 91, 54, 23, 56]
@@ -19,6 +23,8 @@
 	},
 	{
 		"labels" : ["GDP Per Capita"],
+		"x_label" : "GDP Per Capita (USD '000)",
+		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
 			[ "GDP Per Capita ('000)", 12, 17, 90, 28, 6, 8]
@@ -62,6 +68,8 @@
 	},
 	{
 		"labels" : ["Desktop vs Mobile Conversion Rate"],
+		"x_label" : "Conversion Rate (%)",
+		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
 			[ "Mobile", 1.4, 0.8, 1.0, 0.9, 1.5, 0.8],
@@ -78,7 +86,7 @@
 			[ "Desktop", 42, 47, 96, 54, 26, 59]
         ],
         "type" : "horizontal-bar",
-        "format" : "%"
+        "format" : "$"
 	},
 	{
 		"labels" : ["Hourly # of Orders"],
@@ -138,6 +146,8 @@
 	},
 	{
 		"labels" : ["Quarterly % Of Mobile Contribution"],
+		"x_label" : "Quarters of the Year",
+		"y_label" : "Mobile Traffic (%)",
 		"data"	 : [
 			["x", "2016-Q3","2016-Q4","2017-Q1","2017-Q2"],
 			["ID","74","78","85","87"],
