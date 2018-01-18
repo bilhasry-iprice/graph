@@ -1,8 +1,26 @@
 
+function translateCountry(label){
+
+	switch( label ){
+		case 'ID' : return 'Indonesia';
+			break;
+		case 'PH' : return 'Philippines';
+			break;
+		case 'VN' : return 'Vietnam';
+			break;
+		case 'TH' : return 'Thailand';
+			break;
+		case 'SG' : return 'Singapore';
+			break;
+		case 'MY' : return 'Malaysia';
+			break;
+		default : return label
+			break;
+	} 
+}
 /**
  * bar chart function
  */
-
 function barChart( _id, _values, format, cat, x_label, y_label, label){
 
 	var height = ($(window).width() < 768) ? 400 : 500;
@@ -142,6 +160,9 @@ function horizontalChart( _id, _values, format, x_label, y_label, label){
 					}else{
 						return value + " "+format; 	
 					}
+	    		},
+	    		title : function(x){
+	    			return translateCountry(_values[0][x+1]);
 	    		}
 			}
 	    },
@@ -211,6 +232,14 @@ function splineChart( _id, data, format, x_label, y_label){
         	columns: data,
         	type: 'spline'
 	    },
+	    tooltip : {
+	    	format : {
+	    		title : function(x){
+	    			return translateCountry(data[0][x+1]);
+	    		}
+	    	}
+	    }
+	    ,
 	    axis : {
 	    	x: {
 	            type: 'category', // this needed to load string x value
@@ -374,7 +403,6 @@ function stackedChart(_id, _values, _groups, cat, format){
         },
         y : {
         tick: {
-                
 				format: function (d) { 
 					if( format == '%'){
 						return d + " "+format; 	
