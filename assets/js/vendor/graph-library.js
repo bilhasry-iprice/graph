@@ -219,9 +219,7 @@ function splineChart( _id, data, format, x_label, y_label){
 	                position: 'outer-center'
 	            },
 	            tick : {
-	            	culling: {
-	                    max: 5 // the number of tick texts will be adjusted to less than this value
-	                }
+	            	count: 5
 	            }
 	        },
 	        y : {
@@ -249,7 +247,90 @@ function splineChart( _id, data, format, x_label, y_label){
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
 	    },
 	    point: {
-		  r: 3, 
+	    	select: {
+	    		r: 4
+	    	},
+			r: 3
+		},
+	    grid: {
+	        x: {
+	            show: true
+	        },
+	        y: {
+	            show: true
+	        }
+	    }
+	});
+}
+
+/**
+ * pie chart function
+ */
+
+function splineChart2( _id, data, format, x_label, y_label){
+
+	var height = ($(window).width() < 768) ? 350 : 450;
+
+	var chart = c3.generate({
+		bindto: '#'+_id,
+	    data: {
+	    	x : 'x',
+        	columns: data,
+        	type: 'spline'
+	    },
+	    axis : {
+	    	x: {
+	            type: 'category', // this needed to load string x value
+	        	label: {
+	                text: x_label,
+	                position: 'outer-center'
+	            },
+	            tick : {
+	            	values: [9, 15, 21, 3],
+	            	count: 4
+	            }
+	        },
+	        y : {
+	        	label: {
+	                text: y_label,
+	                position: 'outer-middle'
+	            },
+	            tick : {
+	            	format: function (d) { 
+						if( format == '$'){
+							return format + " " + d;
+
+						}else{
+							return d + " "+format; 	
+						}
+						
+					}
+	            }
+	        }
+	    },
+	    tooltip: {
+	    	format: {
+	    		title: function (x) { 
+	    			var hour = data[0][x+1];
+	    			if( hour < 12){
+	    				return parseInt(hour) + ' AM';
+	    			}else{
+	    				return (parseInt(hour) - 12) + ' PM'
+	    			}
+	    		}
+			}
+	    },
+	    size:{
+	    	height: height
+	    },
+	    color: {
+	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
+	    },
+	    point: {
+	    	focus: {
+	    		r: 3
+	    	},
+			r: 3
 		},
 	    grid: {
 	        x: {
