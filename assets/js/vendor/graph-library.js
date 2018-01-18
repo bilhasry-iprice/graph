@@ -151,10 +151,10 @@ function horizontalChart( _id, _values, format, x_label, y_label, label){
             	tick: {
 					format: function (d) { 
 						if( format == '$'){
-							return format + " " + d.toFixed(0);
+							return format + " " + d.toFixed(2);
 							
 						}else{
-							return d.toFixed(0) + " "+format; 	
+							return d.toFixed(2) + " "+format; 	
 						}
 					},
 					count: 6
