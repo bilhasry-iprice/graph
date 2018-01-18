@@ -29,15 +29,21 @@ function barChart( _id, _values, format, cat, x_label, y_label, label){
 	            label: {
 	                text: x_label,
 	                position: 'outer-center'
+	            },
+	            tick : {
+	            	culling: {
+	                    max: 5 // the number of tick texts will be adjusted to less than this value
+	                }
 	            }
 	        },
 	        y : {
 	        	tick: {
 					format: function (d) { 
-						if( format == '%'){
-							return d + " "+format; 	
-						}else{
+						if( format == '$'){
 							return format + " " + d;
+							
+						}else{
+							return d + " "+format; 	
 						}
 						
 					}
@@ -81,10 +87,11 @@ function donutChart( _id, _values, format, cat){
 	        y : {
 	        	tick: {
 					format: function (d) { 
-						if( format == '%'){
-							return d + " "+format; 	
-						}else{
+						if( format == '$'){
 							return format + " " + d;
+							
+						}else{
+							return d + " "+format; 	
 						}
 						
 					}
@@ -107,7 +114,7 @@ function donutChart( _id, _values, format, cat){
  */
 
 function horizontalChart( _id, _values, format, x_label, y_label, label){
-	console.log(label);
+	
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -121,18 +128,31 @@ function horizontalChart( _id, _values, format, x_label, y_label, label){
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
 	    },
+	    tooltip: {
+	    	format: {
+	    		value: function (value, ratio, id, index) { 
+	    			if( format == '$'){
+						return format + " " + value;
+						
+					}else{
+						return value + " "+format; 	
+					}
+	    		}
+			}
+	    },
 	    axis : {
 	    	rotated: true,
 	    	y : {
             	tick: {
 					format: function (d) { 
-						if( format == '%'){
-							return d + " "+format; 	
+						if( format == '$'){
+							return format + " " + d.toFixed(0);
+							
 						}else{
-							return format + " " + d;
+							return d.toFixed(0) + " "+format; 	
 						}
-						
-					}
+					},
+					count: 6
 	            },
 	            label: {
 	                text: x_label,
@@ -189,6 +209,11 @@ function splineChart( _id, data, format, x_label, y_label){
 	        	label: {
 	                text: x_label,
 	                position: 'outer-center'
+	            },
+	            tick : {
+	            	culling: {
+	                    max: 5 // the number of tick texts will be adjusted to less than this value
+	                }
 	            }
 	        },
 	        y : {
@@ -198,10 +223,11 @@ function splineChart( _id, data, format, x_label, y_label){
 	            },
 	            tick : {
 	            	format: function (d) { 
-						if( format == '%'){
-							return d + " "+format; 	
-						}else{
+						if( format == '$'){
 							return format + " " + d;
+
+						}else{
+							return d + " "+format; 	
 						}
 						
 					}
