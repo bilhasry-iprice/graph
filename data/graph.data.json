@@ -9,7 +9,7 @@
 			[ "Conversion Rate", 0.90, 0.68, 1.00, 0.79, 1.13, 0.66]
         ],
         "type" : "horizontal-bar",
-        "format" : "%"
+        "format" : "x"
 	},
 	{
 		"labels" : ["Average Order Value"],
@@ -84,7 +84,7 @@
 			[ "Desktop", 3.5, 2.2, 3.2, 2.0, 3.9, 2.1]
         ],
         "type" : "horizontal-bar",
-        "format" : "%"
+        "format" : "x"
 	},
 	{
 		"labels" : ["Desktop vs Mobile Average Order Value"],
@@ -100,8 +100,8 @@
 	{
 		"labels" : ["Hourly # of Orders"],
 		"label"  : true,
-		"x_label" : "Orders",
-		"y_label" : "Time of the day",
+		"y_label" : "Orders",
+		"x_label" : "Time of the day",
 		"data"	 : [
 			["x", "06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","00","01","02","03","04","05"],
 			["ID","41","63","80","120","149","169","157","155","167","163","153","136","111","108","105","115","109","108","36","44","33","27","22","28"],
