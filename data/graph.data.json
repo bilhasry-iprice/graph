@@ -89,6 +89,8 @@
 	{
 		"labels" : ["Desktop vs Mobile Average Order Value"],
 		"label"  : true,
+		"x_label" : "Average Order Value (USD)",
+		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
 			[ "Mobile", 35, 39, 82, 52, 23, 55],
