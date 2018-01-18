@@ -6,7 +6,7 @@
 		"label"  : false,
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Conversion Rate", 0.90, 0.68, 1.00, 0.79, 1.13, 0.66]
+			[ "Conversion Rate", 0.9, 1.0, 1.0, 0.8, 1.1, 0.6]
         ],
         "type" : "horizontal-bar",
         "format" : "x"
