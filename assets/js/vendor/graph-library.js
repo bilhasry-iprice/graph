@@ -5,6 +5,7 @@
 
 function barChart( _id, _values, format, cat, x_label, y_label, label){
 
+	var height = ($(window).width() < 768) ? 400 : 500;
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
@@ -17,7 +18,7 @@ function barChart( _id, _values, format, cat, x_label, y_label, label){
             }
 	    },
 	    size:{
-	    	height: 500
+	    	height: height
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
@@ -67,6 +68,8 @@ function barChart( _id, _values, format, cat, x_label, y_label, label){
 
 function donutChart( _id, _values, format, cat){
 
+	var height = ($(window).width() < 768) ? 350 : 450;
+
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -74,7 +77,7 @@ function donutChart( _id, _values, format, cat){
 	        type: 'donut'
 	    },
 	    size:{
-	    	height: 450
+	    	height: height
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#91B496', '#86E2D5', '#EC644B', '#FABE58', ]
@@ -115,6 +118,8 @@ function donutChart( _id, _values, format, cat){
 
 function horizontalChart( _id, _values, format, x_label, y_label, label){
 	
+	var height = ($(window).width() < 768) ? 350 : 450;
+
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -123,7 +128,7 @@ function horizontalChart( _id, _values, format, x_label, y_label, label){
 	        type: 'bar'
 	    },
 	    size:{
-	    	height: 450
+	    	height: height
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']
@@ -196,6 +201,9 @@ function putImage( _el ){
  */
 
 function splineChart( _id, data, format, x_label, y_label){
+
+	var height = ($(window).width() < 768) ? 350 : 450;
+
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
@@ -235,7 +243,7 @@ function splineChart( _id, data, format, x_label, y_label){
 	        }
 	    },
 	    size:{
-	    	height: 450
+	    	height: height
 	    },
 	    color: {
 	        pattern: ['#33CCCC', '#FF6633', '#086A87', '#0DA290', '#3fbf72', '#ff4949']

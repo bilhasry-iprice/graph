@@ -1,7 +1,7 @@
 [
 	{
 		"labels" : ["Conversion Rate"],
-		"x_label" : "Conversion Rate (%)",
+		"x_label" : "Conversion Rate",
 		"y_label" : "Countries",
 		"label"  : false,
 		"data" 	 : [
@@ -76,7 +76,7 @@
 	{
 		"labels" : ["Desktop vs Mobile Conversion Rate"],
 		"label"  : true,
-		"x_label" : "Conversion Rate (%)",
+		"x_label" : "Conversion Rate",
 		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
