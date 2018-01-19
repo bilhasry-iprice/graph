@@ -34,7 +34,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                   var label         = data[pos].label;
                   var ticks         = data[pos].tick;
 
-                  console.log(label);
+                  $('#'+_id).addClass('graph-'+pos);
             	switch( _type ){
             		case 'horizontal-bar' : 
                               var legend        = ( data[pos].legend !== 'undefined' ) ? data[pos].legend : false;
