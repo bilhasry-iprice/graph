@@ -18,6 +18,26 @@ function translateCountry(label){
 			break;
 	} 
 }
+
+function translateDay(label){
+
+	switch( label ){
+		case 'SUN' : return 'Sunday';
+			break;
+		case 'MON' : return 'Monday';
+			break;
+		case 'TUE' : return 'Tuesday';
+			break;
+		case 'THU' : return 'Thursday';
+			break;
+		case 'FRI' : return 'Friday';
+			break;
+		case 'SAT' : return 'Saturday';
+			break;
+		default : return label
+			break;
+	} 
+}
 /**
  * bar chart function
  */
@@ -233,7 +253,7 @@ function splineChart( _id, data, format, x_label, y_label, ticks){
 	    tooltip : {
 	    	format : {
 	    		title : function(x){
-	    			return translateCountry(data[0][x+1]);
+	    			return translateDay(ticks[x+1]);
 	    		}
 	    	}
 	    }
