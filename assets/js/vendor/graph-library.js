@@ -244,10 +244,6 @@ function splineChart( _id, data, format, x_label, y_label, ticks){
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
-		padding: {
-			right: 50,
-			left: 80
-		},
 	    data: {
         	columns: data,
         	type: 'spline'
@@ -270,7 +266,11 @@ function splineChart( _id, data, format, x_label, y_label, ticks){
 	            	format : function(x){
 	            		return ticks[x+1];
 	            	}
-	            }
+	            },
+	            padding: {
+			      left: 0.5,
+			      right: 0.5
+			    }
 	        },
 	        y : {
 	        	label: {
