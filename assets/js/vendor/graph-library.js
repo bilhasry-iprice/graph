@@ -21,7 +21,7 @@ function translateCountry(label){
 /**
  * bar chart function
  */
-function barChart( _id, _values, format, cat, x_label, y_label, label){
+function barChart( _id, _values, format, cat, x_label, y_label, label, ticks){
 
 	var height = ($(window).width() < 768) ? 400 : 500;
 
@@ -29,11 +29,7 @@ function barChart( _id, _values, format, cat, x_label, y_label, label){
 		bindto: '#'+_id,
 	    data: {
 	        columns : _values,
-	        type: 'bar',
-	        tick: {
-                // this also works for non timeseries data
-                values: ['06', '09', '12', '15', '18', '21', '00']
-            }
+	        type: 'bar'
 	    },
 	    size:{
 	    	height: height
@@ -43,16 +39,14 @@ function barChart( _id, _values, format, cat, x_label, y_label, label){
 	    },
 	    axis: {
         	x: {
-	            type: 'category',
-	            categories: cat,
+        		type: 'categories',
+        		categories : cat,
 	            label: {
 	                text: x_label,
 	                position: 'outer-center'
 	            },
 	            tick : {
-	            	culling: {
-	                    max: 5 // the number of tick texts will be adjusted to less than this value
-	                }
+	            	centered : true
 	            }
 	        },
 	        y : {
@@ -74,9 +68,6 @@ function barChart( _id, _values, format, cat, x_label, y_label, label){
 	        }
 	    },
 	    grid: {
-	        x: {
-	            show: true
-	        },
 	        y: {
 	            show: true
 	        }
@@ -134,7 +125,7 @@ function donutChart( _id, _values, format, cat){
  * horizontal chart function
  */
 
-function horizontalChart( _id, _values, format, x_label, y_label, label){
+function horizontalChart( _id, _values, format, x_label, y_label, label, legend, _max){
 	
 	var height = ($(window).width() < 768) ? 350 : 450;
 
@@ -166,24 +157,28 @@ function horizontalChart( _id, _values, format, x_label, y_label, label){
 	    		}
 			}
 	    },
+	    legend : {
+	    	hide: legend
+	    },
 	    axis : {
 	    	rotated: true,
 	    	y : {
             	tick: {
 					format: function (d) { 
 						if( format == '$'){
-							return format + " " + d.toFixed(2);
+							return format + " " + d.toFixed(1);
 							
 						}else{
-							return d.toFixed(2) + " "+format; 	
+							return d.toFixed(1) + " "+format; 	
 						}
 					},
-					count: 6
+					count : 6
 	            },
 	            label: {
 	                text: x_label,
 	                position: 'outer-center'
-	            }
+	            },
+	            max : _max
 	        },
 	    	x: {
 	            type: 'category', // this needed to load string x value
@@ -221,14 +216,17 @@ function putImage( _el ){
  * pie chart function
  */
 
-function splineChart( _id, data, format, x_label, y_label){
+function splineChart( _id, data, format, x_label, y_label, ticks){
 
 	var height = ($(window).width() < 768) ? 350 : 450;
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
+		padding: {
+			right: 50,
+			left: 80
+		},
 	    data: {
-	    	x : 'x',
         	columns: data,
         	type: 'spline'
 	    },
@@ -242,14 +240,19 @@ function splineChart( _id, data, format, x_label, y_label){
 	    ,
 	    axis : {
 	    	x: {
-	            type: 'category', // this needed to load string x value
 	        	label: {
 	                text: x_label,
 	                position: 'outer-center'
 	            },
 	            tick : {
-	            	count: 5
-	            }
+	            	format : function(x){
+	            		return ticks[x+1];
+	            	}
+	            },
+	            padding: {
+			      left: 0.5,
+			      right: 0.5
+			    }
 	        },
 	        y : {
 	        	label: {
@@ -296,35 +299,36 @@ function splineChart( _id, data, format, x_label, y_label){
  * pie chart function
  */
 
-function splineChart2( _id, data, format, x_label, y_label){
+function splineChart2( _id, data, format, x_label, y_label, ticks){
 
 	var height = ($(window).width() < 768) ? 350 : 450;
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
 	    data: {
-	    	x : 'x',
         	columns: data,
         	type: 'spline'
 	    },
 	    axis : {
 	    	x: {
-	            type: 'category', // this needed to load string x value
+	            
 	        	label: {
 	                text: x_label,
 	                position: 'outer-center'
 	            },
 	            tick : {
-	            	values: [9, 15, 21, 3],
-	            	count: 4,
-	            	format : function(values){
-	            		var hour = data[0][values+1];
-		    			if( hour < 12){
-		    				return parseInt(hour) + ' AM';
-		    			}else{
-		    				return (parseInt(hour) - 12) + ' PM'
-		    			}
+	            	count : 7,
+	            	format : function(val){
+	            		
+	            		if( (val == 3) || (val == 9) || (val == 15) || (val == 21)){
+	            			return ticks[val+1];
+	            		}
+	            		
 	            	}
+	            },
+	            padding: {
+	            	right: 1,
+	            	left: 1
 	            }
 	        },
 	        y : {
@@ -348,7 +352,7 @@ function splineChart2( _id, data, format, x_label, y_label){
 	    tooltip: {
 	    	format: {
 	    		title: function (x) { 
-	    			var hour = data[0][x+1];
+	    			var hour = ticks[x+1];
 	    			if( hour < 12){
 	    				return parseInt(hour) + ' AM';
 	    			}else{
@@ -369,12 +373,17 @@ function splineChart2( _id, data, format, x_label, y_label){
 	    	},
 			r: 3
 		},
-	    grid: {
+		grid: {
 	        x: {
-	            show: true
+	            lines: [
+	                {value: 3, class: 'label-5'},
+	                {value: 9},
+	                {value: 15},
+	                {value: 21}
+	            ]
 	        },
-	        y: {
-	            show: true
+	        y:{
+	        	show: true
 	        }
 	    }
 	});
