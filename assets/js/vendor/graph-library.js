@@ -270,11 +270,7 @@ function splineChart( _id, data, format, x_label, y_label, ticks){
 	            	format : function(x){
 	            		return ticks[x+1];
 	            	}
-	            },
-	            padding: {
-			      left: 0.5,
-			      right: 0.5
-			    }
+	            }
 	        },
 	        y : {
 	        	label: {
