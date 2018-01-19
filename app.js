@@ -25,31 +25,33 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
 
             	pos = parseInt(pos);
 
-            	var _id = 'canvas';
-            	var _type = data[pos].type;
-            	var _values = data[pos].data;
-            	var _format = data[pos].format;
-                  var _xlabel = data[pos].x_label;
-                  var _ylabel = data[pos].y_label;
-                  var label = data[pos].label;
+            	var _id           = 'canvas';
+            	var _type         = data[pos].type;
+            	var _values       = data[pos].data;
+            	var _format       = data[pos].format;
+                  var _xlabel       = data[pos].x_label;
+                  var _ylabel       = data[pos].y_label;
+                  var label         = data[pos].label;
+                  var ticks         = data[pos].tick;
 
                   console.log(label);
             	switch( _type ){
             		case 'horizontal-bar' : 
-					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label);
+                              var legend        = ( data[pos].legend !== 'undefined' ) ? data[pos].legend : false;
+                              var _max          = data[pos].max;
+					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label, legend, _max);
             		break;
             		case 'spline'         : 
                               if(pos == 9){
-                                    
-                                    splineChart2( _id, _values, _format, _xlabel, _ylabel);
+                                    splineChart2( _id, _values, _format, _xlabel, _ylabel, ticks);
                               }else{
-                                    splineChart( _id, _values, _format, _xlabel, _ylabel);
+                                    splineChart( _id, _values, _format, _xlabel, _ylabel, ticks);
                               }
 					
             		break;
             		case 'bar' : 
                               var _cat = data[pos].categories;
-                              barChart( _id, _values, _format, _cat, _xlabel, _ylabel, label);
+                              barChart( _id, _values, _format, _cat, _xlabel, _ylabel, label, ticks);
             		break;
                         case 'donut' : 
                               var _cat = data[pos].categories;
