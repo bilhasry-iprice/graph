@@ -200,8 +200,8 @@
 			["VN", 60, 88, 82, 47, 49],
 			["PH", 95, 65, 80, 20, 15]
 		],
-		"categories" : ["Credit Card", "Bank Transfer", "Cash On Delivery", "Offline POS", "Instalment"],
-		"tick" : ["Credit Card", "Bank Transfer", "Cash On Delivery", "Offline POS", "Instalment"],
+		"categories" : ["Credit Card", "Bank Transfer", "Cash On Delivery", "Offline POS", "Installment"],
+		"tick" : ["Credit Card", "Bank Transfer", "Cash On Delivery", "Offline POS", "Installment"],
 		"type" : "bar",
 		"format" : "%"
 	},
