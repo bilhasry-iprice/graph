@@ -28,6 +28,8 @@ function translateDay(label){
 			break;
 		case 'TUE' : return 'Tuesday';
 			break;
+		case 'WED' : return 'Wednesday';
+			break;
 		case 'THU' : return 'Thursday';
 			break;
 		case 'FRI' : return 'Friday';
