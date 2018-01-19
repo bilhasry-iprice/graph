@@ -316,7 +316,15 @@ function splineChart2( _id, data, format, x_label, y_label){
 	            },
 	            tick : {
 	            	values: [9, 15, 21, 3],
-	            	count: 4
+	            	count: 4,
+	            	format : function(values){
+	            		var hour = data[0][values+1];
+		    			if( hour < 12){
+		    				return parseInt(hour) + ' AM';
+		    			}else{
+		    				return (parseInt(hour) - 12) + ' PM'
+		    			}
+	            	}
 	            }
 	        },
 	        y : {
