@@ -109,6 +109,29 @@ $(document).ready(function(){
 	        
 	    });
 	});
+
+	$('.quartal').change(function(e){
+
+		q = $(e.currentTarget).val();
+		
+		var filename = q + '.json';
+		
+		data_list = new Array();
+		$.getJSON('data/'+filename, function(result){
+			config = result.config;
+	        $.each(result.data, function(i, field){
+	        	
+	        	data_list.push(field);
+	    		
+	        });
+
+	        curr = sortBy( data_list, true, 'traffics');
+
+	        generateVList(curr);
+	        animate();
+	        
+	    });
+	});
 	$.getJSON('data/'+filename, function(result){
 		config = result.config;
         $.each(result.data, function(i, field){
@@ -267,6 +290,14 @@ $(document).ready(function(){
 
 	    var bigAssList = [];
 
+	    if( x > 0){
+	    	var _style  = 'width:100px;';
+	    		_style += ' transform: '+ translate( x, y); 
+	    	var _w = 'style="width:0px"';
+	    } else{
+	    	var _style = '';
+	    	var _w = '';
+	    }
 	    for (var i = 0; i < data.length; i++) {
 	    	var html = '';
 
@@ -281,10 +312,11 @@ $(document).ready(function(){
 			var _wEmployees = data[i].employees / config.max_employees * 100; 
 
 
-	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '">';
-	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="noopener">';
+	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '" style="'+ _style +'">';
+	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="nofollow">';
 	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/>';
-	    	html += '<label>'+data[i].name+'</label></a></span>';
+
+	    	html += '<label '+ _w +'>'+data[i].name+'</label></a></span>';
 	    	html += '</div>'
 
 	    	html += '<div class="category-item col bg__grey ">';
@@ -292,7 +324,8 @@ $(document).ready(function(){
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
+	    	html += '<span>'+(data[i].app == 99 ? 'n/a' : '#'+data[i].app.toLocaleString())+'</span>';
+	    	// html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';

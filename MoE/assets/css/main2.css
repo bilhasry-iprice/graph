@@ -79,7 +79,7 @@ p{
 	clear: both;
 }
 
-.p__10{ padding: 10px; }
+.p__10{ padding: 10px 10px 6px 10px; }
 .pt__10{ padding-top: 10px; }
 .pb__10{ padding-bottom: 10px; }
 .pr__10{ padding-right: 10px; }
@@ -129,10 +129,39 @@ ul li a{
 	font-weight: bold;
 }
 .infographic-header select{
-    max-width:33.33%;
     font-size: 10px;
-    padding:5px 0px;
+    padding:5px 15px 5px 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    padding: 8px;
+    position: relative;
+    border: 2px solid #33cccc;
+    z-index:3;
+    cursor: pointer;
+    border-radius: 4px;
 }
+
+.infographic-header select{
+	width: 110px;
+}
+.infographic-header span{
+	position: relative;
+}
+.infographic-header span:after{
+	content: ' ';
+	width: 12px;
+	height: 8px;
+	display: block;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	background:url('../img/up-down.png') no-repeat;
+	background-position:-2px -8px !important;
+	background-size: 14px auto;
+}
+
 .filter-header label{
 	font-weight: bold;
 	font-size: 14px;
@@ -140,7 +169,6 @@ ul li a{
 .year{
 	padding-right: 10px;
 	margin-right: 10px;
-	border-right: 1px solid #343434;
 }
 
 .header .col{
@@ -234,7 +262,6 @@ ul li a{
 	width:0%;
 	background: #33cccc;
 	color:#222;
-
 }
 
 .filter-header{
@@ -273,6 +300,11 @@ div#data {
 	position: relative;
 	display:inline-block;
 }
+
+.information label a{
+	color: #000;
+	text-decoration: underline;
+}
 .information label:first-child{
 	border-right: 1px solid #343434;
 }
@@ -292,6 +324,7 @@ div#data {
 	background: url('../img/iema.png') no-repeat center center;
 	background-size: 13px 16px;
 }
+
 
 
 .category-item.iema,
@@ -317,7 +350,7 @@ div#data {
 }
 .category-item.col:nth-child(2) span p,
 .category-item.col:nth-child(3) span p {
-    background: #11C1EA;
+    background: #33CCCC;
 }
 
 .header .col{ color: #fff; }
@@ -330,7 +363,24 @@ div#data {
 
 
 .category-item.col:nth-child(7) span p{
+    background: #FFCB40;
+    line-height: 46px;
+}
+
+.category-item:nth-child(3){
+    height:48px;
     background: #33cccc;
+}
+
+.category-item:nth-child(3) span{
+    line-height: 42px;
+    width: 42px;
+    display: block;
+    margin: 0px auto;
+    text-align:center;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 3px;
 }
 
 .header > span.col.sort-by.active {
@@ -345,7 +395,7 @@ div#data {
 	.swipe-left{ display: none; }
 	
 	.infographic-header{
-		height:70px;
+		height: 80px;
 	}
 	#infographic-content{
 		max-width:1105px;
@@ -353,7 +403,7 @@ div#data {
 		display: block;
 	}
 	.infographic-data-wrapper{
-		padding-top: 70px;
+		padding-top: 80px;
 	}
 
 	.infographic-data-wrapper .header{
@@ -395,31 +445,48 @@ div#data {
 	.infographic-data-wrapper .header .col:last-child, #data .col:last-child{
 		margin-right: 0px;
 	}
-	
-
-
 }
 @media screen and (max-width:768px){
 
 	.swipe-left{
 	    position: absolute;
-	    top: 30%;
+	    top: 0%;
 	    left: 0%;
 	    z-index: 99;
 	    width: 100%;
+	    top:250px;
 	}
 
 	.swipe-wrapper{
-		background: rgba(0,0,0,0.7);
-	    padding: 20px;
+	    padding: 50px 20px;
 	    text-align: center;
 	    color: #fff;
-	    border-radius: 16px;
-	    font-size: 18px;
+	    border-radius: 4px;
+	    font-size: 16px;
 	    line-height: 24px;
 	    width: 75%;
+	    
 	    display: block;
 	    margin: 0px auto;
+	    background: rgba(0,0,0,0.7);
+	}
+
+	.swipe-wrapper img{
+		width:48px;
+		animation: swipe 1s;
+		animation-delay: 2s;
+	}
+	@keyframes swipe{
+		from{
+			-webkit-transform: translateX(100px);
+			-moz-transform: translateX(100px);
+			transform: translateX(100px);
+		}
+		to{
+			-webkit-transform: translateX(-100px);
+			-moz-transform: translateX(-100px);
+			transform: translateX(-100px);
+		}
 	}
 
 	.swipe-wrapper p{
@@ -435,6 +502,11 @@ div#data {
 		order:3;
 		padding: 5px;
 	}
+	
+	.information label:first-child{
+		border:none;
+	}
+
 	.quartal.half{
 		order: 2;
 		border-bottom: 1px solid #efefef;
@@ -449,7 +521,7 @@ div#data {
 	}
 
 	.header .col:nth-child(2){
-		line-height:18px;
+		line-height:16px;
 		padding-top:6px;
 	}
 	.col {
