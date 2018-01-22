@@ -45,7 +45,7 @@ function translateDay(label){
  */
 function barChart( _id, _values, format, cat, x_label, y_label, label, ticks){
 
-	var height = ($(window).width() < 768) ? 400 : 500;
+	var height = ($(window).width() < 768) ? 425 : 500;
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
@@ -86,7 +86,8 @@ function barChart( _id, _values, format, cat, x_label, y_label, label, ticks){
 	            label: {
 	                text: y_label,
 	                position: 'outer-middle'
-	            }
+	            },
+	            max : 100
 	        }
 	    },
 	    grid: {
@@ -187,8 +188,9 @@ function horizontalChart( _id, _values, format, x_label, y_label, label, legend,
 	    	y : {
             	tick: {
 					format: function (d) { 
+						
 						if( format == '$'){
-							return format + " " + d.toFixed(1);
+							return format + " " + d.toFixed(0);
 							
 						}else{
 							return d.toFixed(1) + " "+format; 	

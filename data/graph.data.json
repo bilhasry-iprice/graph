@@ -6,7 +6,7 @@
 		"label"  : false,
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Conversion Rate", 0.9, 1.0, 1.0, 0.8, 1.1, 0.6]
+			[ "Conversion Rate", 0.9, 1.0, 1.0, 0.8, 0.9, 0.6]
         ],
         "type" : "horizontal-bar",
         "legend" : true,
@@ -91,7 +91,7 @@
         ],
         "type" : "horizontal-bar",
         "format" : "x",
-        "max" : 3.9
+        "max" : 4.0
 	},
 	{
 		"labels" : ["Desktop vs Mobile Average Order Value"],
