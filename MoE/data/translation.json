@@ -1,8 +1,8 @@
 {
 	"en" : {
 		"verifiedText": "Verified by Merchant",
-		"awardText": "Award Winners",
-		"filterResultsBy": "Filter results by",
+		"awardText": "iEMA Award Winners",
+		"filterResultsBy": "Filter by",
 		"filterYear" : "Select Data Per Quarter",
 		"filterQuartal" : "Quarter",
 		"typeFilter": "Type",
@@ -19,6 +19,7 @@
 		"businessTitle" : "Business Model",
 		"storeTitle" : "Store Type",
 		"originTitle" : "Store Origin",
+		"quarterSelect" : "Select Quarter",
 		"options" : {
 			"business_model" : {
 				"b2c" : "Business to Consumer",
@@ -37,7 +38,7 @@
 	},
 	"id" : {
 	    "verifiedText": "Diverifikasi oleh Toko Online",
-	    "awardText": "Pemenang Penghargaan",
+	    "awardText": "Pemenang Penghargaan iEMA",
 	    "numbersIn1000Text": "*Angka dalam 1000s",
 	    "filterYear" : "Pilih Data per Kuartal",
 		"filterQuartal" : "Kuartal",
@@ -56,6 +57,7 @@
 		"businessTitle" : "Bisnis Model",
 		"storeTitle" : "Tipe Toko",
 		"originTitle" : "Asal Toko",
+		"quarterSelect" : "Pilih Kuartal",
 		"options" : {
 			"business_model" : {
 				"b2c" : "Business to Consumer ",

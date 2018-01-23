@@ -19,6 +19,10 @@ function translateCountry(label){
 	} 
 }
 
+function round(value, decimals) {
+  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+}
+
 function translateDay(label){
 
 	switch( label ){
@@ -157,7 +161,8 @@ function horizontalChart( _id, _values, format, x_label, y_label, label, legend,
 	    data: {
 	    	x : 'x',
 	        columns : _values,
-	        type: 'bar'
+	        type: 'bar',
+	        order: 'asc'
 	    },
 	    size:{
 	    	height: height
@@ -193,7 +198,7 @@ function horizontalChart( _id, _values, format, x_label, y_label, label, legend,
 							return format + " " + d.toFixed(0);
 							
 						}else{
-							return d.toFixed(1) + " "+format; 	
+							return round(d,2) + " "+format; 	
 						}
 					},
 					count : 6
