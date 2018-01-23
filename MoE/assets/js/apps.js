@@ -110,11 +110,11 @@ $(document).ready(function(){
 	    });
 	});
 
-	$('.quartal').change(function(e){
+	$('.quartal_select').change(function(e){
 
-		q = $(e.currentTarget).val();
+		var q = $(e.currentTarget).val();
 		
-		var filename = q + '.json';
+		var filename = (q != '') ? (q + '.json') : 'q3-2017.json';
 		
 		data_list = new Array();
 		$.getJSON('data/'+filename, function(result){
@@ -126,12 +126,13 @@ $(document).ready(function(){
 	        });
 
 	        curr = sortBy( data_list, true, 'traffics');
-
+	        console.log( data_list);
 	        generateVList(curr);
 	        animate();
 	        
 	    });
 	});
+
 	$.getJSON('data/'+filename, function(result){
 		config = result.config;
         $.each(result.data, function(i, field){
@@ -324,7 +325,7 @@ $(document).ready(function(){
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span>'+(data[i].app == 99 ? 'n/a' : '#'+data[i].app.toLocaleString())+'</span>';
+	    	html += '<span>'+(data[i].app >= 99 ? 'n/a' : '#'+data[i].app.toLocaleString())+'</span>';
 	    	// html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
@@ -415,6 +416,7 @@ $(document).ready(function(){
 		$('.monthlyTitle').html(trans.monthlyTitle);
 		$('.employeeTitle').html( trans.employeeTitle );
 		$('.filterResultsBy').html( trans.filterResultsBy );
+		$('.quartal_select option:first').html(trans.quarterSelect);
 		$('.filter').find('select').each(function(){
 			$(this).empty();
 			if( $(this).hasClass('business_model')){

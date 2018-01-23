@@ -129,7 +129,7 @@ ul li a{
 	font-weight: bold;
 }
 .infographic-header select{
-    font-size: 10px;
+    font-size: 12px;
     padding:5px 15px 5px 0px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -144,7 +144,7 @@ ul li a{
 }
 
 .infographic-header select{
-	width: 110px;
+	width: 120px;
 }
 .infographic-header span{
 	position: relative;
@@ -166,11 +166,6 @@ ul li a{
 	font-weight: bold;
 	font-size: 14px;
 }
-.year{
-	padding-right: 10px;
-	margin-right: 10px;
-}
-
 .header .col{
 	vertical-align: middle;
 	position: relative;
@@ -445,6 +440,10 @@ div#data {
 	.infographic-data-wrapper .header .col:last-child, #data .col:last-child{
 		margin-right: 0px;
 	}
+
+	.country{
+		width: calc(20% - 10px);
+	}
 }
 @media screen and (max-width:768px){
 
@@ -476,6 +475,11 @@ div#data {
 		animation: swipe 1s;
 		animation-delay: 2s;
 	}
+
+	.category-item:nth-child(3){
+		height: 54px;
+	}
+
 	@keyframes swipe{
 		from{
 			-webkit-transform: translateX(100px);
