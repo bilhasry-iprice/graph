@@ -5,8 +5,8 @@
 		"y_label" : "Countries",
 		"label"  : false,
 		"data" 	 : [
-			["x", "TH","PH","MY","ID","SG","VN"],
-			[ "Conversion Rate", 0.8,0.8,0.9,1.1,1.1,1.3]
+			["x", "VN","ID","SG","MY","TH","PH"],
+			[ "Conversion Rate",1.3,1.1,1.1,0.9,0.8,0.8]
         ],
         "type" : "horizontal-bar",
         "legend" : true,
@@ -85,13 +85,13 @@
 		"x_label" : "Conversion Rate",
 		"y_label" : "Countries",
 		"data" 	 : [
-			["x", "PH","TH","MY","SG","ID","VN"],
-			[ "Mobile", 0.7,0.8,0.8,0.9,1.3,1.4],
-			[ "Desktop", 2,2.1,1.9,3,3.3,3.6]
+			["x", "VN","ID","SG","TH","MY","PH"],
+			[ "Mobile", 1.4,1.3,0.9,0.8,0.8,0.7],
+			[ "Desktop", 3.6,3.3,3,2.1,1.9,2]
         ],
         "type" : "horizontal-bar",
         "format" : "x",
-        "max" : 4.0
+        "max" : 3.3
 	},
 	{
 		"labels" : ["Desktop vs Mobile Average Order Value"],
