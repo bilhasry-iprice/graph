@@ -155,6 +155,13 @@ function donutChart( _id, _values, format, cat){
 function horizontalChart( _id, _values, format, x_label, y_label, label, legend, _max){
 	
 	var height = ($(window).width() < 768) ? 350 : 450;
+	if( format == 'x'){
+		var lines = [
+	            	{ value: 1.0, text: 'Average', class: 'avg-hg'}
+	            ];
+	}else{
+		var lines = [];
+	}
 
 	var chart = c3.generate({
 		bindto: '#'+_id,
@@ -223,7 +230,8 @@ function horizontalChart( _id, _values, format, x_label, y_label, label, legend,
 	            show: true
 	        },
 	        y: {
-	            show: true
+	            show: true,
+	            lines: lines
 	        }
 	    }
 	});
@@ -422,7 +430,10 @@ function splineChart2( _id, data, format, x_label, y_label, ticks){
 	            ]
 	        },
 	        y:{
-	        	show: true
+	        	show: true,
+	        	lines : [
+	        		{value: 100, text: 'Average', class: 'avg-line'}
+	        	]
 	        }
 	    }
 	});
