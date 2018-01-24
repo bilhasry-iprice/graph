@@ -144,6 +144,10 @@ ul li a{
 }
 
 .infographic-header select{
+	width: 100px;
+}
+
+.infographic-header .business_model{
 	width: 120px;
 }
 .infographic-header span{
