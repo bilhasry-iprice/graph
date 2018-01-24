@@ -20,7 +20,7 @@ function translateCountry(label){
 }
 
 function round(value, decimals) {
-  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+  return Number(Math.floor(value+'e'+decimals)+'e-'+decimals);
 }
 
 function translateDay(label){
@@ -198,7 +198,8 @@ function horizontalChart( _id, _values, format, x_label, y_label, label, legend,
 							return format + " " + d.toFixed(0);
 							
 						}else{
-							return round(d,2) + " "+format; 	
+
+							return round(d,1) + ""+format; 	
 						}
 					},
 					count : 6
@@ -349,7 +350,12 @@ function splineChart2( _id, data, format, x_label, y_label, ticks){
 			    			if( hour < 12){
 			    				return parseInt(hour) + ' AM';
 			    			}else{
-			    				return (parseInt(hour) - 12) + ' PM'
+			    				if( hour == '12'){
+			    					return hour + ' PM';
+			    				}else{
+			    					return (parseInt(hour) - 12) + ' PM';	
+			    				}
+			    				
 			    			}
 	            		}
 	            		
@@ -385,7 +391,11 @@ function splineChart2( _id, data, format, x_label, y_label, ticks){
 	    			if( hour < 12){
 	    				return parseInt(hour) + ' AM';
 	    			}else{
-	    				return (parseInt(hour) - 12) + ' PM'
+	    				if( hour == '12'){
+	    					return hour + ' PM';
+	    				}else{
+	    					return (parseInt(hour) - 12) + ' PM';	
+	    				}
 	    			}
 	    		}
 			}
