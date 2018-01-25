@@ -76,11 +76,12 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                   var header  = document.getElementsByTagName('head')[0];
                   var main    = document.getElementById('main-container');
                   var _el     = document.createElement('div');
+                  var _title  = document.createElement('strong');
                   var _s      = document.createElement('link');
 
                   main.setAttribute( 'class', 'embedded-graph');
                   _el.setAttribute( 'class', 'copyright');
-                  _el.innerHTML = '<p><a href="https://iprice.my" target="_blank">Powered by iPrice</a></p>';
+                  _el.innerHTML = '<p><strong>The State of eCommerce in SEA 2017</strong><a href="https://iprice.my" target="_blank">Powered by iPrice</a></p>';
 
                   main.appendChild(_el);
 
@@ -88,6 +89,8 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                   _s.setAttribute('rel', 'stylesheet');
                   _s.setAttribute('media', 'all');
 
+                  _title.innerHTML = data[pos].title;
+                  main.insertBefore( _title, main.childNodes[0]);
                   header.appendChild(_s);
             }
 

@@ -2,6 +2,7 @@
 	{
 		"labels" : ["Conversion Rate"],
 		"x_label" : "Conversion Rate",
+		"title" : "Conversion Rates per Country",
 		"y_label" : "Countries",
 		"label"  : false,
 		"data" 	 : [
