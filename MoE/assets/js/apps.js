@@ -16,6 +16,51 @@ $(document).ready(function(){
 	var container = document.getElementById('container');
 	var trans = '';
 
+	
+	//Aplication will do this first
+	
+	checkEmbed();
+
+	$.getJSON('data/'+filename, function(result){
+		config = result.config;
+        $.each(result.data, function(i, field){
+        	
+        	data_list.push(field);
+    		
+        });
+
+        curr = sortBy( data_list, true, 'traffics');
+
+        generateVList(curr);
+        animate();
+        
+    });
+
+	function checkEmbed(){
+		var query 	= window.location.search.substring(1);
+		var vars 	= query.split("&");
+		var embed 	= false;
+		for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			
+          if(pair[0] == 'embed'){
+                embed = pair[1];
+          }
+		}
+
+		if( embed ){
+			var main    = document.getElementById('iprice-content');
+			var _el0    = document.getElementById('infographic-content');
+			var _el     = document.createElement('div');
+
+			main.setAttribute( 'class', 'embedded-graph');
+			_el.setAttribute( 'class', 'copyright');
+			_el.innerHTML = '<p><strong class="embed-title">Peta E-commerce Indonesia</strong><a href="https://iprice.my" target="_blank">Powered by iPrice</a></p>';
+
+			_el0.insertBefore(_el, _el0.childNodes[0]);
+
+		}
+	}
 
 	if( $(window).width() < 768){
 		container.style.width = $(window).width() + 'px';	
@@ -132,22 +177,6 @@ $(document).ready(function(){
 	        
 	    });
 	});
-
-	$.getJSON('data/'+filename, function(result){
-		config = result.config;
-        $.each(result.data, function(i, field){
-        	
-        	data_list.push(field);
-    		
-        });
-
-        curr = sortBy( data_list, true, 'traffics');
-
-        generateVList(curr);
-        animate();
-        
-    });
-
 
 	function Filter( filter ){
 		generateVList(data_list);
