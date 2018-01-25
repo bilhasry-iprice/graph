@@ -5,13 +5,17 @@ var a = angular.module("myApp", ['ngSanitize', 'ngRoute']);
 a.controller('mainController', function($scope, $http, $window, $routeParams){
 	
 	var pos = false;
-    var query = window.location.search.substring(1);
+      var embed = false;
+      var query = window.location.search.substring(1);
 	var vars = query.split("&");
 		for (var i=0;i<vars.length;i++) {
 			var pair = vars[i].split("=");
 			if(pair[0] == 'id'){
 				pos =  pair[1];
-			}
+			} 
+                  if(pair[0] == 'embed'){
+                        embed = pair[1];
+                  }
 		}
 
 	$http({
@@ -19,6 +23,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
       	url: "data/graph.data.json"
       }).then(function mySuccess(response){
             
+            console.log(embed);
             if( pos !== false){
             	
             	var data = response.data;
@@ -64,6 +69,26 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                         break;
 
             	}
+            }
+        
+
+            if( embed ){
+                  var header  = document.getElementsByTagName('head')[0];
+                  var main    = document.getElementById('main-container');
+                  var _el     = document.createElement('div');
+                  var _s      = document.createElement('link');
+
+                  main.setAttribute( 'class', 'embedded-graph');
+                  _el.setAttribute( 'class', 'copyright');
+                  _el.innerHTML = '<p><a href="https://iprice.my" target="_blank">Powered by iPrice</a></p>';
+
+                  main.appendChild(_el);
+
+                  _s.setAttribute('href', 'assets/style.css');
+                  _s.setAttribute('rel', 'stylesheet');
+                  _s.setAttribute('media', 'all');
+
+                  header.appendChild(_s);
             }
 
       });
