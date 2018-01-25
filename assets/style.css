@@ -13,11 +13,32 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	text-align: right;
+}
+
+.embedded-graph > strong{
+    width: 100%;
+    padding: 8px;
+    display:block;
+    border-bottom: 1px solid #efefef;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: lighter;
+    margin-bottom: 24px;
+}
+
+.embedded-graph p{
+    text-align:left;
+    color: #fff;
+}
+
+.embedded-graph p strong{
+    font-weight: lighter;
 }
 
 .embedded-graph p a{
 	color: #fff;
 	text-decoration: none;
+	float:right;
 }
 
