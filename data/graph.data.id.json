@@ -173,8 +173,8 @@
 	},
 	{
 		"labels" : ["Quarterly % Of Mobile Contribution"],
-		"x_label" : "Quarters of the Year",
-		"y_label" : "Mobile Traffic (%)",
+		"x_label" : "Kuarter dalam Setahun",
+		"y_label" : "Trafik Mobile (%)",
 		"data"	 : [
 			["ID","74","78","85","87"],
 			["TH","67","71","78","79"],
