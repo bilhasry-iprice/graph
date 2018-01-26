@@ -20,8 +20,8 @@
 		"y_label" : "Countries",
 		"label"  : false,
 		"data" 	 : [
-			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Average Order Value", 36, 42, 91, 54, 23, 56]
+			["x", "SG", "PH", "MY", "TH", "ID", "VN"],
+			[ "Average Order Value", 91, 56, 54, 42, 36,23]
         ],
         "type" : "horizontal-bar",
         "legend" : true,
@@ -34,8 +34,8 @@
 		"y_label" : "Countries",
 		"label"  : false,
 		"data" 	 : [
-			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "GDP Per Capita ('000)", 12, 17, 90, 28, 6, 8]
+			["x", "SG", "MY", "TH", "ID", "PH", "VN"],
+			[ "GDP Per Capita ('000)", 90, 28, 17, 12, 8, 6]
         ],
         "type" : "horizontal-bar",
         "legend" : true,
@@ -100,9 +100,9 @@
 		"x_label" : "Average Order Value (USD)",
 		"y_label" : "Countries",
 		"data" 	 : [
-			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Mobile", 35, 39, 82, 52, 23, 55],
-			[ "Desktop", 42, 47, 96, 54, 26, 59]
+			["x", "SG", "PH", "MY", "TH", "ID", "VN"],
+			[ "Mobile", 82, 55, 52, 39, 35, 23],
+			[ "Desktop", 96, 59, 54, 47, 42, 26]
         ],
         "type" : "horizontal-bar",
         "format" : "$",
