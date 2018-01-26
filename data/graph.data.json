@@ -15,13 +15,13 @@
         "max" : 1.4
 	},
 	{
-		"labels" : ["Average Order Value"],
-		"x_label" : "Average Order Value (USD)",
+		"labels" : ["Basket Size"],
+		"x_label" : "Basket Size (USD)",
 		"y_label" : "Countries",
 		"label"  : false,
 		"data" 	 : [
 			["x", "SG", "PH", "MY", "TH", "ID", "VN"],
-			[ "Average Order Value", 91, 56, 54, 42, 36,23]
+			[ "Basket Size", 91, 56, 54, 42, 36,23]
         ],
         "type" : "horizontal-bar",
         "legend" : true,
@@ -71,7 +71,7 @@
         "format" : "%"
 	},
 	{
-		"labels" : ["Local vs Overall Average Order Value"],
+		"labels" : ["Local vs Overall Basket Size"],
 		"label"  : true,
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
@@ -95,9 +95,9 @@
         "max" : 3.3
 	},
 	{
-		"labels" : ["Desktop vs Mobile Average Order Value"],
+		"labels" : ["Desktop vs Mobile Basket Size"],
 		"label"  : true,
-		"x_label" : "Average Order Value (USD)",
+		"x_label" : "Basket Size (USD)",
 		"y_label" : "Countries",
 		"data" 	 : [
 			["x", "SG", "PH", "MY", "TH", "ID", "VN"],
