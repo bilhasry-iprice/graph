@@ -152,12 +152,12 @@ function donutChart( _id, _values, format, cat){
  * horizontal chart function
  */
 
-function horizontalChart( _id, _values, format, x_label, y_label, label, legend, _max){
+function horizontalChart( _id, _values, format, x_label, y_label, label, legend, _max, _avg){
 	
 	var height = ($(window).width() < 768) ? 350 : 450;
 	if( format == 'x'){
 		var lines = [
-	            	{ value: 1.0, text: 'Average', class: 'avg-hg'}
+	            	{ value: 1.0, text: _avg, class: 'avg-hg'}
 	            ];
 	}else{
 		var lines = [];
@@ -333,7 +333,7 @@ function splineChart( _id, data, format, x_label, y_label, ticks){
  * pie chart function
  */
 
-function splineChart2( _id, data, format, x_label, y_label, ticks){
+function splineChart2( _id, data, format, x_label, y_label, ticks, _avg){
 
 	var height = ($(window).width() < 768) ? 350 : 450;
 
@@ -432,7 +432,7 @@ function splineChart2( _id, data, format, x_label, y_label, ticks){
 	        y:{
 	        	show: true,
 	        	lines : [
-	        		{value: 100, text: 'Average', class: 'avg-line'}
+	        		{value: 100, text: _avg, class: 'avg-line'}
 	        	]
 	        }
 	    }
