@@ -23,13 +23,15 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
 		}
 
       switch( lang ){
-            case 'id': var data_url = 'graph.data.id.json'
+            case 'id':  var data_url = 'graph.data.id.json';
+                        var avg  = 'Rata-rata';
                   break;
             case 'th': var data_url = 'graph.data.th.json'
                   break;
             case 'vn': var data_url = 'graph.data.vn.json'
                   break;
-            default: var data_url = 'graph.data.json'
+            default: var data_url = 'graph.data.json';
+                        var avg  = 'Average';
                   break;
       }
 	$http({
@@ -58,11 +60,11 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
             		case 'horizontal-bar' : 
                               var legend        = ( data[pos].legend !== 'undefined' ) ? data[pos].legend : false;
                               var _max          = data[pos].max;
-					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label, legend, _max);
+					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label, legend, _max, avg);
             		break;
             		case 'spline'         : 
                               if(pos == 9){
-                                    splineChart2( _id, _values, _format, _xlabel, _ylabel, ticks);
+                                    splineChart2( _id, _values, _format, _xlabel, _ylabel, ticks, avg);
                               }else{
                                     splineChart( _id, _values, _format, _xlabel, _ylabel, ticks);
                               }
