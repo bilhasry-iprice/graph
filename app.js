@@ -6,6 +6,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
 	
 	var pos = false;
       var embed = false;
+      var lang = 'en';
       var query = window.location.search.substring(1);
 	var vars = query.split("&");
 		for (var i=0;i<vars.length;i++) {
@@ -16,11 +17,24 @@ a.controller('mainController', function($scope, $http, $window, $routeParams){
                   if(pair[0] == 'embed'){
                         embed = pair[1];
                   }
+                  if(pair[0] == 'lang'){
+                        lang = pair[1];
+                  }
 		}
 
+      switch( lang ){
+            case 'id': var data_url = 'graph.data.id.json'
+                  break;
+            case 'th': var data_url = 'graph.data.th.json'
+                  break;
+            case 'vn': var data_url = 'graph.data.vn.json'
+                  break;
+            default: var data_url = 'graph.data.json'
+                  break;
+      }
 	$http({
       	method: "GET",
-      	url: "data/graph.data.json"
+      	url: "data/" + data_url
       }).then(function mySuccess(response){
             
             console.log(embed);
