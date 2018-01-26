@@ -100,9 +100,9 @@
 		"x_label" : "Average Order Value (USD)",
 		"y_label" : "Countries",
 		"data" 	 : [
-			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Mobile", 35, 39, 82, 52, 23, 55],
-			[ "Desktop", 42, 47, 96, 54, 26, 59]
+			["x", "SG", "PH", "MY", "TH", "ID", "VN"],
+			[ "Mobile", 82, 55, 52, 39, 35, 23],
+			[ "Desktop", 96, 59, 54, 47, 42, 26]
         ],
         "type" : "horizontal-bar",
         "format" : "$",
