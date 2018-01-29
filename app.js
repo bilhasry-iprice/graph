@@ -2,12 +2,13 @@
 var data = '';
 var a = angular.module("myApp", ['ngSanitize', 'ngRoute']);
 
-a.controller('mainController', function($scope, $http, $window, $routeParams){
+a.controller('mainController', function($scope, $http, $window, $routeParams, $location){
 	
 	var pos = false;
       var embed = false;
       var lang = 'en';
-      var query = window.location.search.substring(1);
+      var query = $location.hash();
+      console.log($routeParams.id);
 	var vars = query.split("&");
 		for (var i=0;i<vars.length;i++) {
 			var pair = vars[i].split("=");

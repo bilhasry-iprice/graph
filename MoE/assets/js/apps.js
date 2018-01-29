@@ -334,12 +334,12 @@ $(document).ready(function(){
 	    	var iema 		= data[i].iema_winner ? 'iema' : '';
 	    	var verified 	= data[i].verified ? 'verified' : '';
 
-			var _wTraffics 	= data[i].traffics / parseInt(config.max_traffics) * 100; 
+			var _wTraffics 	= parseFloat(data[i].traffics) / parseFloat(config.max_traffics) * 100; 
 			var _wApp = 1 / data[i].app * 100 ; 
-			var _wTwitter 	= data[i].twitter / config.max_twitter * 100; 
-			var _wInstagram = data[i].instagram / config.max_instagram * 100; 
-			var _wFacebook 	= data[i].facebook / config.max_facebook * 100; 
-			var _wEmployees = data[i].employees / config.max_employees * 100; 
+			var _wTwitter 	= parseFloat(data[i].twitter) / parseFloat(config.max_twitter) * 100; 
+			var _wInstagram = parseFloat(data[i].instagram) / parseFloat(config.max_instagram) * 100; 
+			var _wFacebook 	= parseFloat(data[i].facebook) / parseFloat(config.max_facebook) * 100; 
+			var _wEmployees = parseFloat(data[i].employees) / parseFloat(config.max_employees) * 100; 
 
 
 	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '" style="'+ _style +'">';
