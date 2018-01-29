@@ -90,14 +90,38 @@
 	"vn" : {
 		"verifiedText": "Chứng thực bởi DN",
 		"awardText": "DN Thắng giải",
-		"numbersIn1000Text": "Số lượng (Ngàn)",
 		"filterResultsBy": "Lọc kết quả theo",
-		"typeFilter": "Loại hình",
+		"filterYear" : "Chọn dữ liệu trên mỗi quý",
+		"filterQuartal" : "Phần tư",
+		"typeFilter": "Type",
 		"categoryFilter": "Ngành hàng",
 		"originFilter": "Xuất xứ",
 		"fashionFilter": "Thời trang",
 		"generalFilter": "Tổng hợp",
 		"techAndGadgetFilter": "Công nghệ",
-		"internationalFilter": "Quốc tế"
+		"internationalFilter": "Quốc tế",
+		"merchantTitle" : "Thương gia",
+		"monthlyTitle" : "Lượng truy cập",
+		"appRank" : "Ứng dụng cài đặt",
+		"employeeTitle" : "Number of Employees",
+		"businessTitle" : "Loại hình",
+		"storeTitle" : "Ngành hàng",
+		"originTitle" : "Xuất xứ",
+		"quarterSelect" : "Chọn Khu phố",
+		"options" : {
+			"business_model" : {
+				"b2c" : "Business to Consumer",
+				"c2c" : "Consumer to Consumer"
+			},
+			"store_type" : {
+				"fashion" : "Thời trang",
+				"general" : "Tổng hợp",
+				"tech" : "Công nghệ"
+			},
+			"store_origin" : {
+				"vietnam" : "Việt Nam",
+				"international" : "Quốc tế"
+			}
+		}
 	}
 }
