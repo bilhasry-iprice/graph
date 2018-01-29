@@ -89,7 +89,7 @@
 		"y_label" : "Quốc Gia",
 		"data" 	 : [
 			["x", "VN","ID","SG","TH","MY","PH"],
-			[ "di động", 1.4,1.3,0.9,0.8,0.8,0.7],
+			[ "Di động", 1.4,1.3,0.9,0.8,0.8,0.7],
 			[ "PC", 3.6,3.3,3,2.1,1.9,2]
         ],
         "title": "Tỷ lệ chuyển đổi của di động so với PC",
@@ -104,7 +104,7 @@
 		"y_label" : "Quốc Gia",
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "di động", 35, 39, 82, 52, 23, 55],
+			[ "Di động", 35, 39, 82, 52, 23, 55],
 			[ "PC", 42, 47, 96, 54, 26, 59]
         ],
         "title" : "Giá trị trung bình trên 1 đơn hàng giữa di động và PC ",

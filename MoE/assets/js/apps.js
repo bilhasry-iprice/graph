@@ -443,6 +443,7 @@ $(document).ready(function(){
 		$('.awardText').html(trans.awardText);
 		$('.merchantTitle').html(trans.merchantTitle);
 		$('.monthlyTitle').html(trans.monthlyTitle);
+		$('.appTitle').html(trans.appRank);
 		$('.employeeTitle').html( trans.employeeTitle );
 		$('.filterResultsBy').html( trans.filterResultsBy );
 		$('.quartal_select option:first').html(trans.quarterSelect);
