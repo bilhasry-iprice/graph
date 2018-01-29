@@ -27,9 +27,10 @@ a.controller('mainController', function($scope, $http, $window, $routeParams, $l
             case 'id':  var data_url = 'graph.data.id.json';
                         var avg  = 'Rata-rata';
                   break;
-            case 'th': var data_url = 'graph.data.th.json'
+            case 'th':  var data_url = 'graph.data.th.json'
                   break;
-            case 'vn': var data_url = 'graph.data.vn.json'
+            case 'vn':  var data_url = 'graph.data.vn.json'
+                        var avg = 'trung bình'
                   break;
             default: var data_url = 'graph.data.json';
                         var avg  = 'Average';
