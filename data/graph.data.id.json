@@ -9,6 +9,7 @@
 			["x", "VN","ID","SG","MY","TH","PH"],
 			[ "Conversion Rate",1.3,1.1,1.1,0.9,0.8,0.8]
         ],
+        "title" : "",
         "type" : "horizontal-bar",
         "legend" : true,
         "format" : "x",
@@ -23,6 +24,7 @@
 			["x", "SG", "PH", "MY", "TH", "ID", "VN"],
 			[ "Basket Size", 91, 56, 54, 42, 36,23]
         ],
+        "title" : "",
         "type" : "horizontal-bar",
         "legend" : true,
         "format" : "$",
