@@ -7,8 +7,8 @@ a.controller('mainController', function($scope, $http, $window, $routeParams, $l
 	var pos = false;
       var embed = false;
       var lang = 'en';
-      var query = $location.hash();
-      console.log($routeParams.id);
+      var query   = window.location.search.substring(1);
+      
 	var vars = query.split("&");
 		for (var i=0;i<vars.length;i++) {
 			var pair = vars[i].split("=");
