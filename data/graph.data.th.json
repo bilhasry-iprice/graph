@@ -21,7 +21,7 @@
 		"label"  : false,
 		"data" 	 : [
 			["x", "ID", "TH", "SG", "MY", "VN", "PH"],
-			[ "Average Order Value", 36, 42, 91, 54, 23, 56]
+			[ "Basket Size", 36, 42, 91, 54, 23, 56]
         ],
         "title" : "Basket Size ในแต่ละประเทศ",
         "type" : "horizontal-bar",
