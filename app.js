@@ -67,7 +67,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams, $l
             		break;
             		case 'spline'         : 
                               if(pos == 9){
-                                    splineChart2( _id, _values, _format, _xlabel, _ylabel, ticks, avg);
+                                    splineChart2( _id, _values, _format, _xlabel, _ylabel, ticks, avg, lang);
                               }else{
                                     splineChart( _id, _values, _format, _xlabel, _ylabel, ticks, lang);
                               }
