@@ -315,6 +315,9 @@ function splineChart( _id, data, format, x_label, y_label, ticks, lang){
 	    	format : {
 	    		title : function(x){
 	    			return translateDay(ticks[x+1], lang);
+	    		},
+	    		name: function (name, ratio, id, index) { 
+	    			return translateCountry(name, lang); 
 	    		}
 	    	}
 	    }
@@ -380,7 +383,7 @@ function splineChart( _id, data, format, x_label, y_label, ticks, lang){
  * pie chart function
  */
 
-function splineChart2( _id, data, format, x_label, y_label, ticks, _avg){
+function splineChart2( _id, data, format, x_label, y_label, ticks, _avg, lang){
 
 	var height = ($(window).width() < 768) ? 350 : 450;
 
@@ -452,6 +455,9 @@ function splineChart2( _id, data, format, x_label, y_label, ticks, _avg){
 	    					return (parseInt(hour) - 12) + ' PM';	
 	    				}
 	    			}
+	    		},
+	    		name: function (name, ratio, id, index) { 
+	    			return translateCountry(name, lang); 
 	    		}
 			}
 	    },
