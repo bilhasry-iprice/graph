@@ -75,7 +75,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams, $l
             		break;
             		case 'bar' : 
                               var _cat = data[pos].categories;
-                              barChart( _id, _values, _format, _cat, _xlabel, _ylabel, label, ticks);
+                              barChart( _id, _values, _format, _cat, _xlabel, _ylabel, label, ticks, lang);
             		break;
                         case 'donut' : 
                               var _cat = data[pos].categories;

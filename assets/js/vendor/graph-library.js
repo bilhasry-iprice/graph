@@ -94,7 +94,7 @@ function translateDay(label, lang){
 /**
  * bar chart function
  */
-function barChart( _id, _values, format, cat, x_label, y_label, label, ticks){
+function barChart( _id, _values, format, cat, x_label, y_label, label, ticks, lang){
 
 	var height = ($(window).width() < 768) ? 425 : 500;
 
@@ -103,6 +103,13 @@ function barChart( _id, _values, format, cat, x_label, y_label, label, ticks){
 	    data: {
 	        columns : _values,
 	        type: 'bar'
+	    },
+	    tooltip : {
+	    	format : {
+	    		name: function (name, ratio, id, index) { 
+	    			return translateCountry(name, lang); 
+	    		}
+	    	}
 	    },
 	    size:{
 	    	height: height
