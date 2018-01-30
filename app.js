@@ -63,13 +63,13 @@ a.controller('mainController', function($scope, $http, $window, $routeParams, $l
             		case 'horizontal-bar' : 
                               var legend        = ( data[pos].legend !== 'undefined' ) ? data[pos].legend : false;
                               var _max          = data[pos].max;
-					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label, legend, _max, avg);
+					horizontalChart( _id, _values, _format, _xlabel, _ylabel, label, legend, _max, avg, lang);
             		break;
             		case 'spline'         : 
                               if(pos == 9){
                                     splineChart2( _id, _values, _format, _xlabel, _ylabel, ticks, avg);
                               }else{
-                                    splineChart( _id, _values, _format, _xlabel, _ylabel, ticks);
+                                    splineChart( _id, _values, _format, _xlabel, _ylabel, ticks, lang);
                               }
 					
             		break;

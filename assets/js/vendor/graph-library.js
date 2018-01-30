@@ -1,48 +1,95 @@
 
-function translateCountry(label){
+function translateCountry(label, lang){
 
-	switch( label ){
-		case 'ID' : return 'Indonesia';
-			break;
-		case 'PH' : return 'Philippines';
-			break;
-		case 'VN' : return 'Vietnam';
-			break;
-		case 'TH' : return 'Thailand';
-			break;
-		case 'SG' : return 'Singapore';
-			break;
-		case 'MY' : return 'Malaysia';
-			break;
-		default : return label
-			break;
-	} 
+	if( lang == 'th'){
+
+		switch( label ){
+			case 'ID' : return 'ID (อินโดนีเซีย)';
+				break;
+			case 'PH' : return 'PH (ฟิลิปปินส์)';
+				break;
+			case 'VN' : return 'VN (เวียดนาม)';
+				break;
+			case 'TH' : return 'TH (ไทย)';
+				break;
+			case 'SG' : return 'SG (สิงคโปร์)';
+				break;
+			case 'MY' : return 'MY (มาเลเซีย)';
+				break;
+			default : return label
+				break;
+		}
+
+	}else{
+
+		switch( label ){
+			case 'ID' : return 'Indonesia';
+				break;
+			case 'PH' : return 'Philippines';
+				break;
+			case 'VN' : return 'Vietnam';
+				break;
+			case 'TH' : return 'Thailand';
+				break;
+			case 'SG' : return 'Singapore';
+				break;
+			case 'MY' : return 'Malaysia';
+				break;
+			default : return label
+				break;
+		} 
+
+	}
 }
 
 function round(value, decimals) {
   return Number(Math.floor(value+'e'+decimals)+'e-'+decimals);
 }
 
-function translateDay(label){
+function translateDay(label, lang){
+	if( lang == 'th'){
+		
+		switch( label ){
+			case 'SUN' : return 'SUN (อาทิตย์)';
+				break;
+			case 'MON' : return 'MON (จันทร์)';
+				break;
+			case 'TUE' : return 'TUE (อังคาร)';
+				break;
+			case 'WED' : return 'WED (พุธ)';
+				break;
+			case 'THU' : return 'THU (พฤหัสบดี)';
+				break;
+			case 'FRI' : return 'FRI (ศุกร์)';
+				break;
+			case 'SAT' : return 'SAT (เสาร์)';
+				break;
+			default : return label
+				break;
+		} 
 
-	switch( label ){
-		case 'SUN' : return 'Sunday';
-			break;
-		case 'MON' : return 'Monday';
-			break;
-		case 'TUE' : return 'Tuesday';
-			break;
-		case 'WED' : return 'Wednesday';
-			break;
-		case 'THU' : return 'Thursday';
-			break;
-		case 'FRI' : return 'Friday';
-			break;
-		case 'SAT' : return 'Saturday';
-			break;
-		default : return label
-			break;
-	} 
+	}else{
+		
+		switch( label ){
+			case 'SUN' : return 'Sunday';
+				break;
+			case 'MON' : return 'Monday';
+				break;
+			case 'TUE' : return 'Tuesday';
+				break;
+			case 'WED' : return 'Wednesday';
+				break;
+			case 'THU' : return 'Thursday';
+				break;
+			case 'FRI' : return 'Friday';
+				break;
+			case 'SAT' : return 'Saturday';
+				break;
+			default : return label
+				break;
+		} 
+
+	}
 }
 /**
  * bar chart function
@@ -152,7 +199,7 @@ function donutChart( _id, _values, format, cat){
  * horizontal chart function
  */
 
-function horizontalChart( _id, _values, format, x_label, y_label, label, legend, _max, _avg){
+function horizontalChart( _id, _values, format, x_label, y_label, label, legend, _max, _avg, lang){
 	
 	var height = ($(window).width() < 768) ? 350 : 450;
 	if( format == 'x'){
@@ -188,7 +235,7 @@ function horizontalChart( _id, _values, format, x_label, y_label, label, legend,
 					}
 	    		},
 	    		title : function(x){
-	    			return translateCountry(_values[0][x+1]);
+	    			return translateCountry(_values[0][x+1], lang);
 	    		}
 			}
 	    },
@@ -254,7 +301,7 @@ function putImage( _el ){
  * pie chart function
  */
 
-function splineChart( _id, data, format, x_label, y_label, ticks){
+function splineChart( _id, data, format, x_label, y_label, ticks, lang){
 
 	var height = ($(window).width() < 768) ? 350 : 450;
 
@@ -267,7 +314,7 @@ function splineChart( _id, data, format, x_label, y_label, ticks){
 	    tooltip : {
 	    	format : {
 	    		title : function(x){
-	    			return translateDay(ticks[x+1]);
+	    			return translateDay(ticks[x+1], lang);
 	    		}
 	    	}
 	    }
