@@ -28,6 +28,7 @@ a.controller('mainController', function($scope, $http, $window, $routeParams, $l
                         var avg  = 'Rata-rata';
                   break;
             case 'th':  var data_url = 'graph.data.th.json'
+                        var avg  = 'ค่าเฉลี่ย';
                   break;
             case 'vn':  var data_url = 'graph.data.vn.json'
                         var avg = 'trung bình'
