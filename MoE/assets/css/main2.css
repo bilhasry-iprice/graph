@@ -580,6 +580,9 @@ div#data {
 	.header .col:first-child{
 		z-index: 4;
 	}
+	.id-content .col:nth-child(3){
+	    line-height: 16px;
+	}
 	span.col.sort-by.active {
 		padding: 2px 21px 2px 6px;
 	}

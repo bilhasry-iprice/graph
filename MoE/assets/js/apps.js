@@ -7,21 +7,36 @@ $(document).ready(function(){
 	var config 		= '';
 	var filter 		= new Array();
 	var filterList	= new Array();
-	var year = 2017;
 	var x	= 0;
 	var y	= 0;	
 	var curr = new Array();
 	var list = '';
-	var lang = 'en';
-	var container = document.getElementById('container');
-	var trans = '';
+	var trans = ''
 
 	
 	//Aplication will do this first
 	
 	checkEmbed();
 
-	$.getJSON('data/'+filename, function(result){
+	// get Language
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if(pair[0] == 'lang'){
+			var lang = (pair[1] != 'undefined') ? pair[1] : 'en';
+		}
+		if(pair[0] == 'lang'){
+			var embed = (pair[1] != 'undefined') ? pair[1] : false ;
+		}
+		if(pair[0] == 'lang'){
+			var loc = (pair[1] != 'undefined') ? pair[1] : '' ;
+		}
+	}
+		
+
+	$.getJSON('data/' + loc + '/' + filename, function(result){
 		config = result.config;
         $.each(result.data, function(i, field){
         	
@@ -37,17 +52,6 @@ $(document).ready(function(){
     });
 
 	function checkEmbed(){
-		var query 	= window.location.search.substring(1);
-		var vars 	= query.split("&");
-		var embed 	= false;
-		for (var i=0;i<vars.length;i++) {
-			var pair = vars[i].split("=");
-			
-          if(pair[0] == 'embed'){
-                embed = pair[1];
-          }
-		}
-
 		if( embed ){
 			var main    = document.getElementById('iprice-content');
 			var _el0    = document.getElementById('infographic-content');
@@ -63,6 +67,8 @@ $(document).ready(function(){
 	}
 
 	if( $(window).width() < 768){
+		var container = document.getElementById('container');
+		container.setAttribute('class', lang+'-content');
 		container.style.width = $(window).width() + 'px';	
 		var topLeft = document.createElement('div');
 		
@@ -139,7 +145,7 @@ $(document).ready(function(){
 
 		$(e.currentTarget).addClass('q-active');
 		data_list = new Array();
-		$.getJSON('data/'+filename, function(result){
+		$.getJSON('data/' + loc + '/' + filename, function(result){
 			config = result.config;
 	        $.each(result.data, function(i, field){
 	        	
@@ -162,7 +168,7 @@ $(document).ready(function(){
 		var filename = (q != '') ? (q + '.json') : 'q3-2017.json';
 		
 		data_list = new Array();
-		$.getJSON('data/'+filename, function(result){
+		$.getJSON('data/' + lang + '/' + filename, function(result){
 			config = result.config;
 	        $.each(result.data, function(i, field){
 	        	
@@ -336,10 +342,19 @@ $(document).ready(function(){
 
 			var _wTraffics 	= parseFloat(data[i].traffics) / parseFloat(config.max_traffics) * 100; 
 			var _wApp = 1 / data[i].app * 100 ; 
-			var _wTwitter 	= parseFloat(data[i].twitter) / parseFloat(config.max_twitter) * 100; 
+			if( loc == 'th'){
+				var _wLine 		= parseFloat(data[i].line) / parseFloat(config.max_twitter) * 100; 	
+			}else if (loc == 'vn'){
+				var _wYoutube 	= parseFloat(data[i].youtube) / parseFloat(config.max_twitter) * 100; 
+			}else{
+				var _wTwitter 	= parseFloat(data[i].twitter) / parseFloat(config.max_twitter) * 100; 
+			}
+
 			var _wInstagram = parseFloat(data[i].instagram) / parseFloat(config.max_instagram) * 100; 
 			var _wFacebook 	= parseFloat(data[i].facebook) / parseFloat(config.max_facebook) * 100; 
-			var _wEmployees = parseFloat(data[i].employees) / parseFloat(config.max_employees) * 100; 
+			if (( loc != 'vn') && (loc != 'ph')){
+				var _wEmployees = parseFloat(data[i].employees) / parseFloat(config.max_employees) * 100; 
+			}
 
 
 	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '" style="'+ _style +'">';
@@ -357,10 +372,20 @@ $(document).ready(function(){
 	    	html += '<span>'+(data[i].app >= 99 ? 'n/a' : '#'+data[i].app.toLocaleString())+'</span>';
 	    	// html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
-
-	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span><p class="percent animate-width" data-width="'+_wTwitter+'">'+ (data[i].twitter == 0 ? 'n/a' : data[i].twitter.toLocaleString()) +'</p></span>';
-	    	html += '</div>';
+	    	if( loc == 'th'){
+				html += '<div class="category-item col bg__grey ">';
+		    	html += '<span><p class="percent animate-width" data-width="'+_wLine+'">'+ (data[i].line == 0 ? 'n/a' : data[i].line.toLocaleString()) +'</p></span>';
+		    	html += '</div>';
+			}else if (loc == 'vn'){
+				html += '<div class="category-item col bg__grey ">';
+		    	html += '<span><p class="percent animate-width" data-width="'+_wYoutube+'">'+ (data[i].youtube == 0 ? 'n/a' : data[i].youtube.toLocaleString()) +'</p></span>';
+		    	html += '</div>';
+			}else{
+				html += '<div class="category-item col bg__grey ">';
+		    	html += '<span><p class="percent animate-width" data-width="'+_wTwitter+'">'+ (data[i].twitter == 0 ? 'n/a' : data[i].twitter.toLocaleString()) +'</p></span>';
+		    	html += '</div>';
+			}
+	    	
 
 	    	html += '<div class="category-item col bg__grey ">';
 	    	html += '<span><p class="percent animate-width" data-width="'+_wInstagram+'">'+ (data[i].instagram == 0 ? 'n/a' : data[i].instagram.toLocaleString()) +'</p></span>';
@@ -370,9 +395,11 @@ $(document).ready(function(){
 	    	html += '<span><p class="percent animate-width" data-width="'+_wFacebook+'">'+ (data[i].facebook == 0 ? 'n/a' : data[i].facebook.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
-	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span><p class="percent animate-width" data-width="'+_wEmployees+'">'+ (data[i].employees == 0 ? 'n/a' : data[i].employees.toLocaleString()) +'</p></span>';
-	    	html += '</div>';
+	    	if (( loc != 'vn') && (loc != 'ph')){
+		    	html += '<div class="category-item col bg__grey ">';
+		    	html += '<span><p class="percent animate-width" data-width="'+_wEmployees+'">'+ (data[i].employees == 0 ? 'n/a' : data[i].employees.toLocaleString()) +'</p></span>';
+		    	html += '</div>';
+		    }
 
 	    	var _el = document.createElement('div');
 			_el.setAttribute('class', 'row  '+ data[i].category + ' ' + data[i].location + ' ' + data[i].type);
@@ -401,27 +428,15 @@ $(document).ready(function(){
 
 	function getLang(){
 
-		
-		var query = window.location.search.substring(1);
-		var vars = query.split("&");
-
-		for (var i=0;i<vars.length;i++) {
-			var pair = vars[i].split("=");
-			if(pair[0] == 'lang'){
-				lang = pair[1];
-			}
-		}
 		$.getJSON('data/translation.json', function(result){
 			
 			switch( lang ){
 				case 'id' :  trans = result.id;
-
 					break;
 				case 'th' :  trans = result.th;
-							
 					break;
 				case 'vn' :  trans = result.vn;
-							
+							 $('.employeeTitle').remove();
 					break;
 				case 'my' :  trans = result.my;
 					break;
@@ -436,9 +451,11 @@ $(document).ready(function(){
 		
 	}
 
+	//getLang
+	getLang();
+
 	function translateLang(trans){
 		$('.filterYear').html(trans.filterYear);
-		$('.filterQuartal').html(trans.filterQuartal);
 		$('.verifiedText').html(trans.verifiedText);
 		$('.awardText').html(trans.awardText);
 		$('.merchantTitle').html(trans.merchantTitle);
@@ -446,7 +463,6 @@ $(document).ready(function(){
 		$('.appTitle').html(trans.appRank);
 		$('.employeeTitle').html( trans.employeeTitle );
 		$('.filterResultsBy').html( trans.filterResultsBy );
-		$('.quartal_select option:first').html(trans.quarterSelect);
 		$('.filter').find('select').each(function(){
 			$(this).empty();
 			if( $(this).hasClass('business_model')){
@@ -466,7 +482,15 @@ $(document).ready(function(){
 				});
 			}
 		});
+		
+		$('.quartal_select').empty();
+		console.log(trans.options.quarter);
+		$('.quartal_select').append('<option value="">'+trans.quarterSelect+'</option>');
+		$.each(trans.options.quarter, function(key, value){
+			$('.quartal_select').append('<option value="'+key+'">'+value+'</option>')
+		});
+		
 	}
-	getLang();
+	
     
 });

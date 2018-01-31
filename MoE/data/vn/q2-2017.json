@@ -1,7 +1,16 @@
-[
+{
+  "config" : {
+    "max_traffics" : "41143333",
+    "max_app" : "1",
+    "max_twitter" : "727652",
+    "max_instagram" : "222000",
+    "max_facebook" : "17504000",
+    "max_employees" : "656"
+  },
+  "data" :[
   {
     "key": 0,
-    "name": "%uFFFDn b_c",
+    "name": "Én bạc",
     "url": "http://enbac.com/",
     "logodesktop": "logo/desktop/enbac.png",
     "logomobile": "logo/mobile/enbac.png",
@@ -52,7 +61,7 @@
   },
   {
     "key": 3,
-    "name": "Th_ gi_i di __ng",
+    "name": "Thế giới di động",
     "url": "https://www.thegioididong.com/",
     "logodesktop": "logo/desktop/thegioididong.png",
     "logomobile": "logo/mobile/thegioididong.png",
@@ -69,7 +78,7 @@
   },
   {
     "key": 4,
-    "name": "V_t gi%uFFFD",
+    "name": "Vật giá",
     "url": "http://www.vatgia.com/home/",
     "logodesktop": "logo/desktop/vatgia.png",
     "logomobile": "logo/mobile/vatgia.png",
@@ -137,7 +146,7 @@
   },
   {
     "key": 8,
-    "name": "Nguy_n Kim",
+    "name": "Nguyễn Kim",
     "url": "https://www.nguyenkim.com/",
     "logodesktop": "logo/desktop/nguyenkim.png",
     "logomobile": "logo/mobile/nguyenkim.png",
@@ -171,7 +180,7 @@
   },
   {
     "key": 10,
-    "name": "Phong V_",
+    "name": "Phong Vũ",
     "url": "http://www.phongvu.vn/",
     "logodesktop": "logo/desktop/phongvu.png",
     "logomobile": "logo/mobile/phongvu.png",
@@ -239,7 +248,7 @@
   },
   {
     "key": 14,
-    "name": "Nh%uFFFDm mua",
+    "name": "Nhóm mua",
     "url": "http://www.nhommua.com/",
     "logodesktop": "logo/desktop/nhommua.png",
     "logomobile": "logo/mobile/nhommua.png",
@@ -256,7 +265,7 @@
   },
   {
     "key": 15,
-    "name": "A _%uFFFDy r_i",
+    "name": "A đây rồi",
     "url": "https://www.adayroi.com/",
     "logodesktop": "logo/desktop/adayroi.png",
     "logomobile": "logo/mobile/adayroi.png",
@@ -307,7 +316,7 @@
   },
   {
     "key": 18,
-    "name": "Vi_n Th%uFFFDng A",
+    "name": "Viễn Thông A",
     "url": "https://vienthonga.vn/",
     "logodesktop": "logo/desktop/vienthonga.png",
     "logomobile": "logo/mobile/vienthonga.png",
@@ -324,7 +333,7 @@
   },
   {
     "key": 19,
-    "name": "_i_n m%uFFFDy xanh",
+    "name": "Điện máy xanh",
     "url": "https://www.dienmayxanh.com/",
     "logodesktop": "logo/desktop/dienmayxanh.png",
     "logomobile": "logo/mobile/dienmayxanh.png",
@@ -409,7 +418,7 @@
   },
   {
     "key": 24,
-    "name": "_i_n m%uFFFDy Ch_ L_n",
+    "name": "Điện máy Chợ Lớn",
     "url": "https://dienmaycholon.vn/",
     "logodesktop": "logo/desktop/cholon.png",
     "logomobile": "logo/mobile/cholon.png",
@@ -426,7 +435,7 @@
   },
   {
     "key": 25,
-    "name": "_i_n m%uFFFDy Pico",
+    "name": "Điện máy Pico",
     "url": "https://pico.vn/",
     "logodesktop": "logo/desktop/pico.png",
     "logomobile": "logo/mobile/pico.png",
@@ -443,7 +452,7 @@
   },
   {
     "key": 26,
-    "name": "_i_n m%uFFFDy HC",
+    "name": "Điện máy HC",
     "url": "https://www.hc.com.vn/",
     "logodesktop": "logo/desktop/hcl.png",
     "logomobile": "logo/mobile/hc.png",
@@ -460,7 +469,7 @@
   },
   {
     "key": 27,
-    "name": "_i_n m%uFFFDy Tr_n Anh",
+    "name": "Điện máy Trần Anh",
     "url": "https://www.trananh.vn/",
     "logodesktop": "logo/desktop/trananh.png",
     "logomobile": "logo/mobile/trananh.png",
@@ -477,7 +486,7 @@
   },
   {
     "key": 28,
-    "name": "_i_n m%uFFFDy Ph%uFFFDc Anh",
+    "name": "Điện máy Phúc Anh",
     "url": "https://www.phucanh.vn/",
     "logodesktop": "logo/desktop/phucanh.png",
     "logomobile": "logo/mobile/phucanh.png",
@@ -494,7 +503,7 @@
   },
   {
     "key": 29,
-    "name": "Ch_ _i_n t_",
+    "name": "Chợ điện tử",
     "url": "https://www.chodientu.vn/",
     "logodesktop": "logo/desktop/chodientu.png",
     "logomobile": "logo/mobile/chodientu.png",
@@ -528,7 +537,7 @@
   },
   {
     "key": 31,
-    "name": "Ho%uFFFDng H%uFFFD Mobile",
+    "name": "Hoàng Hà Mobile",
     "url": "https://hoanghamobile.com/",
     "logodesktop": "logo/desktop/hoangha.png",
     "logomobile": "logo/mobile/hoangha.png",
@@ -545,7 +554,7 @@
   },
   {
     "key": 32,
-    "name": "R_ m_i ng%uFFFDy",
+    "name": "Rẻ mỗi ngày",
     "url": "http://www.remoingay.com/",
     "logodesktop": "logo/desktop/remoingay.png",
     "logomobile": "logo/mobile/remoingay.png",
@@ -647,7 +656,7 @@
   },
   {
     "key": 38,
-    "name": "C%uFFFDng mua",
+    "name": "Cùng mua",
     "url": "http://www.cungmua.com/",
     "logodesktop": "logo/desktop/cungmua.png",
     "logomobile": "logo/mobile/cungmua.png",
@@ -749,7 +758,7 @@
   },
   {
     "key": 44,
-    "name": "Shop Tr_ Th_",
+    "name": "Shop Trẻ Thơ",
     "url": "https://shoptretho.com.vn/",
     "logodesktop": "logo/desktop/shoptretho.png",
     "logomobile": "logo/mobile/shoptretho.png",
@@ -850,3 +859,4 @@
     "iema_winner": ""
   }
 ]
+}
