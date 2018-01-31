@@ -27,17 +27,24 @@ $(document).ready(function(){
 		if(pair[0] == 'lang'){
 			var lang = (pair[1] != 'undefined') ? pair[1] : 'en';
 		}
-		if(pair[0] == 'lang'){
+		if(pair[0] == 'embed'){
 			var embed = (pair[1] != 'undefined') ? pair[1] : false ;
 		}
-		if(pair[0] == 'lang'){
+		if(pair[0] == 'loc'){
 			var loc = (pair[1] != 'undefined') ? pair[1] : '' ;
 		}
 	}
 		
 
 	$.getJSON('data/' + loc + '/' + filename, function(result){
+
 		config = result.config;
+
+		if( ( loc != 'vn') && (loc != 'ph')){
+
+		}else{
+			$('.employeeTitle').remove();
+		}
         $.each(result.data, function(i, field){
         	
         	data_list.push(field);
@@ -168,7 +175,7 @@ $(document).ready(function(){
 		var filename = (q != '') ? (q + '.json') : 'q3-2017.json';
 		
 		data_list = new Array();
-		$.getJSON('data/' + lang + '/' + filename, function(result){
+		$.getJSON('data/' + loc +'/' + filename, function(result){
 			config = result.config;
 	        $.each(result.data, function(i, field){
 	        	
@@ -177,7 +184,7 @@ $(document).ready(function(){
 	        });
 
 	        curr = sortBy( data_list, true, 'traffics');
-	        console.log( data_list);
+	        
 	        generateVList(curr);
 	        animate();
 	        
@@ -436,7 +443,6 @@ $(document).ready(function(){
 				case 'th' :  trans = result.th;
 					break;
 				case 'vn' :  trans = result.vn;
-							 $('.employeeTitle').remove();
 					break;
 				case 'my' :  trans = result.my;
 					break;
@@ -453,6 +459,26 @@ $(document).ready(function(){
 
 	//getLang
 	getLang();
+
+	function getCountry(loc){
+
+		switch( loc ){
+			case 'id' : return 'Indonesia';
+				break;
+			case 'ph' : return 'Philippines';
+				break;
+			case 'vn' : return 'Vietnam';
+				break;
+			case 'th' : return 'Thailand';
+				break;
+			case 'sg' : return 'Singapore';
+				break;
+			case 'my' : return 'Malaysia';
+				break;
+			case 'hk' : return 'HongKong';
+				break;
+		} 
+	}
 
 	function translateLang(trans){
 		$('.filterYear').html(trans.filterYear);
@@ -477,17 +503,31 @@ $(document).ready(function(){
 				});
 			}else if( $(this).hasClass('store_origin')){
 				$(this).append('<option value="">'+trans.originTitle+'</option>');
-				$.each(trans.options.store_origin, function(key, value){
-					$('.store_origin').append('<option value="'+key+'">'+value+'</option>')
-				});
+				if( lang != 'en'){
+					$.each(trans.options.store_origin, function(key, value){
+						$('.store_origin').append('<option value="'+key+'">'+value+'</option>')
+					});
+				}else{
+					console.log(loc);
+					var countryName = getCountry(loc);
+					$('.store_origin').append('<option value="'+countryName.toLowerCase()+'">'+countryName+'</option>');
+					$('.store_origin').append('<option value="international">International</option>');
+				}
 			}
 		});
 		
 		$('.quartal_select').empty();
-		console.log(trans.options.quarter);
+		
 		$('.quartal_select').append('<option value="">'+trans.quarterSelect+'</option>');
-		$.each(trans.options.quarter, function(key, value){
-			$('.quartal_select').append('<option value="'+key+'">'+value+'</option>')
+
+		var quarter = (lang == 'en') ? trans.options.quarter[loc] : trans.options.quarter;
+		
+		$.each(quarter, function(key, value){
+			if( key == 'q3-2017'){
+				$('.quartal_select').append('<option value="'+key+'" selected>'+value+'</option>');
+			}else{
+				$('.quartal_select').append('<option value="'+key+'">'+value+'</option>');	
+			}
 		});
 		
 	}
