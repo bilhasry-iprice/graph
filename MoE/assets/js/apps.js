@@ -401,7 +401,7 @@ $(document).ready(function(){
 	    	html += '</div>'
 
 	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span><p class="percent animate-width" data-width="'+_wTraffics+'">'+data[i].traffics.toLocaleString()+'</p></span>';
+	    	html += '<span><p class="percent animate-width" data-width="'+_wTraffics+'">'+ (data[i].traffics == 0 ? 'n/a' : data[i].traffics.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
