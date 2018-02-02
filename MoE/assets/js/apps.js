@@ -58,6 +58,13 @@ $(document).ready(function(){
         
     });
 
+	function search(nameKey){
+	    for (var i=0; i < data_list.length; i++) {
+	        if (data_list[i].key == nameKey) {
+	            return data_list[i];
+	        }
+	    }
+	}
 	function checkEmbed(){
 		if( embed ){
 			var main    = document.getElementById('iprice-content');
@@ -72,10 +79,13 @@ $(document).ready(function(){
 
 		}
 	}
+	
+
+	var content = document.getElementById('infographic-content');
+	content.setAttribute('class', lang+'-content');
 
 	if( $(window).width() < 768){
-		var container = document.getElementById('container');
-		container.setAttribute('class', lang+'-content');
+		var container = document.getElementById('container');	
 		container.style.width = $(window).width() + 'px';	
 		var topLeft = document.createElement('div');
 		
@@ -183,44 +193,63 @@ $(document).ready(function(){
 	    		
 	        });
 
-	        curr = sortBy( data_list, true, 'traffics');
-	        
+	        curr = reSortByVisits(data_list);
 	        generateVList(curr);
 	        animate();
 	        
 	    });
 	});
 
+	function reSortByVisits( arrayInput ){
+		$('.active').removeClass('active');
+		$('.monthlyTitle').addClass('up');
+		$('.monthlyTitle').addClass('active');
+
+		arrayInput = sortBy( arrayInput, true, 'traffics');		
+
+		return arrayInput;
+	}
+
 	function Filter( filter ){
+		
 		generateVList(data_list);
 		$('.row').css('display', 'none');		
-
+		
 		filterList = [];
 		$('.row').each(function(){
+
 			var key = $(this).attr('data-key');
 			switch( filter.length ){
 				case 1 : if( $(this).hasClass(filter[0])){
-							filterList.push(data_list[key]);
+							var _el = search(key)
+							filterList.push(_el);
+							console.log($(this));
 						}
 					break;
 				case 2 : if( $(this).hasClass(filter[0]) && 
 							 $(this).hasClass(filter[1]) 
 							){
-							filterList.push(data_list[key]);
+							var _el = search(key)
+							filterList.push(_el);
 						}
 					break;
 				case 3 : if( $(this).hasClass(filter[0]) && 
 							 $(this).hasClass(filter[1]) && 
 							 $(this).hasClass(filter[2])
 						   ){
-							filterList.push(data_list[key]);
+							var _el = search(key)
+							filterList.push(_el);
 						}
 					break;
-				default : 	filterList.push(data_list[key]);
+				default : 	var _el = search(key)
+							filterList.push(_el);
 							
 					break;
 			}
 		});
+
+
+		filterList = reSortByVisits(filterList);
 		curr = filterList;
 		generateVList(filterList);
 		animate();
@@ -517,8 +546,6 @@ $(document).ready(function(){
 		});
 		
 		$('.quartal_select').empty();
-		
-		$('.quartal_select').append('<option value="">'+trans.quarterSelect+'</option>');
 
 		var quarter = (lang == 'en') ? trans.options.quarter[loc] : trans.options.quarter;
 		
