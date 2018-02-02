@@ -193,9 +193,8 @@ $(document).ready(function(){
 	    		
 	        });
 
-	        curr = reSortByVisits(data_list);
-	        generateVList(curr);
-	        animate();
+
+	        Filter(filter);
 	        
 	    });
 	});
