@@ -222,7 +222,6 @@ $(document).ready(function(){
 				case 1 : if( $(this).hasClass(filter[0])){
 							var _el = search(key)
 							filterList.push(_el);
-							console.log($(this));
 						}
 					break;
 				case 2 : if( $(this).hasClass(filter[0]) && 
@@ -536,7 +535,7 @@ $(document).ready(function(){
 						$('.store_origin').append('<option value="'+key+'">'+value+'</option>')
 					});
 				}else{
-					console.log(loc);
+					
 					var countryName = getCountry(loc);
 					$('.store_origin').append('<option value="'+countryName.toLowerCase()+'">'+countryName+'</option>');
 					$('.store_origin').append('<option value="international">International</option>');
