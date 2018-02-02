@@ -18,7 +18,7 @@
     "twitter": 203000,
     "instagram": 283000,
     "facebook": 16873000,
-    "employees": 1101,
+    "employees": "1,101",
     "type": "b2c",
     "category": "general",
     "location": "international",
@@ -129,6 +129,23 @@
   },
   {
     "key": 7,
+    "name": "Shopee",
+    "url": "https://shopee.co.id/",
+    "logodesktop": "logo/id/desktop/shopee.png",
+    "traffics": 9100000,
+    "app": 1,
+    "twitter": 20000,
+    "instagram": 347000,
+    "facebook": 404000,
+    "employees": 2703000,
+    "type": "c2c",
+    "category": "general",
+    "location": "international",
+    "verified": "",
+    "iema_winner": ""
+  },
+  {
+    "key": 8,
     "name": "Matahari Mall",
     "url": "https://www.mataharimall.com/",
     "logodesktop": "logo/id/desktop/mataharimall.png",
@@ -145,7 +162,7 @@
     "iema_winner": ""
   },
   {
-    "key": 8,
+    "key": 9,
     "name": "Blanja",
     "url": "http://www.blanja.com/",
     "logodesktop": "logo/id/desktop/blanja.png",
@@ -162,7 +179,7 @@
     "iema_winner": ""
   },
   {
-    "key": 9,
+    "key": 10,
     "name": "Bhinneka",
     "url": "http://www.bhinneka.com/",
     "logodesktop": "logo/id/desktop/bhinneka.png",
@@ -179,7 +196,7 @@
     "iema_winner": ""
   },
   {
-    "key": 10,
+    "key": 11,
     "name": "Zalora",
     "url": "https://www.zalora.co.id/",
     "logodesktop": "logo/id/desktop/zalora.png",
@@ -196,7 +213,7 @@
     "iema_winner": ""
   },
   {
-    "key": 11,
+    "key": 12,
     "name": "Sociolla",
     "url": "http://www.sociolla.com/",
     "logodesktop": "logo/id/desktop/sociolla.png",
@@ -213,7 +230,7 @@
     "iema_winner": ""
   },
   {
-    "key": 12,
+    "key": 13,
     "name": "Orami",
     "url": "https://www.orami.co.id/",
     "logodesktop": "logo/id/desktop/orami.png",
@@ -230,7 +247,7 @@
     "iema_winner": ""
   },
   {
-    "key": 13,
+    "key": 14,
     "name": "Ali Express",
     "url": "https://id.aliexpress.com/",
     "logodesktop": "logo/id/desktop/aliexpress.png",
@@ -247,7 +264,7 @@
     "iema_winner": ""
   },
   {
-    "key": 14,
+    "key": 15,
     "name": "Otten Coffee",
     "url": "https://ottencoffee.co.id/",
     "logodesktop": "logo/id/desktop/ottencoffee.png",
@@ -264,7 +281,7 @@
     "iema_winner": ""
   },
   {
-    "key": 15,
+    "key": 16,
     "name": "Jakmall",
     "url": "https://www.jakmall.com/",
     "logodesktop": "logo/id/desktop/jakmall.png",
@@ -281,7 +298,7 @@
     "iema_winner": ""
   },
   {
-    "key": 16,
+    "key": 17,
     "name": "qoo10",
     "url": "https://www.qoo10.co.id/",
     "logodesktop": "logo/id/desktop/qoo10.png",
@@ -298,7 +315,7 @@
     "iema_winner": ""
   },
   {
-    "key": 17,
+    "key": 18,
     "name": "Berrybenka",
     "url": "http://berrybenka.com/",
     "logodesktop": "logo/id/desktop/berrybenka.png",
@@ -315,7 +332,7 @@
     "iema_winner": ""
   },
   {
-    "key": 18,
+    "key": 19,
     "name": "Mapemall",
     "url": "http://www.mapemall.com/",
     "logodesktop": "logo/id/desktop/mapemall.png",
@@ -332,7 +349,7 @@
     "iema_winner": ""
   },
   {
-    "key": 19,
+    "key": 20,
     "name": "Dinomarket",
     "url": "https://www.dinomarket.com/",
     "logodesktop": "logo/id/desktop/dinomarket.png",
@@ -349,7 +366,7 @@
     "iema_winner": ""
   },
   {
-    "key": 20,
+    "key": 21,
     "name": "VIP Plaza",
     "url": "http://www.vipplaza.co.id/",
     "logodesktop": "logo/id/desktop/vipplaza.png",
@@ -366,7 +383,7 @@
     "iema_winner": ""
   },
   {
-    "key": 21,
+    "key": 22,
     "name": "bobobobo",
     "url": "http://www.bobobobo.com/",
     "logodesktop": "logo/id/desktop/bobobobo.png",
@@ -383,7 +400,7 @@
     "iema_winner": ""
   },
   {
-    "key": 22,
+    "key": 23,
     "name": "BroDo",
     "url": "http://bro.do/id/",
     "logodesktop": "logo/id/desktop/brodo.png",
@@ -400,7 +417,7 @@
     "iema_winner": ""
   },
   {
-    "key": 23,
+    "key": 24,
     "name": "Tees",
     "url": "https://tees.co.id/",
     "logodesktop": "logo/id/desktop/tees.png",
@@ -417,7 +434,7 @@
     "iema_winner": ""
   },
   {
-    "key": 24,
+    "key": 25,
     "name": "weshop",
     "url": "http://weshop.co.id/",
     "logodesktop": "logo/id/desktop/weshop.png",
@@ -434,7 +451,7 @@
     "iema_winner": ""
   },
   {
-    "key": 25,
+    "key": 26,
     "name": "Hijup",
     "url": "https://www.hijup.com/",
     "logodesktop": "logo/id/desktop/hijup.png",
@@ -451,7 +468,7 @@
     "iema_winner": ""
   },
   {
-    "key": 26,
+    "key": 27,
     "name": "hijabenka",
     "url": "http://hijabenka.com/",
     "logodesktop": "logo/id/desktop/hijabenka.png",
@@ -468,7 +485,7 @@
     "iema_winner": ""
   },
   {
-    "key": 27,
+    "key": 28,
     "name": "Bukupedia",
     "url": "http://www.bukupedia.com/",
     "logodesktop": "logo/id/desktop/bukupedia.png",
@@ -485,7 +502,7 @@
     "iema_winner": ""
   },
   {
-    "key": 28,
+    "key": 29,
     "name": "Orori",
     "url": "https://www.orori.com/",
     "logodesktop": "logo/id/desktop/orori.png",
@@ -502,7 +519,7 @@
     "iema_winner": ""
   },
   {
-    "key": 29,
+    "key": 30,
     "name": "Electronic Solution",
     "url": "http://www.es.id/",
     "logodesktop": "logo/id/desktop/electronicsolution.png",
@@ -519,7 +536,7 @@
     "iema_winner": ""
   },
   {
-    "key": 30,
+    "key": 31,
     "name": "what we like",
     "url": "https://www.whatwelike.co/",
     "logodesktop": "logo/id/desktop/whatwelike.png",
@@ -536,7 +553,7 @@
     "iema_winner": ""
   },
   {
-    "key": 31,
+    "key": 32,
     "name": "Maskoolin",
     "url": "https://www.maskoolin.com/",
     "logodesktop": "logo/id/desktop/maskoolin.png",
@@ -553,7 +570,7 @@
     "iema_winner": ""
   },
   {
-    "key": 32,
+    "key": 33,
     "name": "Mothercare",
     "url": "http://www.mothercare.co.id/",
     "logodesktop": "logo/id/desktop/mothercare.png",
@@ -570,7 +587,7 @@
     "iema_winner": ""
   },
   {
-    "key": 33,
+    "key": 34,
     "name": "Pemmz",
     "url": "http://www.pemmz.com/",
     "logodesktop": "logo/id/desktop/pemmz.png",
@@ -587,7 +604,7 @@
     "iema_winner": ""
   },
   {
-    "key": 34,
+    "key": 35,
     "name": "Tororo",
     "url": "http://www.tororo.com/",
     "logodesktop": "logo/id/desktop/tororo.png",
@@ -604,7 +621,7 @@
     "iema_winner": ""
   },
   {
-    "key": 35,
+    "key": 36,
     "name": "Frozen Shop",
     "url": "http://frozenshop.com/",
     "logodesktop": "logo/id/desktop/frozenshop.png",
@@ -621,7 +638,7 @@
     "iema_winner": ""
   },
   {
-    "key": 36,
+    "key": 37,
     "name": "Livaza",
     "url": "https://livaza.com/",
     "logodesktop": "logo/id/desktop/livaza.png",
@@ -638,7 +655,7 @@
     "iema_winner": ""
   },
   {
-    "key": 37,
+    "key": 38,
     "name": "Muslimarket",
     "url": "https://www.muslimarket.com/",
     "logodesktop": "logo/id/desktop/muslimarket.png",
@@ -655,7 +672,7 @@
     "iema_winner": ""
   },
   {
-    "key": 38,
+    "key": 39,
     "name": "8wood",
     "url": "http://www.8wood.id/",
     "logodesktop": "logo/id/desktop/8wood.png",
@@ -672,7 +689,7 @@
     "iema_winner": ""
   },
   {
-    "key": 39,
+    "key": 40,
     "name": "Brandoutlet",
     "url": "https://brandoutlet.co.id/",
     "logodesktop": "logo/id/desktop/brandoutlet.png",
@@ -689,7 +706,7 @@
     "iema_winner": ""
   },
   {
-    "key": 40,
+    "key": 41,
     "name": "UKM Market",
     "url": "https://www.ukmmarket.co.id/",
     "logodesktop": "logo/id/desktop/ukmmarket.png",
@@ -706,7 +723,7 @@
     "iema_winner": ""
   },
   {
-    "key": 41,
+    "key": 42,
     "name": "Mamaway",
     "url": "http://www.mamaway.co.id/",
     "logodesktop": "logo/id/desktop/mamaway.png",
@@ -723,7 +740,7 @@
     "iema_winner": ""
   },
   {
-    "key": 42,
+    "key": 43,
     "name": "Kinerja Mall",
     "url": "http://kinerjamall.com/",
     "logodesktop": "logo/id/desktop/kinerjamall.png",
@@ -740,7 +757,7 @@
     "iema_winner": ""
   },
   {
-    "key": 43,
+    "key": 44,
     "name": "Onmol",
     "url": "http://www.onmol.com/",
     "logodesktop": "logo/id/desktop/onmol.png",
@@ -757,7 +774,7 @@
     "iema_winner": ""
   },
   {
-    "key": 44,
+    "key": 45,
     "name": "KuKa",
     "url": "https://kuka.co.id/",
     "logodesktop": "logo/id/desktop/kuka.png",
@@ -768,13 +785,13 @@
     "facebook": 12000,
     "employees": 0,
     "type": "c2c",
-    "category": "fashion",
+    "category": "general",
     "location": "indonesia",
     "verified": "",
     "iema_winner": ""
   },
   {
-    "key": 45,
+    "key": 46,
     "name": "shoppe33",
     "url": "http://www.shoppe33.com/",
     "logodesktop": "logo/id/desktop/shoppe33.png",
@@ -785,13 +802,13 @@
     "facebook": 2000,
     "employees": 3,
     "type": "b2c",
-    "category": "fashion",
+    "category": "general",
     "location": "indonesia",
     "verified": "",
     "iema_winner": ""
   },
   {
-    "key": 46,
+    "key": 47,
     "name": "Seroya Mart",
     "url": "https://www.seroyamart.com/",
     "logodesktop": "logo/id/desktop/seroyamart.png",
@@ -808,7 +825,7 @@
     "iema_winner": ""
   },
   {
-    "key": 47,
+    "key": 48,
     "name": "Mall Jualan",
     "url": "https://malljualan.co.id/",
     "logodesktop": "logo/id/desktop/malljualan.png",
@@ -825,7 +842,7 @@
     "iema_winner": ""
   },
   {
-    "key": 48,
+    "key": 49,
     "name": "Paradise Store",
     "url": "https://www.paradisestore.id/",
     "logodesktop": "logo/id/desktop/paradisestore.png",
@@ -842,7 +859,7 @@
     "iema_winner": ""
   },
   {
-    "key": 49,
+    "key": 50,
     "name": "Lojai",
     "url": "http://lojai.com/",
     "logodesktop": "logo/id/desktop/lojai.png",
@@ -859,7 +876,7 @@
     "iema_winner": ""
   },
   {
-    "key": 50,
+    "key": 51,
     "name": "Toko1001",
     "url": "https://toko1001.id/",
     "logodesktop": "logo/id/desktop/toko1001.png",
@@ -876,7 +893,7 @@
     "iema_winner": ""
   },
   {
-    "key": 51,
+    "key": 52,
     "name": "Benlieschoice",
     "url": "http://www.benlieschoice.com/",
     "logodesktop": "logo/id/desktop/benlieschoice.png",
@@ -893,7 +910,7 @@
     "iema_winner": ""
   },
   {
-    "key": 52,
+    "key": 53,
     "name": "Tokologi",
     "url": "http://www.tokologi.com/",
     "logodesktop": "logo/id/desktop/tokologi.png",
@@ -910,7 +927,7 @@
     "iema_winner": ""
   },
   {
-    "key": 53,
+    "key": 54,
     "name": "Ngshope",
     "url": "http://ngshope.com/",
     "logodesktop": "logo/id/desktop/ngshope.png",
@@ -927,7 +944,7 @@
     "iema_winner": ""
   },
   {
-    "key": 54,
+    "key": 55,
     "name": "Shoes Vaganza",
     "url": "http://www.shoesvaganza.com/",
     "logodesktop": "logo/id/desktop/shoesvaganza.png",
@@ -944,7 +961,7 @@
     "iema_winner": ""
   },
   {
-    "key": 55,
+    "key": 56,
     "name": "Caristyle",
     "url": "http://caristyle.com/",
     "logodesktop": "logo/id/desktop/caristyle.png",

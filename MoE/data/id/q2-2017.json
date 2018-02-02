@@ -530,7 +530,7 @@
     "facebook": 94000,
     "employees": 27,
     "type": "b2c",
-    "category": "general",
+    "category": "fashion",
     "location": "international",
     "verified": "",
     "iema_winner": ""
@@ -734,7 +734,7 @@
     "facebook": 2000,
     "employees": 2,
     "type": "b2c",
-    "category": "general",
+    "category": "fashion",
     "location": "international",
     "verified": "",
     "iema_winner": ""
@@ -989,7 +989,7 @@
     "facebook": 3034000,
     "employees": 785,
     "type": "c2c",
-    "category": "tech",
+    "category": "general",
     "location": "indonesia",
     "verified": true,
     "iema_winner": ""
