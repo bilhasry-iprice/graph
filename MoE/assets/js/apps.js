@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var data_list 	= new Array();
-	var filename	= 'q3-2017.json';
+	var filename	= 'q4-2017.json';
 	var data 		= document.getElementById('data');
 	var up 			= true;
 	var config 		= '';
@@ -548,7 +548,7 @@ $(document).ready(function(){
 		var quarter = (lang == 'en') ? trans.options.quarter[loc] : trans.options.quarter;
 		
 		$.each(quarter, function(key, value){
-			if( key == 'q3-2017'){
+			if( key == 'q4-2017'){
 				$('.quartal_select').append('<option value="'+key+'" selected>'+value+'</option>');
 			}else{
 				$('.quartal_select').append('<option value="'+key+'">'+value+'</option>');	
