@@ -376,6 +376,12 @@ div#data {
     line-height: 46px;
 }
 
+#infographic-content.my-content .header .col:nth-child(2),
+#infographic-content.my-content .header .col:nth-child(3){
+	padding-top: 6px;
+	line-height: 16px;
+}
+
 .category-item:nth-child(3){
     height:48px;
     background: #33cccc;
@@ -502,7 +508,7 @@ div#data {
 	}
 
 	.id-content .sort-by:last-child,
-	.th-content .sort-by:last-child,
+	.th-content.th-container .sort-by:last-child,
 	.vn-content .sort-by:last-child,
 	.ph-content .sort-by:last-child{
 	    line-height:42px;
@@ -651,7 +657,34 @@ div#data {
 
 	.col:first-child{
 		width: calc(25% - 3px);
+	}
 
+	#infographic-content.vn-content .col,
+	#infographic-content.vn-content .header .col,
+	#infographic-content.ph-content  .col,
+	#infographic-content.ph-content .header .col{
+		width: calc(15% - 5px);
+	}
+
+	#infographic-content.vn-content .col:first-child,
+	#infographic-content.vn-content .header .col:first-child,
+	#infographic-content.ph-content  .col:first-child,
+	#infographic-content.ph-content .header .col:first-child{
+		width: calc(25% - 5px);
+	}
+
+	#infographic-content.vn-content .header .col:nth-child(2),
+	#infographic-content.vn-content .header .col:nth-child(3),
+	#infographic-content.ph-content .header .col:nth-child(2),
+	#infographic-content.ph-content .header .col:nth-child(3){
+		padding-top: 6px;
+		line-height: 16px;
+	}
+
+	#infographic-content.vn-content .header .col:last-child,
+	#infographic-content.ph-content .header .col:last-child{
+		padding-top:0px;
+		line-height: 36px;
 	}
 
 	.m__hide{

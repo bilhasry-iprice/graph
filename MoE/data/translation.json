@@ -31,7 +31,6 @@
 					"q4-2017" : "Q4-2017"
 				},
 				"my" :{
-					"q1-2017" : "Q1-2017",
 					"q2-2017" : "Q2-2017",
 					"q3-2017" : "Q3-2017",
 					"q4-2017" : "Q4-2017"
@@ -104,6 +103,43 @@
 			}
 		}
 	},
+	"my" : {
+	    "verifiedText": "Diverifikasi oleh Toko Online",
+	    "awardText": "Pemenang Penghargaan iEMA",
+	    "numbersIn1000Text": "*Angka dalam 1000s",
+	    "filterYear" : "Pilih Data per Kuartal",
+		"filterQuartal" : "Kuartal",
+	    "filterResultsBy": "Tukar filter",
+	    "merchantTitle" : "Senarai E-Dagang",
+		"monthlyTitle" : "Pengunjung Bulanan",
+		"appRank" : "Kedudukan Aplikasi",
+		"employeeTitle" : "Bilangan Pekerja",
+		"businessTitle" : "Model Perniagaan",
+		"storeTitle" : "Jenis E-Dagang",
+		"originTitle" : "Asal E-Dagang",
+		"socialTitle" : "Twitter",
+		"quarterSelect" : "Pilih Kuartal",
+		"options" : {
+			"business_model" : {
+				"b2c" : "Business to Consumer ",
+				"c2c" : "Consumer to Consumer"
+			},
+			"quarter" : {
+				"q2-2017" : "Q2-2017",
+				"q3-2017" : "Q3-2017",
+				"q4-2017" : "Q4-2017"
+			},
+			"store_type" : {
+				"fashion" : "Fesyen",
+				"general" : "Pelbagai",
+				"tech" : "Elektronik"
+			},
+			"store_origin" : {
+				"indonesia" : "Malaysia",
+				"international" : "Internasional"
+			}
+		}
+	},
 	"th" : {
 		"verifiedText": "ตรวจสอบข้อมูลโดยร้านค้า",
 		"awardText": "ผู้ชนะการประกวด iEMA",
@@ -116,6 +152,7 @@
 		"businessTitle" : "รูปแบบธุรกิจ",
 		"storeTitle" : "ประเภทสินค้า",
 		"originTitle" : "ที่มา",
+		"socialTitle" : "Line",
 		"quarterSelect" : "ไตรมาส",
 		"options" : {
 			"business_model" : {
@@ -148,6 +185,7 @@
 		"appRank" : "Ứng dụng cài đặt",
 		"employeeTitle" : "Number of Employees",
 		"businessTitle" : "Loại hình",
+		"socialTitle" : "Youtube",
 		"storeTitle" : "Ngành hàng",
 		"originTitle" : "Xuất xứ",
 		"quarterSelect" : "Chọn Khu phố",
@@ -180,9 +218,10 @@
 		"filterQuartal" : "Quarter",
 		"merchantTitle" : "Merchant",
 		"monthlyTitle" : "Monthly Visits",
-		"appRank" : "Apps Rank",
-		"employeeTitle" : "Number of Employees",
+		"appRank" : "Rank ayon sa",
+		"employeeTitle" : "Dami ng Empleyado",
 		"businessTitle" : "Business Model",
+		"socialTitle" : "Twitter",
 		"storeTitle" : "Store Type",
 		"originTitle" : "Store Origin",
 		"quarterSelect" : "Select Quarter",
