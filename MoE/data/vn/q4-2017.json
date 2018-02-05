@@ -10,9 +10,8 @@
   "data" :[
   {
     "key": 0,
-    "name": "Én bạc",
+    "name": "�n b_c",
     "url": "http://enbac.com/",
-    "logodesktop" : "logo/vn/desktop/enbac.png",
     "traffics": 500017,
     "app": 99,
     "youtube": 0,
@@ -28,7 +27,6 @@
     "key": 1,
     "name": "Robins",
     "url": "https://www.robins.vn/",
-    "logodesktop" : "logo/vn/desktop/robins.png",
     "traffics": 797187,
     "app": 13,
     "youtube": 1909,
@@ -44,7 +42,6 @@
     "key": 2,
     "name": "Lazada VN",
     "url": "http://www.lazada.vn/",
-    "logodesktop" : "logo/vn/desktop/lazada.png",
     "traffics": 50479088,
     "app": 2,
     "youtube": 70507,
@@ -58,9 +55,8 @@
   },
   {
     "key": 3,
-    "name": "Thế giới di động",
+    "name": "Th_ gi_i di __ng",
     "url": "https://www.thegioididong.com/",
-    "logodesktop" : ""
     "traffics": 39634726,
     "app": 5,
     "youtube": 311841,
@@ -74,7 +70,7 @@
   },
   {
     "key": 4,
-    "name": "Vật giá",
+    "name": "V_t gi�",
     "url": "http://www.vatgia.com/home/",
     "traffics": 7488233,
     "app": 14,
@@ -134,7 +130,7 @@
   },
   {
     "key": 8,
-    "name": "Nguyễn Kim",
+    "name": "Nguy_n Kim",
     "url": "https://www.nguyenkim.com/",
     "traffics": 3647577,
     "app": 8,
@@ -164,7 +160,7 @@
   },
   {
     "key": 10,
-    "name": "Phong Vũ",
+    "name": "Phong V_",
     "url": "http://www.phongvu.vn/",
     "traffics": 1304011,
     "app": 99,
@@ -200,7 +196,7 @@
     "app": 99,
     "youtube": 4079,
     "instagram": 32,
-    "facebook": "69493\n69493",
+    "facebook": 69493,
     "type": "b2c",
     "category": "general",
     "location": "vietnam",
@@ -224,7 +220,7 @@
   },
   {
     "key": 14,
-    "name": "Nhóm mua",
+    "name": "Nh�m mua",
     "url": "http://www.nhommua.com/",
     "traffics": 556466,
     "app": 99,
@@ -239,7 +235,7 @@
   },
   {
     "key": 15,
-    "name": "A đây rồi",
+    "name": "A _�y r_i",
     "url": "https://www.adayroi.com/",
     "traffics": 7388159,
     "app": 7,
@@ -284,7 +280,7 @@
   },
   {
     "key": 18,
-    "name": "Viễn Thông A",
+    "name": "Vi_n Th�ng A",
     "url": "https://vienthonga.vn/",
     "traffics": 512870,
     "app": 9,
@@ -299,7 +295,7 @@
   },
   {
     "key": 19,
-    "name": "Điện máy xanh",
+    "name": "_i_n m�y xanh",
     "url": "https://www.dienmayxanh.com/",
     "traffics": 10271662,
     "app": 6,
@@ -374,7 +370,7 @@
   },
   {
     "key": 24,
-    "name": "Điện máy Chợ Lớn",
+    "name": "_i_n m�y Ch_ L_n",
     "url": "https://dienmaycholon.vn/",
     "traffics": 1390262,
     "app": 99,
@@ -389,7 +385,7 @@
   },
   {
     "key": 25,
-    "name": "Điện máy Pico",
+    "name": "_i_n m�y Pico",
     "url": "https://pico.vn/",
     "traffics": 757815,
     "app": 99,
@@ -404,7 +400,7 @@
   },
   {
     "key": 26,
-    "name": "Điện máy HC",
+    "name": "_i_n m�y HC",
     "url": "https://www.hc.com.vn/",
     "traffics": 476077,
     "app": 99,
@@ -419,7 +415,7 @@
   },
   {
     "key": 27,
-    "name": "Điện máy Trần Anh",
+    "name": "_i_n m�y Tr_n Anh",
     "url": "https://www.trananh.vn/",
     "traffics": 886219,
     "app": 99,
@@ -434,7 +430,7 @@
   },
   {
     "key": 28,
-    "name": "Điện máy Phúc Anh",
+    "name": "_i_n m�y Ph�c Anh",
     "url": "https://www.phucanh.vn/",
     "traffics": 874870,
     "app": 99,
@@ -464,7 +460,7 @@
   },
   {
     "key": 30,
-    "name": "Hoàng Hà Mobile",
+    "name": "Ho�ng H� Mobile",
     "url": "https://hoanghamobile.com/",
     "traffics": 2699166,
     "app": 99,
@@ -539,7 +535,7 @@
   },
   {
     "key": 35,
-    "name": "Cùng mua",
+    "name": "C�ng mua",
     "url": "http://www.cungmua.com/",
     "traffics": 679143,
     "app": 99,

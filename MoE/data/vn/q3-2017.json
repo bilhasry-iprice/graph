@@ -10,7 +10,7 @@
   "data" :[
   {
     "key": 0,
-    "name": "Én bạc",
+    "name": "�n b_c",
     "url": "http://enbac.com/",
     "traffics": 827706,
     "app": 99,
@@ -55,7 +55,7 @@
   },
   {
     "key": 3,
-    "name": "Thế giới di động",
+    "name": "Th_ gi_i di __ng",
     "url": "https://www.thegioididong.com/",
     "traffics": 35509818,
     "app": 5,
@@ -70,7 +70,7 @@
   },
   {
     "key": 4,
-    "name": "Vật giá",
+    "name": "V_t gi�",
     "url": "http://www.vatgia.com/home/",
     "traffics": 11652816,
     "app": 11,
@@ -130,7 +130,7 @@
   },
   {
     "key": 8,
-    "name": "Nguyễn Kim",
+    "name": "Nguy_n Kim",
     "url": "https://www.nguyenkim.com/",
     "traffics": 4629157,
     "app": 12,
@@ -160,7 +160,7 @@
   },
   {
     "key": 10,
-    "name": "Phong Vũ",
+    "name": "Phong V_",
     "url": "http://www.phongvu.vn/",
     "traffics": 1118821,
     "app": 99,
@@ -220,7 +220,7 @@
   },
   {
     "key": 14,
-    "name": "Nhóm mua",
+    "name": "Nh�m mua",
     "url": "http://www.nhommua.com/",
     "traffics": 656697,
     "app": 99,
@@ -235,7 +235,7 @@
   },
   {
     "key": 15,
-    "name": "A đây rồi",
+    "name": "A _�y r_i",
     "url": "https://www.adayroi.com/",
     "traffics": 7774962,
     "app": 7,
@@ -280,7 +280,7 @@
   },
   {
     "key": 18,
-    "name": "Viễn Thông A",
+    "name": "Vi_n Th�ng A",
     "url": "https://vienthonga.vn/",
     "traffics": 2040472,
     "app": 9,
@@ -295,7 +295,7 @@
   },
   {
     "key": 19,
-    "name": "Điện máy xanh",
+    "name": "_i_n m�y xanh",
     "url": "https://www.dienmayxanh.com/",
     "traffics": 8842556,
     "app": 8,
@@ -370,7 +370,7 @@
   },
   {
     "key": 24,
-    "name": "Điện máy Chợ Lớn",
+    "name": "_i_n m�y Ch_ L_n",
     "url": "https://dienmaycholon.vn/",
     "traffics": 1212243,
     "app": 99,
@@ -385,7 +385,7 @@
   },
   {
     "key": 25,
-    "name": "Điện máy Pico",
+    "name": "_i_n m�y Pico",
     "url": "https://pico.vn/",
     "traffics": 699811,
     "app": 99,
@@ -400,7 +400,7 @@
   },
   {
     "key": 26,
-    "name": "Điện máy HC",
+    "name": "_i_n m�y HC",
     "url": "https://www.hc.com.vn/",
     "traffics": 439424,
     "app": 99,
@@ -415,7 +415,7 @@
   },
   {
     "key": 27,
-    "name": "Điện máy Trần Anh",
+    "name": "_i_n m�y Tr_n Anh",
     "url": "https://www.trananh.vn/",
     "traffics": 1189204,
     "app": 99,
@@ -430,7 +430,7 @@
   },
   {
     "key": 28,
-    "name": "Điện máy Phúc Anh",
+    "name": "_i_n m�y Ph�c Anh",
     "url": "https://www.phucanh.vn/",
     "traffics": 861080,
     "app": 99,
@@ -445,21 +445,6 @@
   },
   {
     "key": 29,
-    "name": "Chợ điện tử",
-    "url": "https://www.chodientu.vn/",
-    "traffics": 224633,
-    "app": 99,
-    "youtube": 0,
-    "instagram": 409,
-    "facebook": 239932,
-    "type": "c2c",
-    "category": "general",
-    "location": "vietnam",
-    "verified": "",
-    "iema_winner": ""
-  },
-  {
-    "key": 30,
     "name": "Baza",
     "url": "http://baza.vn/",
     "traffics": 558104,
@@ -474,8 +459,8 @@
     "iema_winner": ""
   },
   {
-    "key": 31,
-    "name": "Hoàng Hà Mobile",
+    "key": 30,
+    "name": "Ho�ng H� Mobile",
     "url": "https://hoanghamobile.com/",
     "traffics": 2654802,
     "app": 99,
@@ -489,22 +474,7 @@
     "iema_winner": ""
   },
   {
-    "key": 32,
-    "name": "Rẻ mỗi ngày",
-    "url": "http://www.remoingay.com/",
-    "traffics": 198009,
-    "app": 99,
-    "youtube": 0,
-    "instagram": 10800,
-    "facebook": 1030161,
-    "type": "b2c",
-    "category": "fashion",
-    "location": "vietnam",
-    "verified": "",
-    "iema_winner": ""
-  },
-  {
-    "key": 33,
+    "key": 31,
     "name": "Yame",
     "url": "https://yame.vn/",
     "traffics": 602616,
@@ -519,7 +489,7 @@
     "iema_winner": ""
   },
   {
-    "key": 34,
+    "key": 32,
     "name": "123mua",
     "url": "http://www.123mua.vn/",
     "traffics": 718446,
@@ -534,22 +504,7 @@
     "iema_winner": ""
   },
   {
-    "key": 35,
-    "name": "Babi",
-    "url": "https://babi.vn/",
-    "traffics": 265429,
-    "app": 99,
-    "youtube": 0,
-    "instagram": 0,
-    "facebook": 648532,
-    "type": "b2c",
-    "category": "fashion",
-    "location": "vietnam",
-    "verified": "",
-    "iema_winner": ""
-  },
-  {
-    "key": 36,
+    "key": 33,
     "name": "Canifa",
     "url": "http://canifa.com/",
     "traffics": 420088,
@@ -564,7 +519,7 @@
     "iema_winner": ""
   },
   {
-    "key": 37,
+    "key": 34,
     "name": "Leflair",
     "url": "https://www.leflair.vn/",
     "traffics": 572317,
@@ -579,8 +534,8 @@
     "iema_winner": ""
   },
   {
-    "key": 38,
-    "name": "Cùng mua",
+    "key": 35,
+    "name": "C�ng mua",
     "url": "http://www.cungmua.com/",
     "traffics": 1038453,
     "app": 16,
@@ -594,7 +549,7 @@
     "iema_winner": ""
   },
   {
-    "key": 39,
+    "key": 36,
     "name": "CellphoneS",
     "url": "https://cellphones.com.vn/",
     "traffics": 2788899,
@@ -609,7 +564,7 @@
     "iema_winner": ""
   },
   {
-    "key": 40,
+    "key": 37,
     "name": "Didongthongminh",
     "url": "http://didongthongminh.vn/",
     "traffics": 2059714,
@@ -624,7 +579,7 @@
     "iema_winner": ""
   },
   {
-    "key": 41,
+    "key": 38,
     "name": "zshop",
     "url": "https://zshop.vn/",
     "traffics": 1018693,
@@ -639,7 +594,7 @@
     "iema_winner": ""
   },
   {
-    "key": 42,
+    "key": 39,
     "name": "Mai Nguyen",
     "url": "http://www.mainguyen.vn/",
     "traffics": 756443,
@@ -654,7 +609,7 @@
     "iema_winner": ""
   },
   {
-    "key": 43,
+    "key": 40,
     "name": "donghohaitrieu",
     "url": "http://donghohaitrieu.com/",
     "traffics": 694069,
@@ -669,8 +624,8 @@
     "iema_winner": ""
   },
   {
-    "key": 44,
-    "name": "Shop Trẻ Thơ",
+    "key": 41,
+    "name": "Shop Tr_ Th_",
     "url": "https://shoptretho.com.vn/",
     "traffics": 493566,
     "app": 99,
@@ -684,7 +639,7 @@
     "iema_winner": ""
   },
   {
-    "key": 45,
+    "key": 42,
     "name": "Bach Long Mobile",
     "url": "https://bachlongmobile.com/",
     "traffics": 694010,
@@ -699,7 +654,7 @@
     "iema_winner": ""
   },
   {
-    "key": 46,
+    "key": 43,
     "name": "Hnammobile",
     "url": "https://www.hnammobile.com/",
     "traffics": 1198141,
@@ -714,7 +669,7 @@
     "iema_winner": ""
   },
   {
-    "key": 47,
+    "key": 44,
     "name": "Viettel Store",
     "url": "https://viettelstore.vn/",
     "traffics": 2324203,
@@ -729,7 +684,7 @@
     "iema_winner": ""
   },
   {
-    "key": 48,
+    "key": 45,
     "name": "Chiaki",
     "url": "http://chiaki.vn/",
     "traffics": 853702,
@@ -744,7 +699,7 @@
     "iema_winner": ""
   },
   {
-    "key": 49,
+    "key": 46,
     "name": "Kidsplaza",
     "url": "https://www.kidsplaza.vn/",
     "traffics": 609187,
@@ -753,6 +708,51 @@
     "instagram": 658,
     "facebook": 649433,
     "type": "B2C",
+    "category": "general",
+    "location": "vietnam",
+    "verified": "",
+    "iema_winner": ""
+  },
+  {
+    "key": 47,
+    "name": "Vuivui",
+    "url": "https://www.vuivui.com/",
+    "traffics": 746429,
+    "app": 17,
+    "youtube": 2376,
+    "instagram": 0,
+    "facebook": 32978,
+    "type": "b2c",
+    "category": "general",
+    "location": "vietnam",
+    "verified": "",
+    "iema_winner": ""
+  },
+  {
+    "key": 48,
+    "name": "Bach Hoa Xanh",
+    "url": "https://www.bachhoaxanh.com/",
+    "traffics": 392303,
+    "app": 99,
+    "youtube": 0,
+    "instagram": 0,
+    "facebook": 10318,
+    "type": "b2c",
+    "category": "general",
+    "location": "vietnam",
+    "verified": "",
+    "iema_winner": ""
+  },
+  {
+    "key": 49,
+    "name": "Hasaki",
+    "url": "https://hasaki.vn/",
+    "traffics": 1798973,
+    "app": 99,
+    "youtube": 0,
+    "instagram": 0,
+    "facebook": 277879,
+    "type": "b2c",
     "category": "general",
     "location": "vietnam",
     "verified": "",

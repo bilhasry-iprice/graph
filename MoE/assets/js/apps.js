@@ -41,9 +41,16 @@ $(document).ready(function(){
 		config = result.config;
 
 		if( ( loc != 'vn') && (loc != 'ph')){
-
+			if( loc == 'th'){
+				$('.socialTitle').attr('data-attr', 'line');
+				$('.socialTitle').html('Line');	
+			}
 		}else{
 			$('.employeeTitle').remove();
+			if( loc == 'vn'){
+				$('.socialTitle').attr('data-attr', 'youtube');
+				$('.socialTitle').html('Youtube');	
+			}
 		}
         $.each(result.data, function(i, field){
         	
@@ -82,7 +89,7 @@ $(document).ready(function(){
 	
 
 	var content = document.getElementById('infographic-content');
-	content.setAttribute('class', lang+'-content');
+	content.setAttribute('class', loc + '-content ' + lang + '-container');
 
 	if( $(window).width() < 768){
 		var container = document.getElementById('container');	
@@ -124,9 +131,13 @@ $(document).ready(function(){
 				$('.category-item:first-child').each(function(){
 					TweenMax.to($(this), 0.5, { width: '100px' }, 1);
 				});
-
-				TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '720px' }, 1);
-				TweenMax.to($('.row-wrapper'), 0.5, { width: '720px' }, 1);
+				if( ( loc != 'vn') && (loc != 'ph')){
+					TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '720px' }, 1);
+					TweenMax.to($('.row-wrapper'), 0.5, { width: '720px' }, 1);
+				}else{
+					TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '615px' }, 1);
+					TweenMax.to($('.row-wrapper'), 0.5, { width: '615px' }, 1);
+				}
 
 			}else{
 				$('.category-item:first-child label').each(function(){
@@ -181,8 +192,8 @@ $(document).ready(function(){
 	$('.quartal_select').change(function(e){
 
 		var q = $(e.currentTarget).val();
-		
-		var filename = (q != '') ? (q + '.json') : 'q3-2017.json';
+		console.log(q);
+		var filename = (q != '') ? (q + '.json') : 'q4-2017.json';
 		
 		data_list = new Array();
 		$.getJSON('data/' + loc +'/' + filename, function(result){
@@ -468,6 +479,8 @@ $(document).ready(function(){
 				case 'id' :  trans = result.id;
 					break;
 				case 'th' :  trans = result.th;
+					break;
+				case 'ph' :  trans = result.ph;
 					break;
 				case 'vn' :  trans = result.vn;
 					break;
