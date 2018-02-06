@@ -317,6 +317,7 @@ div#data {
 .information label:first-child{
 	border-right: 1px solid #343434;
 }
+
 .information label:before{
 	content:'';
 	width: 17px;
@@ -341,7 +342,7 @@ div#data {
     position: relative;
 }
 
-.category-item.iema:after,
+/*.category-item.iema:after,
 .category-item.verified:after{
     content: '';
     position: absolute;
@@ -352,10 +353,30 @@ div#data {
     top: 16px;
     background: url(../img/iema.png) no-repeat center center;
     background-size: 13px 16px;
+}*/
+
+.category-item label.iema, .category-item label.verified{
+    position: absolute;
+    top: 16px;
+    right: 4px;
+    display:block;
+    background: #333;
+    width: 17px;
+    height: 17px;
 }
-.category-item.verified:after{
+
+.category-item label.verified{
 	background: url(../img/verified.png) no-repeat center center;
     background-size: 16px 16px;
+}
+
+.category-item label.iema{
+	background: url(../img/iema.png) no-repeat center center;
+    background-size: 13px 16px;
+}
+
+.category-item label.iema + label.verified{
+	right: 24px;
 }
 .category-item.col:nth-child(2) span p,
 .category-item.col:nth-child(3) span p {
@@ -377,6 +398,7 @@ div#data {
 }
 
 #infographic-content.my-content .header .col:nth-child(2),
+.th-content.th-container .header .col:nth-child(2),
 #infographic-content.my-content .header .col:nth-child(3){
 	padding-top: 6px;
 	line-height: 16px;

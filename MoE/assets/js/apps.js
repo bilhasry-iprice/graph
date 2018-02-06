@@ -402,12 +402,19 @@ $(document).ready(function(){
 			}
 
 
-	    	html += '<div class="category-item col bg__grey ' + iema +' ' + verified + '" style="'+ _style +'">';
+	    	html += '<div class="category-item col bg__grey" style="'+ _style +'">';
 	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="nofollow">';
 	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/>';
 
-	    	html += '<label '+ _w +'>'+data[i].name+'</label></a></span>';
-	    	html += '</div>'
+	    	html += '<label '+ _w +'>'+data[i].name+'</label></a>';
+	    	if(iema != ''){
+	    		html += '<label class="'+ iema+'"></label>';
+	    	}
+
+	    	if(verified != ''){
+	    		html += '<label class="'+ verified+'"></label>';
+	    	}
+	    	html += '</span></div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
 	    	html += '<span><p class="percent animate-width" data-width="'+_wTraffics+'">'+ (data[i].traffics == 0 ? 'n/a' : data[i].traffics.toLocaleString()) +'</p></span>';
