@@ -507,7 +507,7 @@ div#data {
 		width: calc(20% - 10px);
 	}
 
-	.id-content .sort-by:last-child,
+	.id-content.id-container .sort-by:last-child,
 	.th-content.th-container .sort-by:last-child,
 	.vn-content .sort-by:last-child,
 	.ph-content .sort-by:last-child{
