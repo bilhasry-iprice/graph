@@ -476,8 +476,7 @@ $(document).ready(function(){
 		$.getJSON('data/translation.json', function(result){
 			
 			switch( lang ){
-				case 'id' : $('.awardText').attr('href', 'https://iprice.co.id/insights/mapofecommerce/#iema-awards') 
-							trans = result.id;
+				case 'id' : trans = result.id;
 					break;
 				case 'th' :  trans = result.th;
 					break;
