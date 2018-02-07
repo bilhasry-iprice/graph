@@ -480,8 +480,6 @@ $(document).ready(function(){
 
 	$('.awardText').click(function(e){
 		e.preventDefault();
-		console.log(window.parent.document.href());
-		console.log('==== debug-line =====');
 	});
 
 	function getLang(){
