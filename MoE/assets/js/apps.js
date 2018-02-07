@@ -480,7 +480,7 @@ $(document).ready(function(){
 
 	$('.awardText').click(function(e){
 		e.preventDefault();
-		console.log($('#iema-awards', window.parent.document).html());
+		console.log(window.parent.document.href());
 		console.log('==== debug-line =====');
 	});
 
