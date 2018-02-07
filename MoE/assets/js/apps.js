@@ -478,12 +478,18 @@ $(document).ready(function(){
 	    
 	}
 
+	$('.awardText').click(function(e){
+		e.preventDefault();
+		console.log($('#iema-awards', window.parent.document).html());
+		console.log('==== debug-line =====');
+	});
+
 	function getLang(){
 
 		$.getJSON('data/translation.json', function(result){
 			
 			switch( lang ){
-				case 'id' : trans = result.id;
+				case 'id' :  trans = result.id;
 					break;
 				case 'th' :  trans = result.th;
 					break;
