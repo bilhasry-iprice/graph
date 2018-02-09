@@ -124,7 +124,7 @@ $(document).ready(function(){
 			});
 
 			if( x > 0 ){
-				$('.category-item:first-child label').each(function(){
+				$('.category-item:first-child a label').each(function(){
 					this.style.width = '0px';
 				});
 				TweenMax.to($('.sort-by:first-child'), 0.5, { width: '100px' }, 1);
@@ -132,15 +132,15 @@ $(document).ready(function(){
 					TweenMax.to($(this), 0.5, { width: '100px' }, 1);
 				});
 				if( ( loc != 'vn') && (loc != 'ph')){
-					TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '720px' }, 1);
-					TweenMax.to($('.row-wrapper'), 0.5, { width: '720px' }, 1);
+					TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '750px' }, 1);
+					TweenMax.to($('.row-wrapper'), 0.5, { width: '750px' }, 1);
 				}else{
-					TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '615px' }, 1);
-					TweenMax.to($('.row-wrapper'), 0.5, { width: '615px' }, 1);
+					TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '660px' }, 1);
+					TweenMax.to($('.row-wrapper'), 0.5, { width: '660px' }, 1);
 				}
 
 			}else{
-				$('.category-item:first-child label').each(function(){
+				$('.category-item:first-child a label').each(function(){
 					this.style.width = 'calc(100% - 60px)';
 				});
 				TweenMax.to($('.sort-by:first-child'), 0.5, { width: '210px' }, 1);
@@ -148,8 +148,8 @@ $(document).ready(function(){
 				$('.category-item:first-child').each(function(){
 					TweenMax.to($(this), 0.5, { width: '210px' }, 1);
 				});
-				TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '840px' }, 1);
-				TweenMax.to($('.row-wrapper'), 0.5, { width: '840px' }, 1);
+				TweenMax.to($('.infographic-data-wrapper'), 0.5, { width: '900px' }, 1);
+				TweenMax.to($('.row-wrapper'), 0.5, { width: '900px' }, 1);
 			}
 
 			$('.category-item:first-child').each(function(){
@@ -192,7 +192,7 @@ $(document).ready(function(){
 	$('.quartal_select').change(function(e){
 
 		var q = $(e.currentTarget).val();
-		console.log(q);
+		
 		var filename = (q != '') ? (q + '.json') : 'q4-2017.json';
 		
 		data_list = new Array();
@@ -338,7 +338,7 @@ $(document).ready(function(){
     function sortBy( arr, order, property){
     	var arrSort = arr.slice(0);
     	arrSort.sort(function(a,b) {
-    		if( property != 'app'){
+    		if(( property != 'ios')&&(property != 'android')){
 				if( ! order) {//ascending
 					return a[property] - b[property];
 				} else { // descending
@@ -403,7 +403,7 @@ $(document).ready(function(){
 
 
 	    	html += '<div class="category-item col bg__grey" style="'+ _style +'">';
-	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="nofollow">';
+	    	html += '<span><a href="' + data[i].url.toLowerCase() + '" class="color__black" target="_blank" rel="nofollow">';
 	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/>';
 
 	    	html += '<label '+ _w +'>'+data[i].name+'</label></a>';
@@ -421,9 +421,13 @@ $(document).ready(function(){
 	    	html += '</div>';
 
 	    	html += '<div class="category-item col bg__grey ">';
-	    	html += '<span>'+(data[i].app >= 99 ? 'n/a' : '#'+data[i].app.toLocaleString())+'</span>';
-	    	// html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
+	    	html += '<span>'+(data[i].ios >= 99 ? 'n/a' : '#'+data[i].ios.toLocaleString())+'</span>';
 	    	html += '</div>';
+	    	html += '<div class="category-item col bg__grey ">';
+	    	html += '<span>'+(data[i].android >= 99 ? 'n/a' : '#'+data[i].android.toLocaleString())+'</span>';
+	    	html += '</div>';
+	    	// html += '<span><p class="percent animate-width" data-width="'+_wApp+'">'+  (data[i].app == 99 ? 'n/a' : data[i].app.toLocaleString()) +'</p></span>';
+	    	
 	    	if( loc == 'th'){
 				html += '<div class="category-item col bg__grey ">';
 		    	html += '<span><p class="percent animate-width" data-width="'+_wLine+'">'+ (data[i].line == 0 ? 'n/a' : data[i].line.toLocaleString()) +'</p></span>';
@@ -537,7 +541,8 @@ $(document).ready(function(){
 		$('.awardText').html(trans.awardText);
 		$('.merchantTitle').html(trans.merchantTitle);
 		$('.monthlyTitle').html(trans.monthlyTitle);
-		$('.appTitle').html(trans.appRank);
+		$('.iosTitle').html(trans.iosTitle);
+		$('.androidTitle').html(trans.androidTitle);
 		$('.employeeTitle').html( trans.employeeTitle );
 		$('.filterResultsBy').html( trans.filterResultsBy );
 		$('.filter').find('select').each(function(){
