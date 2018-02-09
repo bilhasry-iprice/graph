@@ -403,8 +403,8 @@ $(document).ready(function(){
 
 
 	    	html += '<div class="category-item col bg__grey" style="'+ _style +'">';
-	    	html += '<span><a href="' + data[i].url.toLowerCase() + '" class="color__black" target="_blank" rel="nofollow">';
-	    	html += '<img src="assets/img/'+ data[i].logodesktop + '"/>';
+	    	html += '<span><a href="' + data[i].url + '" class="color__black" target="_blank" rel="nofollow">';
+	    	html += '<img src="assets/img/'+ data[i].logodesktop.toLowerCase() + '"/>';
 
 	    	html += '<label '+ _w +'>'+data[i].name+'</label></a>';
 	    	if(iema != ''){
