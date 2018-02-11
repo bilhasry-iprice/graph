@@ -59,7 +59,7 @@
 			"store_type" : {
 				"fashion" : "Fashion",
 				"general" : "General",
-				"tech" : "Tech &amp; Gadget"
+				"tech" : "Electronics"
 			},
 			"store_origin" : {
 				"indonesia" : "Indonesia",
@@ -183,7 +183,7 @@
 		"awardText": "DN Thắng giải",
 		"filterResultsBy": "Lọc kết quả theo",
 		"filterYear" : "Chọn dữ liệu trên mỗi quý",
-		"merchantTitle" : "Thương gia",
+		"merchantTitle" : "Doanh nghiệp",
 		"monthlyTitle" : "Lượng truy cập",
 		"iosTitle" : "xếp hạng iOS",
 		"androidTitle" : "xếp hạng Android",
@@ -195,8 +195,8 @@
 		"quarterSelect" : "Chọn Khu phố",
 		"options" : {
 			"business_model" : {
-				"b2c" : "Business to Consumer",
-				"c2c" : "Consumer to Consumer"
+				"b2c" : "B2C",
+				"c2c" : "C2C"
 			},
 			"quarter" : {
 				"q2-2017" : "Q2-2017",
