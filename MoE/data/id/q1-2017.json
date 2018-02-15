@@ -78,7 +78,7 @@
     "category": "general",
     "location": "indonesia",
     "verified": "",
-    "iema_winner": "TRUE"
+    "iema_winner": true
   },
   {
     "key": 4,
