@@ -60,7 +60,7 @@
     "category": "general",
     "location": "indonesia",
     "verified": "",
-    "iema_winner": "TRUE"
+    "iema_winner": true
   },
   {
     "key": 3,
@@ -167,7 +167,7 @@
     "type": "b2c",
     "category": "general",
     "location": "indonesia",
-    "verified": "TRUE",
+    "verified": true,
     "iema_winner": ""
   },
   {
@@ -203,7 +203,7 @@
     "type": "b2c",
     "category": "tech",
     "location": "indonesia",
-    "verified": "TRUE",
+    "verified": true,
     "iema_winner": ""
   },
   {
@@ -257,7 +257,7 @@
     "type": "b2c",
     "category": "general",
     "location": "international",
-    "verified": "TRUE",
+    "verified": true,
     "iema_winner": ""
   },
   {
@@ -293,7 +293,7 @@
     "type": "b2c",
     "category": "general",
     "location": "indonesia",
-    "verified": "TRUE",
+    "verified": true,
     "iema_winner": ""
   },
   {
@@ -455,7 +455,7 @@
     "type": "b2c",
     "category": "fashion",
     "location": "indonesia",
-    "verified": "TRUE",
+    "verified": true,
     "iema_winner": ""
   },
   {
@@ -887,7 +887,7 @@
     "type": "c2c",
     "category": "general",
     "location": "indonesia",
-    "verified": "TRUE",
+    "verified": true,
     "iema_winner": ""
   },
   {
