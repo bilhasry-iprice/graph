@@ -210,6 +210,14 @@ $(document).ready(function(){
 	    });
 	});
 
+	function reSortByActive( arrayInput ){
+		var sort = $('.active').attr('data-attr');
+
+		arrayInput = sortBy( arrayInput, true, sort);		
+
+		return arrayInput;
+	}
+
 	function reSortByVisits( arrayInput ){
 		$('.active').removeClass('active');
 		$('.monthlyTitle').addClass('up');
@@ -258,7 +266,7 @@ $(document).ready(function(){
 		});
 
 
-		filterList = reSortByVisits(filterList);
+		filterList = reSortByActive(filterList);
 		curr = filterList;
 		generateVList(filterList);
 		animate();
