@@ -193,7 +193,7 @@ $(document).ready(function(){
 
 		var q = $(e.currentTarget).val();
 		
-		var filename = (q != '') ? (q + '.json') : 'q1-2018.json';
+		var filename = (q != '') ? (q + '.json') : 'q2-2018.json';
 		
 		data_list = new Array();
 		$.getJSON('data/' + loc +'/' + filename, function(result){
