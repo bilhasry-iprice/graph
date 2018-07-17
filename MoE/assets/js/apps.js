@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var data_list 	= new Array();
-	var filename	= 'q1-2018.json';
+	var filename	= 'q2-2018.json';
 	var data 		= document.getElementById('data');
 	var up 			= true;
 	var config 		= '';
