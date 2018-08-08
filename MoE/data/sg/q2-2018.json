@@ -565,6 +565,24 @@
     "location": "singapore",
     "verified": "",
     "iema_winner": ""
+  },
+  {
+    "key": 31,
+    "name": "Amazon",
+    "url": "https://www.amazon.com.sg/",
+    "logodesktop": "logo/sg/desktop/amazon.png",
+    "traffics": 205000,
+    "ios": 6,
+    "android": 6,
+    "twitter": 169,
+    "instagram": 0,
+    "facebook": 3398,
+    "employees": 290,
+    "type": "b2c",
+    "category": "general",
+    "location": "international",
+    "verified": "",
+    "iema_winner": ""
   }
 ]
 }
