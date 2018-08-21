@@ -14,8 +14,8 @@
     "url": "http://www.11street.co.th/",
     "logodesktop": "logo/th/desktop/11street.png",
     "traffics": 1385300,
-    "android": 18,
-    "ios": 16,
+    "android": 19,
+    "ios": 17,
     "line": 1561,
     "instagram": 5468,
     "facebook": 454209,
@@ -41,8 +41,8 @@
     "type": "b2c",
     "category": "tech",
     "location": "thailand",
-    "verified": true,
-    "iema_winner": true
+    "verified": "TRUE",
+    "iema_winner": "TRUE"
   },
   {
     "key": 35,
@@ -86,7 +86,7 @@
     "url": "http://www.blisby.com/",
     "logodesktop": "logo/th/desktop/blisby.jpg",
     "traffics": 158100,
-    "android": 16,
+    "android": 17,
     "ios": 99,
     "line": 0,
     "instagram": 1859,
@@ -113,7 +113,7 @@
     "type": "b2c",
     "category": "general",
     "location": "thailand",
-    "verified": true,
+    "verified": "TRUE",
     "iema_winner": ""
   },
   {
@@ -167,7 +167,7 @@
     "type": "c2c",
     "category": "general",
     "location": "thailand",
-    "verified": true,
+    "verified": "TRUE",
     "iema_winner": ""
   },
   {
@@ -249,7 +249,7 @@
     "logodesktop": "logo/th/desktop/itcity.png",
     "traffics": 95400,
     "android": 99,
-    "ios": 19,
+    "ios": 20,
     "line": 22512,
     "instagram": 0,
     "facebook": 0,
@@ -293,7 +293,7 @@
     "type": "b2c",
     "category": "tech",
     "location": "thailand",
-    "verified": true,
+    "verified": "TRUE",
     "iema_winner": ""
   },
   {
@@ -347,7 +347,7 @@
     "type": "b2c",
     "category": "general",
     "location": "international",
-    "verified": true,
+    "verified": "TRUE",
     "iema_winner": ""
   },
   {
@@ -356,7 +356,7 @@
     "url": "https://www.looksi.com/",
     "logodesktop": "logo/th/desktop/looksi.png",
     "traffics": 468300,
-    "android": 17,
+    "android": 18,
     "ios": 9,
     "line": 0,
     "instagram": 40947,
@@ -428,8 +428,8 @@
     "url": "https://www.orami.co.th/",
     "logodesktop": "logo/th/desktop/orami.png",
     "traffics": 204800,
-    "android": 20,
-    "ios": 18,
+    "android": 21,
+    "ios": 19,
     "line": 2561,
     "instagram": 3207,
     "facebook": 673058,
@@ -437,7 +437,7 @@
     "type": "b2c",
     "category": "general",
     "location": "international",
-    "verified": true,
+    "verified": "TRUE",
     "iema_winner": ""
   },
   {
@@ -536,7 +536,7 @@
     "url": "https://shopspotapp.com",
     "logodesktop": "logo/th/desktop/shopspot.png",
     "traffics": 218700,
-    "android": 15,
+    "android": 16,
     "ios": 15,
     "line": 6615,
     "instagram": 37459,
@@ -554,7 +554,7 @@
     "url": "https://www.tarad.com/",
     "logodesktop": "logo/th/desktop/tarad.png",
     "traffics": 1502400,
-    "android": 19,
+    "android": 20,
     "ios": 99,
     "line": 6772,
     "instagram": 990,
@@ -563,7 +563,7 @@
     "type": "c2c",
     "category": "general",
     "location": "thailand",
-    "verified": true,
+    "verified": "TRUE",
     "iema_winner": ""
   },
   {
@@ -590,8 +590,8 @@
     "url": "http://www.tohome.com/",
     "logodesktop": "logo/th/desktop/tohome.png",
     "traffics": 330500,
-    "android": 21,
-    "ios": 17,
+    "android": 22,
+    "ios": 18,
     "line": 7656,
     "instagram": 823,
     "facebook": 207155,
@@ -662,7 +662,7 @@
     "url": "https://portal.weloveshopping.com/",
     "logodesktop": "logo/th/desktop/weloveshopping.png",
     "traffics": 429400,
-    "android": 14,
+    "android": 15,
     "ios": 10,
     "line": 27885,
     "instagram": 2535,
@@ -706,6 +706,24 @@
     "employees": 33,
     "type": "b2c",
     "category": "fashion",
+    "location": "thailand",
+    "verified": "",
+    "iema_winner": ""
+  },
+  {
+    "key": 39,
+    "name": "JD Central",
+    "url": "https://www.jd.co.th/",
+    "logodesktop": "logo/th/desktop/jdcentral.png",
+    "traffics": 80600,
+    "android": 14,
+    "ios": 16,
+    "line": 0,
+    "instagram": 814,
+    "facebook": 29311,
+    "employees": 79,
+    "type": "b2c",
+    "category": "general",
     "location": "thailand",
     "verified": "",
     "iema_winner": ""
