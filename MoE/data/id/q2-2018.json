@@ -799,6 +799,24 @@
     "location": "indonesia",
     "verified": "",
     "iema_winner": ""
+  },
+  {
+    "key": 45,
+    "name": "Fabelio",
+    "url": "https://fabelio.com/",
+    "logodesktop": "logo/id/desktop/fabelio.png",
+    "traffics": 1215200,
+    "ios": 99,
+    "android": 99,
+    "twitter": 0,
+    "instagram": 90500,
+    "facebook": 81600,
+    "employees": 150,
+    "type": "b2c",
+    "category": "general",
+    "location": "indonesia",
+    "verified": "",
+    "iema_winner": ""
   }
 ]
 }
