@@ -1,11 +1,11 @@
 {
   "config" : {
-    "max_traffics" : "10300800",
+    "max_traffics" : "9910800",
     "max_app" : "100000000",
-    "max_twitter" : "38790",
-    "max_instagram" : "183160",
-    "max_facebook" : "27220200",
-    "max_employees" : "634"
+    "max_twitter" : "38490",
+    "max_instagram" : "206890",
+    "max_facebook" : "27941000",
+    "max_employees" : "688"
   },
   "data" :[
   {
