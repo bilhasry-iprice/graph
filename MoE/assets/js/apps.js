@@ -34,7 +34,8 @@ $(document).ready(function(){
 			var loc = (pair[1] != 'undefined') ? pair[1] : '' ;
 		}
 	}
-		
+
+	$('.iema-awards').attr('href', returnUrl(loc,lang));
 
 	$.getJSON('data/' + loc + '/' + filename, function(result){
 
@@ -64,6 +65,25 @@ $(document).ready(function(){
         animate();
         
     });
+
+	function returnUrl(loc, lang){
+		var url = '';
+		switch( loc ){
+			case 'id' : url = lang == 'id' ? 'https://iprice.co.id/insights/' : 'https://iprice.co.id/insights/en/';
+				break;
+			case 'my' : url = lang == 'vn' ? 'https://iprice.my/insights/' : 'https://iprice.my/insights/en/';
+				break;
+			case 'th' : url = lang == 'th' ? 'https://ipricethailand.com/insights/' : 'https://ipricethailand.com/insights/en/';
+				break;
+			case 'vn' : url = lang == 'vn' ? 'https://iprice.vn/insights/' : 'https://iprice.vn/insights/en/';
+				break;
+			case 'ph' : url = lang == 'ph' ? 'https://iprice.ph/insights/' : 'https://iprice.ph/insights/en/';
+				break;
+			case 'sg' : url = 'https://iprice.sg/insights/';
+				break;
+		}
+		url += 'mapofecommerce/#iema-awards';
+	}
 
 	function search(nameKey){
 	    for (var i=0; i < data_list.length; i++) {
