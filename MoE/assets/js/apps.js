@@ -83,6 +83,8 @@ $(document).ready(function(){
 				break;
 		}
 		url += 'mapofecommerce/#iema-awards';
+
+		return url;
 	}
 
 	function search(nameKey){
