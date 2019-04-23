@@ -355,7 +355,7 @@ div#data {
     background-size: 13px 16px;
 }*/
 
-.category-item label.iema, .category-item label.verified{
+/*.category-item label.iema, .category-item label.verified{
     position: absolute;
     top: 16px;
     right: 4px;
@@ -377,7 +377,7 @@ div#data {
 
 .category-item label.iema + label.verified{
 	right: 24px;
-}
+}*/
 .category-item.col:nth-child(2) span p,
 .category-item.col:nth-child(3) span p {
     background: #33CCCC;
