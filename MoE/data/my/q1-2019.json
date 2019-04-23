@@ -2,10 +2,10 @@
   "config" : {
     "max_traffics" : "26264874",
     "max_app" : "100000000",
-    "max_twitter" : "44120",
-    "max_instagram" : "874240",
-    "max_facebook" : "27940800",
-    "max_employees" : "502"
+    "max_twitter" : "43800",
+    "max_instagram" : "877900",
+    "max_facebook" : "28245000",
+    "max_employees" : "516"
   },
   "data" :[
   {
@@ -516,7 +516,7 @@
     "key": 29,
     "name": "MuslimahClothing.com",
     "url": "muslimahclothing.com",
-    "logodesktop": "logo/my/desktop/muslimahclothingcom.png",
+    "logodesktop": "logo/my/desktop/muslimahclothing.png",
     "traffics": 61033,
     "ios": 99,
     "android": 99,
@@ -696,7 +696,7 @@
     "key": 39,
     "name": "Wedding.com.my",
     "url": "wedding.com.my",
-    "logodesktop": "logo/my/desktop/weddingcommy.png",
+    "logodesktop": "logo/my/desktop/wedding.png",
     "traffics": 23295,
     "ios": 99,
     "android": 99,

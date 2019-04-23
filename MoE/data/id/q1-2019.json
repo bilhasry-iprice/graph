@@ -1,11 +1,11 @@
 {
   "config" : {
-    "max_traffics" : "168000000",
+    "max_traffics" : "137200900",
     "max_app" : "111484100",
-    "max_twitter" : "482280",
-    "max_instagram" : "1788340",
-    "max_facebook" : "27940900",
-    "max_employees" : "2762"
+    "max_twitter" : "483300",
+    "max_instagram" : "2164100",
+    "max_facebook" : "28245000",
+    "max_employees" : "3009"
   },
   "data" :[
   {
@@ -282,7 +282,7 @@
     "key": 35,
     "name": "Pasarwarga",
     "url": "https://www.pasarwarga.com/",
-    "logodesktop": "logo/id/desktop/pasarwar.png",
+    "logodesktop": "logo/id/desktop/pasarwarga.png",
     "traffics": 322100,
     "ios": 24,
     "android": 16,
@@ -696,7 +696,7 @@
     "key": 24,
     "name": "Laku6",
     "url": "https://www.laku6.com/",
-    "logodesktop": "logo/id/desktop/laku6.png",
+    "logodesktop": "logo/id/desktop/laku-6.png",
     "traffics": 2512900,
     "ios": 99,
     "android": 99,
