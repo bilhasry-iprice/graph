@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var data_list 	= new Array();
-	var filename	= 'q1-2019.json';
+	var filename	= 'q2-2019.json';
 	var data 		= document.getElementById('data');
 	var up 			= true;
 	var config 		= '';
@@ -215,7 +215,7 @@ $(document).ready(function(){
 
 		var q = $(e.currentTarget).val();
 		
-		var filename = (q != '') ? (q + '.json') : 'q1-2019.json';
+		var filename = (q != '') ? (q + '.json') : 'q2-2019.json';
 		
 		data_list = new Array();
 		$.getJSON('data/' + loc +'/' + filename, function(result){
@@ -412,7 +412,7 @@ $(document).ready(function(){
 	    for (var i = 0; i < data.length; i++) {
 	    	var html = '';
 
-	    	var iema 		= data[i].iema_winner ? 'iema' : '';
+	    	// var iema 		= data[i].iema_winner ? 'iema' : '';
 	    	var verified 	= data[i].verified ? 'verified' : '';
 
 			var _wTraffics 	= parseFloat(data[i].traffics) / parseFloat(config.max_traffics) * 100; 
@@ -437,9 +437,9 @@ $(document).ready(function(){
 	    	html += '<img src="assets/img/'+ data[i].logodesktop.toLowerCase() + '"/>';
 
 	    	html += '<label '+ _w +'>'+data[i].name+'</label></a>';
-	    	if(iema != ''){
-	    		html += '<label class="'+ iema+'"></label>';
-	    	}
+	    	// if(iema != ''){
+	    	// 	html += '<label class="'+ iema+'"></label>';
+	    	// }
 
 	    	if(verified != ''){
 	    		html += '<label class="'+ verified+'"></label>';
@@ -607,7 +607,7 @@ $(document).ready(function(){
 		var quarter = (lang == 'en') ? trans.options.quarter[loc] : trans.options.quarter;
 		
 		$.each(quarter, function(key, value){
-			if( key == 'q1-2019'){
+			if( key == 'q2-2019'){
 				$('.quartal_select').append('<option value="'+key+'" selected>'+value+'</option>');
 			}else{
 				$('.quartal_select').append('<option value="'+key+'">'+value+'</option>');	
