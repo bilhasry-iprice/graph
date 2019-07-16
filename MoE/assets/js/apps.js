@@ -41,18 +41,21 @@ $(document).ready(function(){
 
 		config = result.config;
 
-		if( ( loc != 'vn') && (loc != 'ph')){
-			if( loc == 'th'){
-				$('.socialTitle').attr('data-attr', 'line');
-				$('.socialTitle').html('Line');	
-			}
+		if( ( loc != 'vn') && (loc != 'ph') && (loc != 'th')){
+			//do nothing
 		}else{
+
 			$('.employeeTitle').remove();
 			if( loc == 'vn'){
 				$('.socialTitle').attr('data-attr', 'youtube');
 				$('.socialTitle').html('Youtube');	
 			}
+			if( loc == 'th'){
+				$('.socialTitle').attr('data-attr', 'line');
+				$('.socialTitle').html('Line');	
+			}
 		}
+		
         $.each(result.data, function(i, field){
         	
         	data_list.push(field);
