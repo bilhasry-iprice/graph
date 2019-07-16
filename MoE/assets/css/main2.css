@@ -517,6 +517,8 @@ div#data {
 
 	#infographic-content.vn-content .col,
 	#infographic-content.vn-content .header .col,
+	#infographic-content.th-content .col,
+	#infographic-content.th-content .header .col,
 	#infographic-content.ph-content  .col,
 	#infographic-content.ph-content .header .col{
 		width: calc(14.75% - 5px);
