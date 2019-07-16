@@ -427,7 +427,7 @@ $(document).ready(function(){
 
 			var _wInstagram = parseFloat(data[i].instagram) / parseFloat(config.max_instagram) * 100; 
 			var _wFacebook 	= parseFloat(data[i].facebook) / parseFloat(config.max_facebook) * 100; 
-			if (( loc != 'vn') && (loc != 'ph')){
+			if (( loc != 'vn') && (loc != 'ph') && (loc != 'th')){
 				var _wEmployees = parseFloat(data[i].employees) / parseFloat(config.max_employees) * 100; 
 			}
 
@@ -481,7 +481,7 @@ $(document).ready(function(){
 	    	html += '<span><p class="percent animate-width" data-width="'+_wFacebook+'">'+ (data[i].facebook == 0 ? 'n/a' : data[i].facebook.toLocaleString()) +'</p></span>';
 	    	html += '</div>';
 
-	    	if (( loc != 'vn') && (loc != 'ph')){
+	    	if (( loc != 'vn') && (loc != 'ph') && (loc != 'th')){
 		    	html += '<div class="category-item col bg__grey ">';
 		    	html += '<span><p class="percent animate-width" data-width="'+_wEmployees+'">'+ (data[i].employees == 0 ? 'n/a' : data[i].employees.toLocaleString()) +'</p></span>';
 		    	html += '</div>';
