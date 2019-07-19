@@ -525,6 +525,7 @@ div#data {
 	}
 
 	.infographic-data-wrapper .header .col:first-child, #data .col:first-child,
+	#infographic-content.th-content .header .col:first-child,
 	#infographic-content.vn-content .header .col:first-child,
 	#infographic-content.ph-content .header .col:first-child{
 		width: calc(23% - 5px);
