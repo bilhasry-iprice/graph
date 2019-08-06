@@ -345,22 +345,6 @@
       "location": "singapore"
     },
     {
-      "key": 22,
-      "name": "SHOP.com",
-      "url": "https://sg.shop.com/",
-      "logodesktop": "logo/sg/desktop/shopcom.png",
-      "traffics": 1673300,
-      "ios": 99,
-      "android": 99,
-      "twitter": 19320,
-      "instagram": 0,
-      "facebook": 0,
-      "employees": 53,
-      "type": "b2c",
-      "category": "general",
-      "location": "international"
-    },
-    {
       "key": 23,
       "name": "Shopee",
       "url": "https://shopee.sg/",
@@ -407,22 +391,6 @@
       "type": "b2c",
       "category": "fashion",
       "location": "singapore"
-    },
-    {
-      "key": 26,
-      "name": "StrawberryNET",
-      "url": "https://sg.strawberrynet.com/",
-      "logodesktop": "logo/sg/desktop/strawberrynet.png",
-      "traffics": 1550300,
-      "ios": 12,
-      "android": 11,
-      "twitter": 38030,
-      "instagram": 0,
-      "facebook": 7574860,
-      "employees": 0,
-      "type": "b2c",
-      "category": "fashion",
-      "location": "international"
     },
     {
       "key": 27,

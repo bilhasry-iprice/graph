@@ -11,7 +11,7 @@
     {
       "key": 1,
       "name": "Althea",
-      "url": "my.althea.kr",
+      "url": "https://my.althea.kr",
       "logodesktop": "logo/my/desktop/althea.png",
       "traffics": 124400,
       "ios": 14,
@@ -27,7 +27,7 @@
     {
       "key": 2,
       "name": "Apple Crumby & Fish",
-      "url": "applecrumbyandfish.com",
+      "url": "https://applecrumbyandfish.com",
       "logodesktop": "logo/my/desktop/applecrumbyfish.png",
       "traffics": 9700,
       "ios": 99,
@@ -43,7 +43,7 @@
     {
       "key": 3,
       "name": "Babydash",
-      "url": "babydash.com.my",
+      "url": "https://babydash.com.my",
       "logodesktop": "logo/my/desktop/babydash.png",
       "traffics": 44400,
       "ios": 99,
@@ -59,7 +59,7 @@
     {
       "key": 4,
       "name": "Bella Ammara",
-      "url": "bellaammara.com",
+      "url": "https://bellaammara.com",
       "logodesktop": "logo/my/desktop/bellaammara.png",
       "traffics": 17500,
       "ios": 99,
@@ -75,7 +75,7 @@
     {
       "key": 5,
       "name": "Benang Hijau",
-      "url": "benanghijau.com",
+      "url": "https://benanghijau.com",
       "logodesktop": "logo/my/desktop/benanghijau.png",
       "traffics": 7700,
       "ios": 99,
@@ -91,7 +91,7 @@
     {
       "key": 6,
       "name": "Bodying",
-      "url": "bodying.my",
+      "url": "https://bodying.my",
       "logodesktop": "logo/my/desktop/bodying.png",
       "traffics": 46200,
       "ios": 99,
@@ -107,7 +107,7 @@
     {
       "key": 7,
       "name": "Calaqisya",
-      "url": "calaqisya.com",
+      "url": "https://calaqisya.com",
       "logodesktop": "logo/my/desktop/calaqisya.png",
       "traffics": 31700,
       "ios": 99,
@@ -123,7 +123,7 @@
     {
       "key": 8,
       "name": "Cristy Ng",
-      "url": "christyng.com",
+      "url": "https://christyng.com",
       "logodesktop": "logo/my/desktop/cristyng.png",
       "traffics": 174300,
       "ios": 99,
@@ -139,7 +139,7 @@
     {
       "key": 9,
       "name": "Curves",
-      "url": "curveskk.com",
+      "url": "https://curveskk.com",
       "logodesktop": "logo/my/desktop/curves.png",
       "traffics": 3500,
       "ios": 99,
@@ -155,7 +155,7 @@
     {
       "key": 10,
       "name": "Doublewoot",
-      "url": "double-woot.com",
+      "url": "https://double-woot.com",
       "logodesktop": "logo/my/desktop/doublewoot.png",
       "traffics": 64500,
       "ios": 99,
@@ -171,7 +171,7 @@
     {
       "key": 11,
       "name": "eBay",
-      "url": "ebay.com.my",
+      "url": "https://ebay.com.my",
       "logodesktop": "logo/my/desktop/ebay.png",
       "traffics": 796800,
       "ios": 10,
@@ -187,7 +187,7 @@
     {
       "key": 12,
       "name": "ezbuy",
-      "url": "ezbuy.my",
+      "url": "https://ezbuy.my",
       "logodesktop": "logo/my/desktop/ezbuy.png",
       "traffics": 517500,
       "ios": 7,
@@ -203,7 +203,7 @@
     {
       "key": 13,
       "name": "FashionValet",
-      "url": "fashionvalet.com",
+      "url": "https://fashionvalet.com",
       "logodesktop": "logo/my/desktop/fashionvalet.png",
       "traffics": 521600,
       "ios": 99,
@@ -219,7 +219,7 @@
     {
       "key": 14,
       "name": "GoShop",
-      "url": "goshop.com.my",
+      "url": "https://goshop.com.my",
       "logodesktop": "logo/my/desktop/goshop.png",
       "traffics": 749000,
       "ios": 5,
@@ -235,7 +235,7 @@
     {
       "key": 15,
       "name": "Gundam",
-      "url": "gundam.my",
+      "url": "https://gundam.my",
       "logodesktop": "logo/my/desktop/gundam.png",
       "traffics": 88600,
       "ios": 99,
@@ -251,7 +251,7 @@
     {
       "key": 16,
       "name": "Hanabella",
-      "url": "hanabella.com.my/",
+      "url": "https://hanabella.com.my/",
       "logodesktop": "logo/my/desktop/hanabella.png",
       "traffics": 20300,
       "ios": 99,
@@ -267,7 +267,7 @@
     {
       "key": 17,
       "name": "Hermo",
-      "url": "hermo.my",
+      "url": "https://hermo.my",
       "logodesktop": "logo/my/desktop/hermo.png",
       "traffics": 538300,
       "ios": 8,
@@ -283,7 +283,7 @@
     {
       "key": 18,
       "name": "i-Pmart",
-      "url": "ipmart.com.my",
+      "url": "https://ipmart.com.my",
       "logodesktop": "logo/my/desktop/ipmart.png",
       "traffics": 26700,
       "ios": 99,
@@ -299,7 +299,7 @@
     {
       "key": 19,
       "name": "JelitaSara",
-      "url": "jelitasara.com",
+      "url": "https://jelitasara.com",
       "logodesktop": "logo/my/desktop/jelitasara.png",
       "traffics": 37700,
       "ios": 99,
@@ -315,7 +315,7 @@
     {
       "key": 20,
       "name": "La Rossa",
-      "url": "larossa.com.my",
+      "url": "https://larossa.com.my",
       "logodesktop": "logo/my/desktop/larossa.png",
       "traffics": 2100,
       "ios": 99,
@@ -331,7 +331,7 @@
     {
       "key": 21,
       "name": "Lazada",
-      "url": "lazada.com.my",
+      "url": "https://lazada.com.my",
       "logodesktop": "logo/my/desktop/lazada.png",
       "traffics": 20657700,
       "ios": 2,
@@ -347,7 +347,7 @@
     {
       "key": 22,
       "name": "Lelong",
-      "url": "lelong.com.my",
+      "url": "https://lelong.com.my",
       "logodesktop": "logo/my/desktop/lelong.png",
       "traffics": 3104500,
       "ios": 11,
@@ -363,7 +363,7 @@
     {
       "key": 23,
       "name": "Mis Claire",
-      "url": "misclaire.com",
+      "url": "https://misclaire.com",
       "logodesktop": "logo/my/desktop/misclaire.png",
       "traffics": 101700,
       "ios": 99,
@@ -379,7 +379,7 @@
     {
       "key": 24,
       "name": "Motherhood",
-      "url": "motherhood.com.my",
+      "url": "https://motherhood.com.my",
       "logodesktop": "logo/my/desktop/motherhood.png",
       "traffics": 114100,
       "ios": 99,
@@ -395,7 +395,7 @@
     {
       "key": 25,
       "name": "MuslimahClothing.com",
-      "url": "muslimahclothing.com",
+      "url": "https://muslimahclothing.com",
       "logodesktop": "logo/my/desktop/MuslimahClothing.png",
       "traffics": 88000,
       "ios": 99,
@@ -411,7 +411,7 @@
     {
       "key": 26,
       "name": "Mysale",
-      "url": "mysale.my",
+      "url": "https://mysale.my",
       "logodesktop": "logo/my/desktop/mysale.png",
       "traffics": 194400,
       "ios": 99,
@@ -427,7 +427,7 @@
     {
       "key": 27,
       "name": "Naelofar Hijab",
-      "url": "naelofarhijab.com",
+      "url": "https://naelofarhijab.com",
       "logodesktop": "logo/my/desktop/naelofarhijab.png",
       "traffics": 48300,
       "ios": 99,
@@ -443,7 +443,7 @@
     {
       "key": 28,
       "name": "Nile",
-      "url": "nile.com.my",
+      "url": "https://nile.com.my",
       "logodesktop": "logo/my/desktop/nile.png",
       "traffics": 19300,
       "ios": 99,
@@ -459,7 +459,7 @@
     {
       "key": 29,
       "name": "Photobook",
-      "url": "photobook.com.my",
+      "url": "https://photobook.com.my",
       "logodesktop": "logo/my/desktop/photobook.png",
       "traffics": 166600,
       "ios": 99,
@@ -475,7 +475,7 @@
     {
       "key": 30,
       "name": "Poplook",
-      "url": "poplook.com",
+      "url": "https://poplook.com",
       "logodesktop": "logo/my/desktop/poplook.png",
       "traffics": 279000,
       "ios": 13,
@@ -491,7 +491,7 @@
     {
       "key": 31,
       "name": "PrestoMall",
-      "url": "prestomall.com/",
+      "url": "https://prestomall.com/",
       "logodesktop": "logo/my/desktop/prestomall.png",
       "traffics": 237900,
       "ios": 6,
@@ -507,7 +507,7 @@
     {
       "key": 32,
       "name": "Printcious",
-      "url": "printcious.com",
+      "url": "https://printcious.com",
       "logodesktop": "logo/my/desktop/printcious.png",
       "traffics": 73700,
       "ios": 99,
@@ -523,7 +523,7 @@
     {
       "key": 33,
       "name": "Qoo10",
-      "url": "qoo10.my",
+      "url": "https://qoo10.my",
       "logodesktop": "logo/my/desktop/qoo10.png",
       "traffics": 432800,
       "ios": 12,
@@ -539,7 +539,7 @@
     {
       "key": 34,
       "name": "QQ Baby Shop",
-      "url": "qqbabyshop.com",
+      "url": "https://qqbabyshop.com",
       "logodesktop": "logo/my/desktop/qqbabyshop.png",
       "traffics": 29600,
       "ios": 99,
@@ -555,7 +555,7 @@
     {
       "key": 35,
       "name": "Radiusite",
-      "url": "radiusite.com.my",
+      "url": "https://radiusite.com.my",
       "logodesktop": "logo/my/desktop/radiusite.png",
       "traffics": 30700,
       "ios": 99,
@@ -571,7 +571,7 @@
     {
       "key": 36,
       "name": "Sally Fashion",
-      "url": "sallyfashion.com.my",
+      "url": "https://sallyfashion.com.my",
       "logodesktop": "logo/my/desktop/sallyfashion.png",
       "traffics": 16100,
       "ios": 99,
@@ -587,7 +587,7 @@
     {
       "key": 37,
       "name": "Sephora",
-      "url": "sephora.my",
+      "url": "https://sephora.my",
       "logodesktop": "logo/my/desktop/sephora.png",
       "traffics": 385100,
       "ios": 4,
@@ -603,7 +603,7 @@
     {
       "key": 38,
       "name": "SGShop",
-      "url": "sgshop.com.my",
+      "url": "https://sgshop.com.my",
       "logodesktop": "logo/my/desktop/sgshop.png",
       "traffics": 193200,
       "ios": 15,
@@ -619,7 +619,7 @@
     {
       "key": 39,
       "name": "Shopee",
-      "url": "shopee.com.my",
+      "url": "https://shopee.com.my",
       "logodesktop": "logo/my/desktop/shopee.png",
       "traffics": 21263900,
       "ios": 1,
@@ -635,7 +635,7 @@
     {
       "key": 40,
       "name": "Siti Khadijah",
-      "url": "sitikhadijah.com",
+      "url": "https://sitikhadijah.com",
       "logodesktop": "logo/my/desktop/sitikhadijah.png",
       "traffics": 161800,
       "ios": 99,
@@ -651,7 +651,7 @@
     {
       "key": 41,
       "name": "Summerglitz",
-      "url": "summerglitz.com.my",
+      "url": "https://summerglitz.com.my",
       "logodesktop": "logo/my/desktop/summerglitz.png",
       "traffics": 23100,
       "ios": 99,
@@ -667,7 +667,7 @@
     {
       "key": 42,
       "name": "Superbuy",
-      "url": "superbuy.my",
+      "url": "https://superbuy.my",
       "logodesktop": "logo/my/desktop/superbuy.png",
       "traffics": 56300,
       "ios": 99,
@@ -683,7 +683,7 @@
     {
       "key": 43,
       "name": "The One Mall",
-      "url": "theonemall.com",
+      "url": "https://theonemall.com",
       "logodesktop": "logo/my/desktop/theonemall.png",
       "traffics": 126400,
       "ios": 99,
@@ -699,7 +699,7 @@
     {
       "key": 44,
       "name": "Twenty3",
-      "url": "twenty3.my",
+      "url": "https://twenty3.my",
       "logodesktop": "logo/my/desktop/twenty3.png",
       "traffics": 7700,
       "ios": 99,
@@ -715,7 +715,7 @@
     {
       "key": 45,
       "name": "uBuy",
-      "url": "ubuy.com.my",
+      "url": "https://ubuy.com.my",
       "logodesktop": "logo/my/desktop/ubuy.png",
       "traffics": 333800,
       "ios": 99,
@@ -731,7 +731,7 @@
     {
       "key": 46,
       "name": "Wedding.com.my",
-      "url": "wedding.com.my",
+      "url": "https://wedding.com.my",
       "logodesktop": "logo/my/desktop/wedding.png",
       "traffics": 46800,
       "ios": 99,
@@ -747,7 +747,7 @@
     {
       "key": 47,
       "name": "Wowshop",
-      "url": "cjwowshop.com.my",
+      "url": "https://cjwowshop.com.my",
       "logodesktop": "logo/my/desktop/wowshop.png",
       "traffics": 343500,
       "ios": 9,
@@ -763,7 +763,7 @@
     {
       "key": 48,
       "name": "YouBeli",
-      "url": "youbeli.com",
+      "url": "https://youbeli.com",
       "logodesktop": "logo/my/desktop/youbeli.png",
       "traffics": 179000,
       "ios": 16,
@@ -779,7 +779,7 @@
     {
       "key": 49,
       "name": "Zalora",
-      "url": "zalora.com.my",
+      "url": "https://zalora.com.my",
       "logodesktop": "logo/my/desktop/zalora.png",
       "traffics": 1574600,
       "ios": 3,
@@ -795,7 +795,7 @@
     {
       "key": 50,
       "name": "Zolace",
-      "url": "zolace.com",
+      "url": "https://zolace.com",
       "logodesktop": "logo/my/desktop/zolace.png",
       "traffics": 11900,
       "ios": 99,

@@ -41,7 +41,7 @@
     {
       "key": 3,
       "name": "Banana Store",
-      "url": "http://shoponline.bananastore.com/",
+      "url": "https://www.bnn.in.th",
       "logodesktop": "logo/th/desktop/bananastore.png",
       "traffics": 33500,
       "ios": 99,
@@ -382,21 +382,6 @@
       "type": "b2c",
       "category": "general",
       "location": "thailand"
-    },
-    {
-      "key": 26,
-      "name": "Orami",
-      "url": "https://www.orami.co.th/",
-      "logodesktop": "logo/th/desktop/orami.png",
-      "traffics": 1800,
-      "ios": 99,
-      "android": 99,
-      "line": 210,
-      "instagram": 2990,
-      "facebook": 662900,
-      "type": "b2c",
-      "category": "general",
-      "location": "international"
     },
     {
       "key": 27,
