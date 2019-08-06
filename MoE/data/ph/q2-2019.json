@@ -129,21 +129,6 @@
       "location": "philippines"
     },
     {
-      "key": 1,
-      "name": "158db",
-      "url": "https://158db.com.ph/",
-      "logodesktop": "logo/ph/desktop/158designerboulevard.png",
-      "traffics": 1400,
-      "ios": 99,
-      "android": 99,
-      "twitter": 0,
-      "instagram": 2450,
-      "facebook": 308870,
-      "type": "b2c",
-      "category": "fashion",
-      "location": "philippines"
-    },
-    {
       "key": 2,
       "name": "Abubot",
       "url": "https://abubot.ph/",
@@ -394,21 +379,6 @@
       "twitter": 990,
       "instagram": 9350,
       "facebook": 1311730,
-      "type": "b2c",
-      "category": "general",
-      "location": "philippines"
-    },
-    {
-      "key": 23,
-      "name": "Great Value Plus",
-      "url": "http://www.greatvalueplus.ph/",
-      "logodesktop": "logo/ph/desktop/greatvalueplus.png",
-      "traffics": 1300,
-      "ios": 99,
-      "android": 99,
-      "twitter": 630,
-      "instagram": 2200,
-      "facebook": 0,
       "type": "b2c",
       "category": "general",
       "location": "philippines"
