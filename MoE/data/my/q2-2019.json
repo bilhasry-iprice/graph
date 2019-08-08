@@ -283,7 +283,7 @@
     {
       "key": 18,
       "name": "i-Pmart",
-      "url": "https://ipmart.com.my",
+      "url": "http://ipmart.com.my",
       "logodesktop": "logo/my/desktop/ipmart.png",
       "traffics": 26700,
       "ios": 99,
@@ -315,7 +315,7 @@
     {
       "key": 20,
       "name": "La Rossa",
-      "url": "https://larossa.com.my",
+      "url": "http://larossa.com.my",
       "logodesktop": "logo/my/desktop/larossa.png",
       "traffics": 2100,
       "ios": 99,
@@ -539,7 +539,7 @@
     {
       "key": 34,
       "name": "QQ Baby Shop",
-      "url": "https://qqbabyshop.com",
+      "url": "http://qqbabyshop.com",
       "logodesktop": "logo/my/desktop/qqbabyshop.png",
       "traffics": 29600,
       "ios": 99,
@@ -555,7 +555,7 @@
     {
       "key": 35,
       "name": "Radiusite",
-      "url": "https://radiusite.com.my",
+      "url": "http://radiusite.com.my",
       "logodesktop": "logo/my/desktop/radiusite.png",
       "traffics": 30700,
       "ios": 99,
@@ -651,7 +651,7 @@
     {
       "key": 41,
       "name": "Summerglitz",
-      "url": "https://summerglitz.com.my",
+      "url": "http://summerglitz.com.my",
       "logodesktop": "logo/my/desktop/summerglitz.png",
       "traffics": 23100,
       "ios": 99,
@@ -747,7 +747,7 @@
     {
       "key": 47,
       "name": "Wowshop",
-      "url": "https://cjwowshop.com.my",
+      "url": "http://cjwowshop.com.my",
       "logodesktop": "logo/my/desktop/wowshop.png",
       "traffics": 343500,
       "ios": 9,
