@@ -342,6 +342,11 @@ div#data {
     position: relative;
 }
 
+.category-item img{
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+
 /*.category-item.iema:after,
 .category-item.verified:after{
     content: '';
