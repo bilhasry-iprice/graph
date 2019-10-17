@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 	var data_list 	= new Array();
-	var filename	= 'q2-2019.json';
+	var filename	= 'q3-2019.json';
+	var currentQ    = 'q3-2019';
 	var data 		= document.getElementById('data');
 	var up 			= true;
 	var config 		= '';
@@ -41,10 +42,7 @@ $(document).ready(function(){
 
 		config = result.config;
 
-		if( ( loc != 'vn') && (loc != 'ph') && (loc != 'th')){
-			//do nothing
-		}else{
-
+		if( ( loc == 'vn') || (loc == 'ph') || (loc == 'th')){
 			$('.employeeTitle').remove();
 			if( loc == 'vn'){
 				$('.socialTitle').attr('data-attr', 'youtube');
@@ -218,7 +216,7 @@ $(document).ready(function(){
 
 		var q = $(e.currentTarget).val();
 		
-		var filename = (q != '') ? (q + '.json') : 'q2-2019.json';
+		var filename = (q != '') ? (q + '.json') : currentQ + '.json';
 		
 		data_list = new Array();
 		$.getJSON('data/' + loc +'/' + filename, function(result){
@@ -610,7 +608,7 @@ $(document).ready(function(){
 		var quarter = (lang == 'en') ? trans.options.quarter[loc] : trans.options.quarter;
 		
 		$.each(quarter, function(key, value){
-			if( key == 'q2-2019'){
+			if( key == currentQ){
 				$('.quartal_select').append('<option value="'+key+'" selected>'+value+'</option>');
 			}else{
 				$('.quartal_select').append('<option value="'+key+'">'+value+'</option>');	
