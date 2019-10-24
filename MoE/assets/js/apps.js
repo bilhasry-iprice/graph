@@ -605,7 +605,7 @@ $(document).ready(function(){
 		
 		$('.quartal_select').empty();
 
-		var quarter = (lang == 'en') ? trans.options.quarter[loc] : trans.options.quarter;
+		var quarter = trans.options.quarter;
 		
 		$.each(quarter, function(key, value){
 			if( key == currentQ){
