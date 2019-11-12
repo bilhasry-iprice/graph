@@ -5,7 +5,11 @@
     "max_twitter" : "492420",
     "max_instagram" : "2970980",
     "max_facebook" : "28689230",
-    "max_employees" : "3431"
+    "max_employees" : "3431",
+    "business_model" : {
+      "inventory" : "Inventori",
+      "marketplace" : "Marketplace"
+    }
   },
   "data" :[
     {

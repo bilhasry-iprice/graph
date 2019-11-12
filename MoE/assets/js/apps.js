@@ -215,18 +215,17 @@ $(document).ready(function(){
 	$('.quartal_select').change(function(e){
 
 		var q = $(e.currentTarget).val();
-		
 		var filename = (q != '') ? (q + '.json') : currentQ + '.json';
 		
 		data_list = new Array();
 		$.getJSON('data/' + loc +'/' + filename, function(result){
 			config = result.config;
+			setBusinessModel('business_model', config, trans);
 	        $.each(result.data, function(i, field){
 	        	
 	        	data_list.push(field);
 	    		
 	        });
-
 
 	        Filter(filter);
 	        
@@ -239,6 +238,17 @@ $(document).ready(function(){
 		arrayInput = sortBy( arrayInput, true, sort);		
 
 		return arrayInput;
+	}
+
+	function setBusinessModel(selectClass, config, trans){
+		var select = document.querySelector(`.${selectClass}`);
+		var business_models = typeof config.business_model == 'undefined' ? trans.options.business_model : config.business_model ;
+
+		select.innerHTML = '';
+		select.innerHTML += `<option value="">${trans.businessTitle}</option>`;
+		$.each(business_models, function(key, value){
+			select.innerHTML += `<option value="${key}}">${value}</option>`;
+		});
 	}
 
 	function reSortByVisits( arrayInput ){
@@ -579,10 +589,7 @@ $(document).ready(function(){
 		$('.filter').find('select').each(function(){
 			$(this).empty();
 			if( $(this).hasClass('business_model')){
-				$(this).append('<option value="">'+trans.businessTitle+'</option>');
-				$.each(trans.options.business_model, function(key, value){
-					$('.business_model').append('<option value="'+key+'">'+value+'</option>')
-				});
+				setBusinessModel('business_model', config, trans);
 			}else if( $(this).hasClass('store_type')){
 				$(this).append('<option value="">'+trans.storeTitle+'</option>');
 				$.each(trans.options.store_type, function(key, value){
@@ -606,7 +613,7 @@ $(document).ready(function(){
 		$('.quartal_select').empty();
 
 		var quarter = trans.options.quarter;
-		
+
 		$.each(quarter, function(key, value){
 			if( key == currentQ){
 				$('.quartal_select').append('<option value="'+key+'" selected>'+value+'</option>');

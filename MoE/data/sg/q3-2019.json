@@ -74,7 +74,11 @@
       "type": "marketplace",
       "category": "general",
       "location": "singapore",
-      "multiple_country": ""
+      "multiple_country": "",
+      "business_model" : {
+        "inventory" : "Inventory",
+        "marketplace" : "Marketplace"
+      }
     },
     {
       "key": 5,

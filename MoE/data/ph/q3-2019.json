@@ -5,7 +5,11 @@
     "max_twitter" : "70560",
     "max_instagram" : "401850",
     "max_facebook" : "28689260",
-    "max_employees" : "2250"
+    "max_employees" : "2250",
+    "business_model" : {
+      "inventory" : "Imbentaryo",
+      "marketplace" : "Pamilihan"
+    }
   },
   "data" :[
     {
