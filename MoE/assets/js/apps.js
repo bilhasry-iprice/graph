@@ -242,10 +242,10 @@ $(document).ready(function(){
 
 	function setBusinessModel(selectClass, config, trans){
 		var select = document.querySelector(`.${selectClass}`);
-		var business_models = typeof config.business_model == 'undefined' ? trans.options.business_model : config.business_model ;
+		var business_models = typeof config.business_model == 'undefined' ? trans.business_model.options : config.business_model ;
 
 		select.innerHTML = '';
-		select.innerHTML += `<option value="">${trans.businessTitle}</option>`;
+		select.innerHTML += `<option value="">${trans.business_model.title}</option>`;
 		$.each(business_models, function(key, value){
 			select.innerHTML += `<option value="${key}}">${value}</option>`;
 		});
@@ -410,7 +410,7 @@ $(document).ready(function(){
 
     function generateVList(data) {
 
-	    var bigAssList = [];
+	    var dataList = [];
 
 	    if( x > 0){
 	    	var _style  = 'width:100px;';
@@ -505,7 +505,7 @@ $(document).ready(function(){
 
 
 	    	_el.innerHTML = html;
-			bigAssList.push(_el);
+			dataList.push(_el);
 	    }
 
 	    var _width = $(window).width();
@@ -514,7 +514,7 @@ $(document).ready(function(){
 	    list = new VirtualList({
 	      w: $('#data').width(),
 	      h: _h * data.length,
-	      items: bigAssList,
+	      items: dataList,
 	      itemHeight: itemH,
 	      cache: true
 	    });
@@ -591,14 +591,14 @@ $(document).ready(function(){
 			if( $(this).hasClass('business_model')){
 				setBusinessModel('business_model', config, trans);
 			}else if( $(this).hasClass('store_type')){
-				$(this).append('<option value="">'+trans.storeTitle+'</option>');
-				$.each(trans.options.store_type, function(key, value){
+				$(this).append('<option value="">'+trans.store_type.title+'</option>');
+				$.each(trans.store_type.options, function(key, value){
 					$('.store_type').append('<option value="'+key+'">'+value+'</option>')
 				});
 			}else if( $(this).hasClass('store_origin')){
-				$(this).append('<option value="">'+trans.originTitle+'</option>');
+				$(this).append('<option value="">'+trans.store_origin.title+'</option>');
 				if( lang != 'en'){
-					$.each(trans.options.store_origin, function(key, value){
+					$.each(trans.store_origin.options, function(key, value){
 						$('.store_origin').append('<option value="'+key+'">'+value+'</option>')
 					});
 				}else{
@@ -612,7 +612,7 @@ $(document).ready(function(){
 		
 		$('.quartal_select').empty();
 
-		var quarter = trans.options.quarter;
+		var quarter = trans.quarter.options;
 
 		$.each(quarter, function(key, value){
 			if( key == currentQ){
