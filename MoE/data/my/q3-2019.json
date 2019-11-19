@@ -297,7 +297,7 @@
       "facebook": 419740,
       "employees": 155,
       "type": "inventory",
-      "category": "other",
+      "category": "others",
       "location": "international",
       "multiple_country": ""
     },
@@ -382,7 +382,7 @@
       "facebook": 259690,
       "employees": 89,
       "type": "marketplace",
-      "category": "other",
+      "category": "others",
       "location": "international",
       "multiple_country": ""
     },
@@ -416,7 +416,7 @@
       "facebook": 56510,
       "employees": 0,
       "type": "marketplace",
-      "category": "other",
+      "category": "others",
       "location": "international",
       "multiple_country": ""
     },
@@ -433,7 +433,7 @@
       "facebook": 88000,
       "employees": 0,
       "type": "inventory",
-      "category": "other",
+      "category": "others",
       "location": "malaysia",
       "multiple_country": ""
     },
