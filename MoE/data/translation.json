@@ -177,8 +177,8 @@
 			"title": "รูปแบบธุรกิจ",
 			"options": 
 				{
-					"b2c" : "Peniaga ke pengguna",
-					"c2c" : "Pengguna ke pengguna"
+					"b2c" : "Business to Consumer",
+					"c2c" : "Consumer to Consumer"
 				}
 		},
 		"quarter" : {
@@ -230,8 +230,8 @@
 			"title": "Loại hình",
 			"options": 
 				{
-					"b2c" : "Peniaga ke pengguna",
-					"c2c" : "Pengguna ke pengguna"
+					"b2c" : "B2C",
+					"c2c" : "C2C"
 				}
 		},
 		"quarter" : {
