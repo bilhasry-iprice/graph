@@ -5,7 +5,11 @@
     "max_twitter" : "7650",
     "max_instagram" : "253750",
     "max_facebook" : "28689250",
-    "max_employees" : "1277"
+    "max_employees" : "1277",
+    "business_model" : {
+      "inventory" : "Inventory",
+      "marketplace" : "Marketplace"
+    }
   },
   "data" :[
     {
@@ -81,23 +85,6 @@
       }
     },
     {
-      "key": 5,
-      "name": "Fairpriceon",
-      "url": "https://www.fairprice.com.sg/",
-      "logodesktop": "logo/sg/desktop/fairprice.png",
-      "traffics": 1311700,
-      "ios": 99,
-      "android": 99,
-      "twitter": 0,
-      "instagram": 22500,
-      "facebook": 293190,
-      "employees": 0,
-      "type": "inventory",
-      "category": "others",
-      "location": "singapore",
-      "multiple_country": ""
-    },
-    {
       "key": 6,
       "name": "Zalora",
       "url": "https://www.zalora.sg/",
@@ -144,7 +131,7 @@
       "facebook": 486320,
       "employees": 0,
       "type": "inventory",
-      "category": "electronic",
+      "category": "electronics",
       "location": "singapore",
       "multiple_country": ""
     },

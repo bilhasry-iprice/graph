@@ -92,8 +92,8 @@
 		"store_type" : {
 			"title": "Store Type",
 			"options": {
-				"fashion" : "Fesyen",
-				"general" : "Umum",
+				"fashion" : "Fashion",
+				"general" : "General",
 				"tech" : "Elektronik",
 				"cosmetics": "Kosmetik",
 				"others": "Lainnya"
@@ -149,16 +149,16 @@
 			"title": "Jenis E-Dagang",
 			"options": {
 				"fashion" : "Fesyen",
-				"general" : "Pelbagai",
+				"general" : "Umum",
 				"tech" : "Elektronik",
-				"cosmetics": "Cosmetics",
-				"others": "Lainnya"
+				"cosmetics": "Kosmetik",
+				"others": "Dan Lain-Lain"
 			}
 		},
 		"store_origin" : {
 			"title": "Asal E-Dagang",
 			"options": {
-				"indonesia" : "Malaysia",
+				"malaysia" : "Malaysia",
 				"international" : "International"
 			}
 		}
