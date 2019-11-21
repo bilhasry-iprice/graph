@@ -247,7 +247,7 @@ $(document).ready(function(){
 		select.innerHTML = '';
 		select.innerHTML += `<option value="">${trans.business_model.title}</option>`;
 		$.each(business_models, function(key, value){
-			select.innerHTML += `<option value="${key}}">${value}</option>`;
+			select.innerHTML += `<option value="${key}">${value}</option>`;
 		});
 	}
 
