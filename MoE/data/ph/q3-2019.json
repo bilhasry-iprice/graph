@@ -7,8 +7,14 @@
     "max_facebook" : "28689260",
     "max_employees" : "2250",
     "business_model" : {
-      "inventory" : "Imbentaryo",
-      "marketplace" : "Pamilihan"
+      "ph": {
+        "inventory" : "Imbentaryo",
+        "marketplace" : "Pamilihan"
+      },
+      "en": {
+        "inventory" : "Inventory",
+        "marketplace" : "Marketplace"
+      }
     }
   },
   "data" :[
