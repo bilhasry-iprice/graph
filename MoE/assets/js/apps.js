@@ -242,7 +242,12 @@ $(document).ready(function(){
 
 	function setBusinessModel(selectClass, config, trans){
 		var select = document.querySelector(`.${selectClass}`);
-		var business_models = typeof config.business_model == 'undefined' ? trans.business_model.options : config.business_model ;
+		if( ['id','ph','vn'].indexOf(lang)){
+			var business_models = typeof config.business_model == 'undefined' ? trans.business_model.options : config.business_model[lang] ;
+		}else{
+			var business_models = typeof config.business_model == 'undefined' ? trans.business_model.options : config.business_model ;
+		}
+		
 
 		select.innerHTML = '';
 		select.innerHTML += `<option value="">${trans.business_model.title}</option>`;

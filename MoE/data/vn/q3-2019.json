@@ -7,8 +7,14 @@
       "max_facebook" : "28413610",
       "max_employees" : "656",
       "business_model" : {
-        "inventory" : "Cửa Hàng Trực Tuyến",
-        "marketplace" : "Sàn Thương Mại Điện Tử"
+        "vn":{
+          "inventory" : "Cửa Hàng Trực Tuyến",
+          "marketplace" : "Sàn Thương Mại Điện Tử"
+        },
+        "en": {
+          "inventory" : "Inventory",
+          "marketplace" : "Marketplace"
+        }
       }
     },
     "data" :[

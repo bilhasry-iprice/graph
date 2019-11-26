@@ -7,8 +7,14 @@
     "max_facebook" : "28689230",
     "max_employees" : "3431",
     "business_model" : {
+      "id": {
       "inventory" : "Inventori",
       "marketplace" : "Marketplace"
+      },
+      "en": {
+        "inventory" : "Inventory",
+        "marketplace" : "Marketplace"
+      }
     }
   },
   "data" :[
